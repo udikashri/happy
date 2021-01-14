@@ -1,34 +1,35 @@
 import React, { Component } from 'react'
-// import { ItemFilter } from '../cmps/ItemFilter';
 import { connect } from 'react-redux'
 import { ItemList } from '../cmps/ItemList';
+import { loadItems/*, removeItem, setFilter*/ } from '../store/actions/itemActions'
+// import { ItemFilter } from '../cmps/ItemFilter';
 // import { ItemFilter } from '../cmps/ItemFilter'
 // import { Link } from 'react-router-dom'
-// import { loadItems, removeItem, setFilter } from '../store/actions/itemActions'
 // import { logout } from '../store/actions/userActions'
-import {itemService} from '../services/itemService.js'
+// import {itemService} from '../services/itemService.js'
 
 
 
 class _ShopApp extends Component {
-    state = {
-        items: []
-    }
+    // state = {
+    //     items: []
+    // }
 
    async componentDidMount() {
-    const items = await itemService.query();
-    this.setState({items})
+      await this.props.loadItems()
+        console.log('Got from store:', this.props)
+    }
+
+    // const items = await itemService.query();
+    // this.setState({items})
         // this.props.loadItems(this.props.filterBy)
-        // console.log('Got from store:', this.props);
         // TODO load socks items and save in state . //////////
         // console.log(this.props.items);
-        // this.props.loadItems()
 // console.log(itemService.query())
 
         // query(){
         //     return Promise.resolve(gItems)
         // }
-    }
 
     // onRemove = (itemId) => {
     //     this.props.removeItem(itemId)
@@ -54,7 +55,7 @@ class _ShopApp extends Component {
         return (
             <section className="shop-container">
                 <h1>shop app</h1>
-                <ItemList items={this.state.items} />
+                <ItemList items={this.props.items} />
                 {/* <ItemFilter/> */}
                 {/* {loggedInUser.username && <button className="logout-btn" onClick={this.doLogout}>Logout</button>}
                 <ItemFilter onSetFilter={this.onSetFilter} />
@@ -68,17 +69,17 @@ class _ShopApp extends Component {
 const mapStateToProps = state => {
     return {
 
-        // items: state.itemModule.items,
+        items: state.itemModule.items,
         // filterBy: state.itemModule.filterBy,
         // loggedInUser: state.userModule.loggedInUser,
     }
 }
 
 const mapDispatchToProps = {
-    // loadItems,
-    // removeItem,
-    // setFilter,
-    // logout,
+    loadItems,
+//     // removeItem,
+//     // setFilter,
+//     // logout,
 }
 
 

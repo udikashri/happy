@@ -1,41 +1,48 @@
 import { connect } from 'react-redux'
-// import { Link } from 'react-router-dom'
 import React, { Component } from 'react'
-// import { itemService } from '../service/itemService.js'
+import { itemService } from '../services/itemService.js'
+import { loadItems/*, removeItem, setFilter*/ } from '../store/actions/itemActions'
+// import { Link } from 'react-router-dom'
 // import { ItemReview } from './ItemReview'
 // import { removeItem } from '../store/actions/itemActions.js'
 
 class _ItemDetails extends Component {
+state = {
+  currItem:{}
+}
+  async componentDidMount() {
 
-  state = {
-    item: null,
+    await this.props.loadItems()
+    console.log('Got from store:', this.props)
+    this.loadItem()
   }
 
-//   componentDidMount() {
-//     this.loadItem()
-//   }
+  loadItem = () => {
+    const { itemId } = this.props.match.params
+    const selectItem = this.props.items.filter(item => {
+      return  +itemId === item._id })
+    console.log('dsd',...selectItem);
+  this.setState({currItem:selectItem[0]})
+    // const item = await itemService.getById(itemId)
+    // this.setState({ item })
+  }
 
-//   loadItem = async () => {
-//     const { itemId } = this.props.match.params
-//     const item = await itemService.getById(itemId)
-//     this.setState({ item })
-
-//   }
-
-//   onRemove = (itemId) => {
-//     console.log(this.state.item);
-//     this.props.removeItem(itemId)
-//     this.props.history.push('/item')
-
-//   }
-
+  //   onRemove = (itemId) => {
+  //     console.log(this.state.item);
+  //     this.props.removeItem(itemId)
+  //     this.props.history.push('/item')
+  //   }
 
   render() {
     // const { item } = this.state;
     // const { loggedInUser } = this.props
+const { currItem} = this.state
+console.log("currItem",currItem);
     // if (!item) return <h1>Loading...</h1>
     return (
       <section className="item-details">
+                <p>{currItem.title}</p>
+        <img src={currItem.imgUrl} alt=""/>
         {/* <div className="item-desc">
           <div className="right-desc">
             <h1>{item.name}</h1>
@@ -55,6 +62,8 @@ class _ItemDetails extends Component {
         </div>
         <ItemReview itemId={this.props.match.params.itemId}/> */}
         <h1>item details</h1>
+        {/* <p>{item.title}</p>
+        <img src={item.imgUrl} alt=""/> */}
       </section>
     )
   }
@@ -62,13 +71,19 @@ class _ItemDetails extends Component {
 
 const mapStateToProps = state => {
   return {
-    // items: state.itemModule.items,
+
+    items: state.itemModule.items,
+    // filterBy: state.itemModule.filterBy,
     // loggedInUser: state.userModule.loggedInUser,
   }
 }
 
+
 const mapDispatchToProps = {
-  // removeItem,
+  loadItems,
+  //     // removeItem,
+  //     // setFilter,
+  //     // logout,
 }
 
 export const ItemDetails = connect(mapStateToProps, mapDispatchToProps)(_ItemDetails);

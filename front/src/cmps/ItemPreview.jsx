@@ -1,10 +1,12 @@
+import { Link } from 'react-router-dom'
 
 export function ItemPreview(props){
     const {item} = props;
     console.log(item)
-    return <div>
+    return <section className="card-hadar">
         <p>{item.title}</p>
         <img src={item.imgUrl} alt=""/>
-    </div>
+        <button><Link to={`/item/${item._id}`}>Details</Link></button>
+    </section>
 }
 

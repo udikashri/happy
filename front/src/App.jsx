@@ -7,6 +7,7 @@ import { Home } from './pages/Home'
 // import { UserDetails } from './pages/UserDetails'
 import { ShopApp } from './pages/ShopApp'
 import { ItemDetails } from './pages/ItemDetails'
+import '../src/assets/styles/main.scss'
 
 // import { Header } from './cmps/Header'
 
