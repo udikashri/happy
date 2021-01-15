@@ -19,23 +19,7 @@ class _ShopApp extends Component {
       await this.props.loadItems()
         console.log('Got from store:', this.props)
     }
-
-    // const items = await itemService.query();
-    // this.setState({items})
-        // this.props.loadItems(this.props.filterBy)
-        // TODO load socks items and save in state . //////////
-        // console.log(this.props.items);
-// console.log(itemService.query())
-
-        // query(){
-        //     return Promise.resolve(gItems)
-        // }
-
-    // onRemove = (itemId) => {
-    //     this.props.removeItem(itemId)
-
-    // }
-
+ 
     // onSetFilter = (filterBy) => {
     //     this.props.setFilter(filterBy)
     //     this.props.loadItems(filterBy)

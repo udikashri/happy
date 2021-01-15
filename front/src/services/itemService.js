@@ -5,6 +5,7 @@ import axios from 'axios'
 
 export const itemService = {
     query,
+    removeItem
 }
 
 const baseUrl = 'http://localhost:3030/items';
@@ -23,11 +24,12 @@ async function query() {
     return res.data;
 }
 
-
-// function deleteItem(itemId) {
-//     return axios.delete(`${baseUrl}/${itemId}`)
-//         .then(res => res.data)
-// }
+async function removeItem(itemId) {
+    const remove = await axios.delete(`${baseUrl}/${itemId}`)
+    return remove.data
+    // return axios.delete(`${baseUrl}/${itemId}`)
+    // .then(res => res.data)
+}
 // function toggleItem(item) {
 //     item.isDone = !item.isDone
 //     return save(item)

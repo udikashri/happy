@@ -28,8 +28,9 @@ export function saveItem(item){
 }
 
 export function removeItem(itemId) {
+    console.log('remove');
     return (dispatch) => {
-        return itemService.remove(itemId)
+        return itemService.removeItem(itemId)
         .then(items => {
             const action = {
                 type: 'REMOVE_ITEM',

@@ -1,7 +1,8 @@
 import { connect } from 'react-redux'
 import React, { Component } from 'react'
-import { itemService } from '../services/itemService.js'
-import { loadItems/*, removeItem, setFilter*/ } from '../store/actions/itemActions'
+// import { itemService } from '../services/itemService.js'
+import { loadItems, removeItem/*, setFilter*/ } from '../store/actions/itemActions'
+import { ItemEdit } from '../cmps/ItemEdit'
 // import { Link } from 'react-router-dom'
 // import { ItemReview } from './ItemReview'
 // import { removeItem } from '../store/actions/itemActions.js'
@@ -21,17 +22,16 @@ state = {
     const { itemId } = this.props.match.params
     const selectItem = this.props.items.filter(item => {
       return  +itemId === item._id })
-    console.log('dsd',...selectItem);
   this.setState({currItem:selectItem[0]})
     // const item = await itemService.getById(itemId)
     // this.setState({ item })
   }
 
-  //   onRemove = (itemId) => {
-  //     console.log(this.state.item);
-  //     this.props.removeItem(itemId)
-  //     this.props.history.push('/item')
-  //   }
+    onRemove = () => {
+      console.log('Curr',this.state.currItem);
+      this.props.removeItem(this.state.currItem._id)
+      this.props.history.push('/shop')
+    }
 
   render() {
     // const { item } = this.state;
@@ -43,6 +43,7 @@ console.log("currItem",currItem);
       <section className="item-details">
                 <p>{currItem.title}</p>
         <img src={currItem.imgUrl} alt=""/>
+        <button onClick={() => this.onRemove(currItem._id)} className="delete-btn">Delete</button>
         {/* <div className="item-desc">
           <div className="right-desc">
             <h1>{item.name}</h1>
@@ -64,6 +65,7 @@ console.log("currItem",currItem);
         <h1>item details</h1>
         {/* <p>{item.title}</p>
         <img src={item.imgUrl} alt=""/> */}
+        <ItemEdit item={this.state.currItem}/>
       </section>
     )
   }
@@ -81,7 +83,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = {
   loadItems,
-  //     // removeItem,
+ removeItem,
   //     // setFilter,
   //     // logout,
 }
