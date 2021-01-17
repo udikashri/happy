@@ -1,8 +1,29 @@
-.card-hadar{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px));
-    // width: 100%;
-    // height: 100%;
-    object-fit: cover;
-    background-color: whitesmoke;
+// .card-hadar {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(250px));
+//     object-fit: cover;
+//     background-color: whitesmoke;
+// }
+
+.card-main {
+    display: flex;
+    align-items: strech;
+    position: relative;
 }
+
+.card-root {
+    max-width: 345;
+}
+.card-media {
+    height: 0;
+    padding-top: 100%;
+}
+.card-avatar {
+    background-color: red;
+}
+.card-edit {
+    position: absolute;
+    bottom: 0;
+}
+
+
