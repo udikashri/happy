@@ -20,7 +20,7 @@ function query(filterBy = null) {
         url += '?';
         let params = new URLSearchParams(url.search);
         title && params.set('title_like', title);
-        type && params.set('type', type);
+        type !== 'all' && params.set('type', type);
         url += params.toString()
         console.log('url is:', url);
     }

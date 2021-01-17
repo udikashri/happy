@@ -6,7 +6,7 @@ export class ItemFilter extends Component {
     state = {
         filterBy: {
             title: '',
-            type: 'All',
+            type: 'all',
             // price: '',
         }
     }
@@ -37,7 +37,7 @@ export class ItemFilter extends Component {
                     value={filterBy.type}
                     onChange={this.handleChange}
                 >
-                    <option value="All">All</option>
+                    <option value="all">All</option>
                     <option value="socks">Socks</option>
                     <option value="masks">Masks</option>
                 </select>
