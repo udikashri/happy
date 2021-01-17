@@ -95,7 +95,7 @@
       "type": "socks",
       "title": "Red, White, and Blue Women's Socks - Made In America by K.Bell",
       "price": 12,
-      "color": "red,white",
+      "color": "red",
       "seller": {
         "_id": "hMtw5Ro8N",
         "name": "Lethia Josephoff",
@@ -131,7 +131,7 @@
       "type": "socks",
       "title": "Holy Sriracha Women's Socks by Oooh Yeah Socks",
       "price": 12,
-      "color": "black",
+      "color": "yellow",
       "seller": {
         "_id": "DQLJgZf",
         "name": "Yorgos Uden",
@@ -185,7 +185,7 @@
       "type": "socks",
       "title": "It’s a Feauture, Not a Bug Socks",
       "price": 12,
-      "color": "black",
+      "color": "white",
       "seller": {
         "_id": "SXfRuV6N",
         "name": "Vally Eades",
@@ -239,7 +239,7 @@
       "type": "socks",
       "title": "IT Crowd Socks",
       "price": 9,
-      "color": "blue",
+      "color": "green",
       "seller": {
         "_id": "niGHztDn0bI",
         "name": "Corrina Carbry",
@@ -275,7 +275,7 @@
       "type": "socks",
       "title": "Reboot II GREEN Socks",
       "price": 8,
-      "color": "white",
+      "color": "green",
       "seller": {
         "_id": "jnHsftFZ4oYL",
         "name": "Frieda Jewitt",
@@ -293,7 +293,7 @@
       "type": "socks",
       "title": "Programmer Wizard Socks",
       "price": 12,
-      "color": "black",
+      "color": "gray",
       "seller": {
         "_id": "kylH5sHOMs",
         "name": "Gearalt Morden",
@@ -491,7 +491,7 @@
       "type": "socks",
       "title": "Funny Python programmer Snake Cartoon Socks",
       "price": 12,
-      "color": null,
+      "color": "pink",
       "seller": {
         "_id": "y89kAIH",
         "name": "Leeland Mechell",
@@ -544,7 +544,7 @@
       "type": "socks",
       "title": "Trump Socks",
       "price": "11",
-      "color": "black",
+      "color": "blue",
       "seller": {
         "_id": "kwmXcp",
         "name": "Kaila Melonby",

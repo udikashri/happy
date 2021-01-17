@@ -7,6 +7,7 @@ export class ItemFilter extends Component {
         filterBy: {
             title: '',
             type: 'All',
+            color:''
             // price: '',
         }
     }
@@ -18,6 +19,12 @@ export class ItemFilter extends Component {
         const value = (target.type === 'number') ? +target.value : target.value
 
         this.setState(prevState => ({ filterBy: { ...prevState.filterBy, [field]: value } }), () => {
+            this.props.onSetFilter(this.state.filterBy)
+        })
+    }
+
+    handleChangeColor =(color) =>{
+        this.setState(prevState => ({ filterBy: { ...prevState.filterBy, color: color } }), () => {
             this.props.onSetFilter(this.state.filterBy)
         })
     }
@@ -43,14 +50,16 @@ export class ItemFilter extends Component {
                 </select>
                 <div className="color-container">
 
-                    <section className="red"></section>
-                    <section className="gray"></section>
-                    <section className="blue"></section>
-                    <section className="pink"></section>
-                    <section className="yellow"></section>
-                    <section className="black"></section>
-                    <section className="white"></section>
-                    <section className="green"></section>
+                    <section onClick={() => {this.handleChangeColor('red')}} className="red"></section>
+                    <section onClick={() => {this.handleChangeColor('gray')}} className="gray"></section>
+                    <section onClick={() => {this.handleChangeColor('blue')}} className="blue"></section>
+                    <section onClick={() => {this.handleChangeColor('pink')}} className="pink"></section>
+                    <section onClick={() => {this.handleChangeColor('yellow')}} className="yellow"></section>
+                    <section onClick={() => {this.handleChangeColor('black')}} className="black"></section>
+                    <section onClick={() => {this.handleChangeColor('white')}} className="white"></section>
+                    <section onClick={() => {this.handleChangeColor('green')}} className="green"></section>
+                    <section onClick={() => {this.handleChangeColor('purple')}} className="purple"></section>
+                    <section onClick={() => {this.handleChangeColor('brown')}} className="brown"></section>
 
 
                 </div>
