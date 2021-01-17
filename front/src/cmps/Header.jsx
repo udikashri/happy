@@ -5,12 +5,12 @@ import { connect } from 'react-redux'
 class _Header extends Component {
     render() {
         const {loggedInUser} = this.props;
-        return <header>
+        return <div><header>
+            <div className="logo"><NavLink exact to="/">🧦Happy Faces</NavLink></div>
             <nav>
-                <NavLink exact to="/"><span role="img" aria-label="logo">🙏</span></NavLink>
+                <NavLink exact to="/">Home</NavLink>
+                <NavLink to="/shop">Explore</NavLink>
                 <NavLink to="/login">Login</NavLink>
-                <NavLink exact to="/">User Reviews</NavLink>
-                <NavLink to="/chat">Chat Room</NavLink>
             </nav>
             {loggedInUser && <span className="loggedin-user">
 
@@ -21,6 +21,8 @@ class _Header extends Component {
                 <span>{loggedInUser.score || 0}</span>
             </span>}
         </header>
+
+        </div>
     }
 
 }

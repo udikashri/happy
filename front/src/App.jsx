@@ -9,14 +9,14 @@ import { ShopApp } from './pages/ShopApp'
 import { ItemDetails } from './pages/ItemDetails'
 import '../src/assets/styles/main.scss'
 
-// import { Header } from './cmps/Header'
+import { Header } from './cmps/Header'
 
 
 export function App() {
   return (
     <div className="app">
       <Router>
-        {/* <Header></Header> */}
+        <Header></Header>
         <main>
           <Switch>
             {/* <Route path="/user/:id" component={UserDetails} /> */}
