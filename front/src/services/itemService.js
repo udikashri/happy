@@ -13,6 +13,7 @@ export const itemService = {
 const baseUrl = 'http://localhost:3030/items';
 
 function query(filterBy = null) {
+    console.log('query');
     let url = '';
     if (filterBy) {
         const { title, type, color } = filterBy
@@ -22,15 +23,13 @@ function query(filterBy = null) {
         color && params.set('color', color);
         title && params.set('title_like', title);
         type !== 'all' && params.set('type', type);
-        url += params.toString()
-        console.log('url is:', url);
+        url += params.toString()   
     }
-    return axios.get(`${baseUrl}${url}`)
-        .then(res => {
-            return res.data
-
-        })
-        .catch(() => console.log('nooooo'))
+         return axios.get(`${baseUrl}${url}`)
+            .then(res => {
+                return res.data
+            })
+            .catch(() => console.log('nooooo'))
 }
 
 

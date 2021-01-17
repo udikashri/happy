@@ -6,12 +6,8 @@ export class ItemFilter extends Component {
     state = {
         filterBy: {
             title: '',
-<<<<<<< HEAD
             type: 'all',
-=======
-            type: 'All',
             color:''
->>>>>>> 1559208ae6d9c000508fddae2b875bd4680bf2c6
             // price: '',
         }
     }
