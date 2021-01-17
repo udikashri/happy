@@ -1,27 +1,12 @@
 import { itemService } from '../../services/itemService'
 
-
-// export function loadItems(filterBy) { // Action Creator
-//     return async (dispatch) => {
-//         const items = await itemService.query(filterBy)
-//                 const action = {
-//                     type: 'SET_ITEMS',
-//                     items,
-//                     filterBy
-//                 }
-//                 dispatch(action)
-          
-//     }
-// }
-
-export function loadItems(filterBy) { // Action Creator
+export function loadItems(filterBy) { 
     return (dispatch) => {
         return itemService.query(filterBy)
             .then(items => {
                 const action = {
                     type: 'SET_ITEMS',
                     items,
-                    // filterBy
                 }
                 dispatch(action)
             })
@@ -65,7 +50,6 @@ export function removeItem(itemId) {
 export function setFilter(filterBy) {
     console.log('filterBy is:',filterBy);
     return (dispatch) => {
-        // return itemService.rItem(itemId)
         const action = {
             type: 'FILTER',
             filterBy

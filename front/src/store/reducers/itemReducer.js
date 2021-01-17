@@ -10,7 +10,7 @@ const initialState = {
 export function itemReducer(state = initialState, action) {
   switch (action.type) {
     case 'SET_ITEMS':
-      return { ...state, items: action.items/*, filterBy: action.filterBy*/ }
+      return { ...state, items: action.items}
     //   case 'SET_SELECT_ITEM':
     //       return {...state, selectItem: items.filter(item => {return item.id === action.itemId})}
     case 'ADD_ITEM':
@@ -26,9 +26,11 @@ export function itemReducer(state = initialState, action) {
     case 'REMOVE_ITEM':
       return { ...state, items: state.items.filter(item => item._id !== action.itemId) }
     case 'FILTER':
-      const y = { ...state, filterBy: action.filterBy }
-      return y
+      const x = { ...state, filterBy: action.filterBy }
+      console.log(x);
+      return x
     default:
+      console.log('default');
       return state
   }
 }

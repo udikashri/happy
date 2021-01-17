@@ -6,13 +6,14 @@ export class ItemFilter extends Component {
     state = {
         filterBy: {
             title: '',
-            type: 'socks',
+            type: 'All',
             // price: '',
         }
     }
 
 
     handleChange = ({ target }) => {
+        console.log(target);
         const field = target.name
         const value = (target.type === 'number') ? +target.value : target.value
 
@@ -29,17 +30,17 @@ export class ItemFilter extends Component {
                 {/* <input type="number" name="lowPrice" value={filterBy.lowPrice} onChange={this.handleChange} placeholder="low price" />
                 <input type="number" name="highPrice" value={filterBy.highPrice} onChange={this.handleChange} placeholder="high price" />
                 <input id="demo-simple-select-label">Item Type</input> */}
-            {/* <select
-                    labelId="demo-simple-select-label"
+            <select
+                    // labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     name="type"
                     value={filterBy.type}
                     onChange={this.handleChange}
                 >
-                    <option selected value="">All</option>
+                    <option value="All">All</option>
                     <option value="socks">Socks</option>
                     <option value="masks">Masks</option>
-                </select> */}
+                </select>
             </section>
         )
     }

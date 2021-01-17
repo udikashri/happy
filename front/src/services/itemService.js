@@ -12,36 +12,20 @@ export const itemService = {
 
 const baseUrl = 'http://localhost:3030/items';
 
-// function query() {
-    
-//     console.log('sadsa');
-//     return axios.get(baseUrl)
-//         .then(res => res.data)
-//         .then(items =>{return items})
-// }
-
-// async function query(filterBy) {
-//     console.log('filterBy',filterBy);
-//     const res = await axios.get(baseUrl,{ params: filterBy })
-//     console.log('sent',baseUrl,{ params: filterBy });
-//     return res.data;
-// }
-
-
 function query(filterBy = null) {
     let url = '';
     if (filterBy) {
         const { title, type } = filterBy
+        console.log(type);
         url += '?';
         let params = new URLSearchParams(url.search);
         title && params.set('title_like', title);
-        // type !== 'All' && params.set('type', type);
+        type && params.set('type', type);
         url += params.toString()
-        console.log('url is:',url);
+        console.log('url is:', url);
     }
     return axios.get(`${baseUrl}${url}`)
         .then(res => {
-            // console.log("query , res.data", res.data)
             return res.data
 
         })

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { ItemAdd } from '../cmps/ItemAdd';
+import { ItemEdit } from '../cmps/ItemEdit';
 import { ItemFilter } from '../cmps/ItemFilter';
 import { ItemList } from '../cmps/ItemList';
 import { loadItems, setFilter,saveItem} from '../store/actions/itemActions'
@@ -28,7 +28,7 @@ class _ShopApp extends Component {
             <section className="shop-container">
                 <h1>shop app</h1>
                 <ItemFilter onSetFilter={this.onSetFilter}/>
-                <ItemAdd onSaveItem={this.onSaveItem} />
+                <ItemEdit onSaveItem={this.onSaveItem} />
                 <ItemList items={this.props.items} />
             </section>
         )

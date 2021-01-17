@@ -542,8 +542,8 @@
     },
     {
       "type": "socks",
-      "title": "dsdss",
-      "price": "123",
+      "title": "Trump Socks",
+      "price": "11",
       "color": "black",
       "seller": {
         "_id": "kwmXcp",
@@ -551,30 +551,12 @@
         "imgUrl": "http://dummyimage.com/129x121.jpg/cc0000/ffffff"
       },
       "description": "moratorium",
-      "imgUrl": "https://ih1.redbubble.net/image.951124242.1192/ur,socks_flatlay_medium,square,600x600-bg,f8f8f8.1.jpg",
+      "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610883642/e5bytalqxuctwvzwhrlh.jpg",
       "tags": [
         "one",
         "tow"
       ],
-      "_id": 33
-    },
-    {
-      "type": "socks",
-      "title": "sadsasad",
-      "price": "123",
-      "color": "black",
-      "seller": {
-        "_id": "kwmXcp",
-        "name": "Kaila Melonby",
-        "imgUrl": "http://dummyimage.com/129x121.jpg/cc0000/ffffff"
-      },
-      "description": "moratorium",
-      "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610825699/g3gxzrq5gnxik4tjg5pg.jpg",
-      "tags": [
-        "one",
-        "tow"
-      ],
-      "_id": 34
+      "_id": 43
     }
   ],
   "orders": [
