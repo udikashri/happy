@@ -20,13 +20,39 @@ const baseUrl = 'http://localhost:3030/items';
 //         .then(items =>{return items})
 // }
 
-async function query(filterBy) {
-    console.log(filterBy);
-    console.log('ping');
-    const res = await axios.get(baseUrl,{ params: filterBy })
-    console.log(res);
-    return res.data;
+// async function query(filterBy) {
+//     console.log('filterBy',filterBy);
+//     const res = await axios.get(baseUrl,{ params: filterBy })
+//     console.log('sent',baseUrl,{ params: filterBy });
+//     return res.data;
+// }
+
+
+function query(filterBy = null) {
+    let url = '';
+    if (filterBy) {
+        const { title, type } = filterBy
+        url += '?';
+        let params = new URLSearchParams(url.search);
+        title && params.set('title_like', title);
+        // type !== 'All' && params.set('type', type);
+        url += params.toString()
+        console.log('url is:',url);
+    }
+    return axios.get(`${baseUrl}${url}`)
+        .then(res => {
+            // console.log("query , res.data", res.data)
+            return res.data
+
+        })
+        .catch(() => console.log('nooooo'))
 }
+
+
+
+
+
+
 
 async function removeItem(itemId) {
     const remove = await axios.delete(`${baseUrl}/${itemId}`)

@@ -13,7 +13,6 @@ class _ShopApp extends Component {
     }
  
     onSetFilter = (filterBy) => {
-        console.log(filterBy);
         this.props.setFilter(filterBy)
         this.props.loadItems(filterBy)
     }

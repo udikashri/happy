@@ -63,6 +63,7 @@ export function removeItem(itemId) {
 }
 
 export function setFilter(filterBy) {
+    console.log('filterBy is:',filterBy);
     return (dispatch) => {
         // return itemService.rItem(itemId)
         const action = {

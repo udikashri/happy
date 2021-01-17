@@ -26,12 +26,7 @@ export function itemReducer(state = initialState, action) {
     case 'REMOVE_ITEM':
       return { ...state, items: state.items.filter(item => item._id !== action.itemId) }
     case 'FILTER':
-      // console.log('filter reducer',action.filterBy);
-      // const x = { ...state, filterBy: {...state.filterBy,title:action.filterBy.title}}
-      
       const y = { ...state, filterBy: action.filterBy }
-      console.log('y',y);
-      // console.log('filter state',state.filterBy);
       return y
     default:
       return state
