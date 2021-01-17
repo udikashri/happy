@@ -15,10 +15,11 @@ const baseUrl = 'http://localhost:3030/items';
 function query(filterBy = null) {
     let url = '';
     if (filterBy) {
-        const { title, type } = filterBy
+        const { title, type, color } = filterBy
         console.log(type);
         url += '?';
         let params = new URLSearchParams(url.search);
+        color && params.set('color', color);
         title && params.set('title_like', title);
         type !== 'all' && params.set('type', type);
         url += params.toString()

@@ -1,15 +1,16 @@
 @mixin circle {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
     margin: 3px;
     cursor: pointer;
 }
 
 .color-container {
+    margin-top: 10px;
     grid-area: filter;
     display: grid;
-    grid-template-columns: repeat(4,20px);
+    grid-template-columns: repeat(4, 25px);
     grid-gap: 6px;
     .red {
         background-color: red;
@@ -22,21 +23,33 @@
     .blue {
         background-color: blue;
         @include circle();
-    }    .pink {
+    }
+    .pink {
         background-color: hotpink;
         @include circle();
-    }    .yellow {
+    }
+    .yellow {
         background-color: yellow;
         @include circle();
-    }    .black {
+    }
+    .black {
         background-color: black;
         @include circle();
-    }    .white {
-        background-color: rgb(223, 209, 209);
+    }
+    .white {
+        background-color:whitesmoke;
         @include circle();
-    }      .green {
+    }
+    .green {
         background-color: greenyellow;
         @include circle();
-    }  
-
+    }
+    .purple {
+        background-color: purple;
+        @include circle();
+    }
+    .brown {
+        background-color: rgb(116, 76, 24);
+        @include circle();
+    }
 }
