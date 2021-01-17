@@ -30,7 +30,7 @@ export class ItemFilter extends Component {
                 {/* <input type="number" name="lowPrice" value={filterBy.lowPrice} onChange={this.handleChange} placeholder="low price" />
                 <input type="number" name="highPrice" value={filterBy.highPrice} onChange={this.handleChange} placeholder="high price" />
                 <input id="demo-simple-select-label">Item Type</input> */}
-            <select
+                <select
                     // labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     name="type"
@@ -41,6 +41,19 @@ export class ItemFilter extends Component {
                     <option value="socks">Socks</option>
                     <option value="masks">Masks</option>
                 </select>
+                <div className="color-container">
+
+                    <section className="red"></section>
+                    <section className="gray"></section>
+                    <section className="blue"></section>
+                    <section className="pink"></section>
+                    <section className="yellow"></section>
+                    <section className="black"></section>
+                    <section className="white"></section>
+                    <section className="green"></section>
+
+
+                </div>
             </section>
         )
     }

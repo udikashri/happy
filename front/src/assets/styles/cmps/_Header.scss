@@ -1,32 +1,54 @@
 header {
-    background-color: $clr5;
-    padding: 10px;
+    background-color: $clr1;
+    // padding: 10px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-
+    height: 80px;
     .loggedin-user {
         background-color: $clr1;
         padding: 2px 8px;
         border-radius: 1em;
         align-self: flex-end;
         color: whitesmoke;
-        span{
+        span {
             background-color: $clr2;
             padding: 4px;
             margin: 10px;
             border-radius: 50%;
         }
     }
+
 }
 nav {
-    background-color: $clr4;
-    padding: 5px 0;
+    margin-right: 50px;
+    padding: 0;
+    height: inherit;
+    display: flex;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        border-right: 1px solid black;
+
+        &:first-child {
+            border-left: 1px solid black;
+        }
+    }
 }
-nav a:not(:first-child) {
-    border-top: 1px solid $clr1;
-    padding: 0 5px;
-    margin: 10px;
-}
+
 nav .active {
-    color: $clr1;
+    color: black;
+}
+
+.logo a{
+    margin-left: 30px;
+    font-size: 2rem;
+    color: rgb(13, 61, 80);
+
+    &:hover{
+        text-decoration: none;
+    }
 }
