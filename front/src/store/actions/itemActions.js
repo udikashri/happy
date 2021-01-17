@@ -1,16 +1,30 @@
 import { itemService } from '../../services/itemService'
 
 
-export function loadItems() { // Action Creator
-    return async (dispatch) => {
-        const items = await itemService.query()
+// export function loadItems(filterBy) { // Action Creator
+//     return async (dispatch) => {
+//         const items = await itemService.query(filterBy)
+//                 const action = {
+//                     type: 'SET_ITEMS',
+//                     items,
+//                     filterBy
+//                 }
+//                 dispatch(action)
+          
+//     }
+// }
+
+export function loadItems(filterBy) { // Action Creator
+    return (dispatch) => {
+        return itemService.query(filterBy)
+            .then(items => {
                 const action = {
                     type: 'SET_ITEMS',
                     items,
                     // filterBy
                 }
                 dispatch(action)
-          
+            })
     }
 }
 

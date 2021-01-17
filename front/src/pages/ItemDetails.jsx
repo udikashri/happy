@@ -9,7 +9,7 @@ import { ItemEdit } from '../cmps/ItemEdit'
 
 class _ItemDetails extends Component {
   state = {
-    currItem: null
+    currItem: {title:'',imgUrl:'',price:0,_id:''}
   }
   async componentDidMount() {
     await this.props.loadItems()
@@ -41,7 +41,7 @@ class _ItemDetails extends Component {
     // const { item } = this.state;
     // const { loggedInUser } = this.props
     const { currItem } = this.state
-    if (!currItem) return <h1>Loading...</h1>
+    // if (!currItem) return <h1>Loading...</h1>
     return (
       <section className="item-details">
         <p>{currItem.title}</p>

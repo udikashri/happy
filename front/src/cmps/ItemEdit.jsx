@@ -1,16 +1,22 @@
 import { connect } from 'react-redux'
 import React, { Component } from 'react'
-import { saveItem,editItem } from '../store/actions/itemActions.js'
+import { saveItem, editItem } from '../store/actions/itemActions.js'
 
 export class _ItemEdit extends Component {
 
   state = {
-    currItem: null
+    currItem: {
+      title: '',
+      price: ''
+    }
   }
 
-   async componentDidMount() {
-    const {currItem}  = this.props
-    this.setState({currItem})
+  async componentDidUpdate(prevProps) {
+    if (prevProps.currItem !== this.props.currItem) {
+      const { currItem } = this.props
+      console.log(await currItem);
+      this.setState({ currItem })
+    }
   }
 
   handleInput = ({ target }) => {
@@ -27,13 +33,14 @@ export class _ItemEdit extends Component {
 
   render() {
     const { currItem } = this.state;
-    if (!currItem) return <h1>Loading.....</h1> 
+
+    if (!currItem) return <h1>Loading.....</h1>
     return (
       <section className="edit-box">
-        <form onSubmit={(event)=>{this.props.onSaveItem(event,currItem)}}>
-        <input autoFocus type="text" value={currItem.title} onChange={this.handleInput} name="title" />
-        <label >Price: <input type="number" name="price" value={currItem.price} onChange={this.handleInput} /></label>
-        <button>Save</button>
+        <form onSubmit={(event) => { this.props.onSaveItem(event, currItem) }}>
+          <input autoFocus type="text" value={currItem.title} onChange={this.handleInput} name="title" />
+          <label >Price: <input type="number" name="price" value={currItem.price} onChange={this.handleInput} /></label>
+          <button>Save</button>
         </form>
       </section>
     )

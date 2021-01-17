@@ -21,6 +21,8 @@ const baseUrl = 'http://localhost:3030/items';
 // }
 
 async function query(filterBy) {
+    console.log(filterBy);
+    console.log('ping');
     const res = await axios.get(baseUrl,{ params: filterBy })
     console.log(res);
     return res.data;
