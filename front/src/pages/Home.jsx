@@ -3,9 +3,10 @@ import React, { Component } from 'react'
 export  class Home extends Component {
   state={}
   render() {
+console.log('🧦Happy Faces');
     return (
       <div>
-        <h1>hello word</h1>
+        <h1>🧦Happy Faces</h1>
       </div>
     )
   }

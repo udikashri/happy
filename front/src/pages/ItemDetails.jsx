@@ -1,71 +1,54 @@
 import { connect } from 'react-redux'
 import React, { Component } from 'react'
 // import { itemService } from '../services/itemService.js'
-import { loadItems, removeItem/*, setFilter*/ } from '../store/actions/itemActions'
+import { loadItems, removeItem, saveItem/*, setFilter*/ } from '../store/actions/itemActions'
 import { ItemEdit } from '../cmps/ItemEdit'
 // import { Link } from 'react-router-dom'
 // import { ItemReview } from './ItemReview'
 // import { removeItem } from '../store/actions/itemActions.js'
 
 class _ItemDetails extends Component {
-state = {
-  currItem:{}
-}
+  state = {
+    currItem: null
+  }
   async componentDidMount() {
-
     await this.props.loadItems()
-    console.log('Got from store:', this.props)
     this.loadItem()
   }
 
   loadItem = () => {
     const { itemId } = this.props.match.params
     const selectItem = this.props.items.filter(item => {
-      return  +itemId === item._id })
-  this.setState({currItem:selectItem[0]})
-    // const item = await itemService.getById(itemId)
-    // this.setState({ item })
+      return +itemId === item._id
+    })
+    this.setState({ currItem: selectItem[0] })
   }
 
-    onRemove = () => {
-      console.log('Curr',this.state.currItem);
-      this.props.removeItem(this.state.currItem._id)
-      this.props.history.push('/shop')
-    }
+  onSaveItem = (ev,newItem) => {
+    ev.preventDefault()
+    this.props.saveItem(newItem)
+    this.setState({currItem:newItem})
+    this.props.history.push('/shop')
+  }
+ 
+
+  onRemove = () => {
+    this.props.removeItem(this.state.currItem._id)
+    this.props.history.push('/shop')
+  }
 
   render() {
     // const { item } = this.state;
     // const { loggedInUser } = this.props
-const { currItem} = this.state
-console.log("currItem",currItem);
-    // if (!item) return <h1>Loading...</h1>
+    const { currItem } = this.state
+    if (!currItem) return <h1>Loading...</h1>
     return (
       <section className="item-details">
-                <p>{currItem.title}</p>
-        <img src={currItem.imgUrl} alt=""/>
+        <p>{currItem.title}</p>
+        <img src={currItem.imgUrl} alt="" />
         <button onClick={() => this.onRemove(currItem._id)} className="delete-btn">Delete</button>
-        {/* <div className="item-desc">
-          <div className="right-desc">
-            <h1>{item.name}</h1>
-            <img src={ item.imgUrl? item.imgUrl : `https://robohash.org/${item._id}?set=set3`} />
-          </div>
-          <div className="left-desc">
-            <h4>Price: ${item.price}</h4>
-            <h5>Item type: {item.type}</h5>
-            <h4>Description: </h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis blanditiis dolores explicabo ut eligendi non omnis molestiae voluptatem, officia ipsa vero magni pariatur quibusdam exercitationem nam nesciunt aliquam assumenda ullam?</p>
-            <p>{item.inStock ? 'In Stock' : 'Out of Stock'}</p>
-          </div>
-        </div>
-        <div className="details-btn">
-          {loggedInUser.isAdmin && <button onClick={() => this.onRemove(item._id)} className="delete-btn">Delete</button>}
-          {loggedInUser.isAdmin && <button className="edit-btn"><Link to={`/item/edit/${item._id}`}>Edit</Link></button>}
-        </div>
-        <ItemReview itemId={this.props.match.params.itemId}/> */}
         <h1>item details</h1>
-        {/* <p>{item.title}</p>
-        <img src={item.imgUrl} alt=""/> */}
-        <ItemEdit item={this.state.currItem}/>
+        <ItemEdit currItem={currItem} onSaveItem={this.onSaveItem} />
       </section>
     )
   }
@@ -83,7 +66,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = {
   loadItems,
- removeItem,
+  removeItem,
+  saveItem
   //     // setFilter,
   //     // logout,
 }

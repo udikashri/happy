@@ -3,7 +3,7 @@
 const initialState = {
     // selectItem = {},
   items: [],
-  filterBy: {name: '', type: '', lowPrice: 1, highPrice: 1000}
+  filterBy: {title: '', type: '', lowPrice: 1, highPrice: 1000}
 }
 
 export function itemReducer(state = initialState, action) {
@@ -17,14 +17,16 @@ export function itemReducer(state = initialState, action) {
     case 'SAVE_ITEM':
       return {
         ...state, items: state.items.map(item => {
-          if (item._id === action.item._id) return action.item
+          if (item._id === action.item._id) {
+            return action.item}
           else return item
         })
       }
     case 'REMOVE_ITEM':
-      console.log('reducer');
       return { ...state, items: state.items.filter(item => item._id !== action.itemId) }
     case 'FILTER':
+      // console.log('filter reducer',action);
+      // console.log('filter state',state);
       return { ...state, filterBy: action.filterBy }
     default:
       return state

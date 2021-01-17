@@ -16,7 +16,7 @@ export function loadItems() { // Action Creator
 
 export function saveItem(item){
     return (dispatch) => {
-        return itemService.save(item)
+        return itemService.saveItem(item)
             .then(saveItem => {
                 const action = {
                     type: (item._id) ? 'SAVE_ITEM' : 'ADD_ITEM',
@@ -24,6 +24,13 @@ export function saveItem(item){
                   }
                 dispatch(action)
             })
+    }
+}
+
+export function editItem(item) {
+    console.log('hello');
+    return (dispatch) => {
+        itemService.editItem(item).then(() => { dispatch({ type: 'EDIT_ITEM', item }) })
     }
 }
 
@@ -43,6 +50,7 @@ export function removeItem(itemId) {
 
 export function setFilter(filterBy) {
     return (dispatch) => {
+        // return itemService.rItem(itemId)
         const action = {
             type: 'FILTER',
             filterBy

@@ -5,7 +5,9 @@ import axios from 'axios'
 
 export const itemService = {
     query,
-    removeItem
+    removeItem,
+    saveItem,
+    editItem
 }
 
 const baseUrl = 'http://localhost:3030/items';
@@ -18,8 +20,8 @@ const baseUrl = 'http://localhost:3030/items';
 //         .then(items =>{return items})
 // }
 
-async function query() {
-    const res = await axios.get(baseUrl)
+async function query(filterBy) {
+    const res = await axios.get(baseUrl,{ params: filterBy })
     console.log(res);
     return res.data;
 }
@@ -34,14 +36,21 @@ async function removeItem(itemId) {
 //     item.isDone = !item.isDone
 //     return save(item)
 // }
-// function save(itemToSave) {
-//     if (itemToSave._id) {
-//         // UPDATE
-//         return axios.put(`${baseUrl}/${itemToSave._id}`, itemToSave)
-//             .then(res => res.data)
-//     } else {
-//         // CREATE
-//         return axios.post(baseUrl, itemToSave)
-//             .then(res => res.data)
-//     }
-// }
+function saveItem(itemToSave) {
+    if (itemToSave._id) {
+        console.log('service');
+        // UPDATE
+        return axios.put(`${baseUrl}/${itemToSave._id}`, itemToSave)
+            .then(res => res.data)
+    } else {
+        // CREATE
+        return axios.post(baseUrl, itemToSave)
+            .then(res => res.data)
+    }
+}
+
+function editItem(item) {
+    console.log('hi');
+    return axios.put(`${baseUrl}/${item._id}`, item)
+        .then(res => res.data)
+}

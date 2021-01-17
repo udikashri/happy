@@ -1,50 +1,36 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { ItemAdd } from '../cmps/ItemAdd';
+import { ItemFilter } from '../cmps/ItemFilter';
 import { ItemList } from '../cmps/ItemList';
-import { loadItems/*, removeItem, setFilter*/ } from '../store/actions/itemActions'
-// import { ItemFilter } from '../cmps/ItemFilter';
-// import { ItemFilter } from '../cmps/ItemFilter'
-// import { Link } from 'react-router-dom'
-// import { logout } from '../store/actions/userActions'
-// import {itemService} from '../services/itemService.js'
-
-
+import { loadItems, setFilter,saveItem} from '../store/actions/itemActions'
 
 class _ShopApp extends Component {
-    // state = {
-    //     items: []
-    // }
-
-   async componentDidMount() {
-      await this.props.loadItems()
+   
+    componentDidMount() {
+      this.props.loadItems(this.props.filterBy)
         console.log('Got from store:', this.props)
     }
  
-    // onSetFilter = (filterBy) => {
-    //     this.props.setFilter(filterBy)
-    //     this.props.loadItems(filterBy)
+    onSetFilter = (filterBy) => {
+        console.log(filterBy);
+        this.props.setFilter(filterBy)
+        this.props.loadItems(filterBy)
+    }
 
-    // }
-
-    // doLogout = async () => {
-    //     await this.props.logout()
-    //     this.setState({ loggedInUser: null }, () => this.props.history.push('/'))
-    // }
+    onSaveItem = (ev,newItem) => {
+        ev.preventDefault()
+        this.props.saveItem(newItem)
+        this.setState({currItem:newItem})
+      }
 
     render() {
-        // const { items} = this.props
-        // console.log('logged in user', loggedInUser);
-        // const login = <p>Please Login</p>
-       
         return (
             <section className="shop-container">
                 <h1>shop app</h1>
+                <ItemFilter onSetFilter={this.onSetFilter}/>
+                <ItemAdd onSaveItem={this.onSaveItem} />
                 <ItemList items={this.props.items} />
-                {/* <ItemFilter/> */}
-                {/* {loggedInUser.username && <button className="logout-btn" onClick={this.doLogout}>Logout</button>}
-                <ItemFilter onSetFilter={this.onSetFilter} />
-                {loggedInUser.isAdmin && <button className="add-item-btn"><Link to={`/item/add`}>Add New Item</Link></button>}
-                <ItemsList items={items} onRemove={this.onRemove} loggedInUser={loggedInUser} /> */}
             </section>
         )
     }
@@ -54,20 +40,15 @@ const mapStateToProps = state => {
     return {
 
         items: state.itemModule.items,
-        // filterBy: state.itemModule.filterBy,
-        // loggedInUser: state.userModule.loggedInUser,
+        filterBy: state.itemModule.filterBy,
     }
 }
 
 const mapDispatchToProps = {
     loadItems,
-//     // removeItem,
-//     // setFilter,
-//     // logout,
+    setFilter,
+    saveItem
+
 }
 
-
-
 export const ShopApp = connect(mapStateToProps, mapDispatchToProps)(_ShopApp);
-
-// //(!loggedInUser.username)? login :
