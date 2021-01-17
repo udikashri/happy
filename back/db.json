@@ -665,27 +665,6 @@
         "Secured",
         "tow"
       ]
-<<<<<<< HEAD
-=======
-    },
-    {
-      "type": "socks",
-      "title": "hadar",
-      "price": "3",
-      "color": "black",
-      "seller": {
-        "_id": "kwmXcp",
-        "name": "Kaila Melonby",
-        "imgUrl": "http://dummyimage.com/129x121.jpg/cc0000/ffffff"
-      },
-      "description": "moratorium",
-      "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610897985/ghxh7xyvguhoydybt8i2.jpg",
-      "tags": [
-        "one",
-        "tow"
-      ],
-      "_id": 50
->>>>>>> 165a511c02cc9173a0143beded305b2451182109
     }
   ],
   "orders": [
