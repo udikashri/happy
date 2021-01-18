@@ -4,38 +4,36 @@
       "color": "brown",
       "description": "OK, genius. Can you figure out what these funny men's socks mean? They feature a donkey graduate wearing a mortarboard and glasses. That's right ... it's a concept you're really familiar with. It's a smart ass! These hilariously irreverent socks are just right for the man who always has some kind of comeback ready. They're also a perfect gift for graduation!",
       "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/socksmith_mens_smart_ass_crew_socks_230x.jpg?v=1593129038",
-      "price": "20",
+      "price": "10",
       "seller": {
         "_id": "dhoSPowvM",
-        "name": "Alexine Heinzel",
-        "imgUrl": "http://dummyimage.com/136x200.png/cc0000/ffffff"
+        "fullname": "Zack Jordan",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/15_pj1iel.jpg"
       },
       "tags": [
-        "one",
-        "tow"
+        "animal"
       ],
-      "details": "",
+      "details": "Contents: 70% Cotton, 27% Nylon, 3% Spandex",
       "title": "Smart Ass Socks",
       "type": "socks",
-      "_id": 1
+      "likes": "7"
     },
     {
-      "color": "brown",
-      "description": "OK, genius. Can you figure out what these funny men's socks mean? They feature a donkey graduate wearing a mortarboard and glasses. That's right ... it's a concept you're really familiar with. It's a smart ass! These hilariously irreverent socks are just right for the man who always has some kind of comeback ready. They're also a perfect gift for graduation!",
-      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/socksmith_mens_smart_ass_crew_socks_230x.jpg?v=1593129038",
-      "price": "20",
+      "color": "blue",
+      "description": "Don't get too much fur in your concoction! And make sure your safety goggles fit OK over your ears! These funny dog socks feature a bunch of â€œscience Labs,â€ aka Labrador retrievers in white coats who are doing chemistry experiments. A great choice for dog lovers, these geeky, punny socks will have your tail wagging!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/socksmith_mens_science_lab_blue_crew_socks_230x.jpg?v=1593207493",
+      "price": "11",
       "seller": {
         "_id": "dhoSPowvM",
         "name": "Alexine Heinzel",
         "imgUrl": "http://dummyimage.com/136x200.png/cc0000/ffffff"
       },
       "tags": [
-        "one",
-        "tow"
+        "animal"
       ],
-      "title": "Smart Ass Socks",
+      "title": "Science Lab Socks",
       "type": "socks",
-      "_id": 1
+      "likes":"4"
     }
   ],
   "orders": [

@@ -16,22 +16,6 @@ const baseUrl = 'http://localhost:3030/api/item';
 function query(filterBy = null) {
     console.log('query');
     let url = '';
-<<<<<<< HEAD
-    if (filterBy) {
-        const { title, type, color , lowPrice , highPrice  } = filterBy
-        console.log(lowPrice);
-        url += '?';
-        let params = new URLSearchParams(url.search);
-        color !== 'clear' && params.set('color', color);
-        title && params.set('title_like', title);
-        type !== 'all' && params.set('type', type);
-        lowPrice && params.set('price__gte', lowPrice);
-        // highPrice !== 'all' && params.set('type', highPrice);
-        url += params.toString() 
-        console.log(url);  
-    }
-         return axios.get(`${baseUrl}${url}`)
-=======
     // if (filterBy) {
     //     const { title, type, color } = filterBy
     //     console.log(type);
@@ -44,7 +28,6 @@ function query(filterBy = null) {
     // }
         //  return axios.get(`${baseUrl}${url}`)
          return axios.get(`${baseUrl}`)
->>>>>>> fb7119ca63ce4316099ed8e8e420e49e4bfb59c8
             .then(res => {
                 return res.data
             })
