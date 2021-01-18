@@ -8,7 +8,7 @@ const router = express.Router()
 // router.use(requireAuth)
 
 router.get('/', log, getItems)
-router.post('/',  addItem) //requireAuth
+router.post('/', addItem) //requireAuth
 router.delete('/:id', deleteItem)
 
 module.exports = router

@@ -8,42 +8,82 @@
 
 .hero-image {
     background-image: 
-    // linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
     //     // url(../../../assets/img/Home/heppy-home.jpeg);
         url(../../../assets/img/Home/pexels-photo-1684187.jpeg);
-        height: 90vh;
-        margin-bottom: 8px;
-        background-position: 50%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        z-index : 0;
+    height: 90vh;
+    margin-bottom: 8px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
 
 }
 
+.card-media{
+    &:hover {
+	transform: scale(1.2);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+}
 .home-collection-list {
-    width: 100%;
-    background: yellow;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    background: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 900px;
 }
 
 .collection-card {
-    width:95%;
-    background:brown;
-    margin: 5px 5px;
-    
+    background-position: 50%;
+    padding: 40px 0 0 40px;
+
+    &:first-child {
+        grid-column: 1/3;
+    }
+}
+.preview-image {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: 50%;
+    &:hover {
+        transform: scale(1.2);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+    }
+
+
+.img-1 {
+    color: whitesmoke;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+        url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990427/atmosphere/header_yhs6xr.jpg);
+       
+    }
+.img-2 {
+    background-image: url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_happy_nhag3k.jpg);
+    color: whitesmoke;
+}
+.img-3 {
+    background-image: url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_pink_tklalh.jpg);
+
+    color: whitesmoke;
+}
+.img-4 {
+    background-image: url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990432/atmosphere/socks_face-removebg-preview_u5mgyo.png);
+    color: whitesmoke;
+}
+.img-5 {
+    background-image: url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990429/atmosphere/pexels-photo-1437149_rf8m7o.jpg);
+    color: whitesmoke;
 }
 
-.collection-card .img-1 {
-grid-column: 1/3;
-}
 
 .item-cards {
-    width:100%;
-    background:blue;
+    width: 100%;
+    background: blue;
     gap: 20px;
     padding-left: 15px;
-    
 }

@@ -5,6 +5,8 @@ import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
@@ -22,36 +24,37 @@ export class Home extends Component {
         <section className="app main-container">
           <div className="home">
             <section className="home-collection-list">
-              <div class="collection-card">
-                <div class="preview-image img-1">
+              <div className="collection-card img-1">
+                <div className="preview-image ">
                   <h3>Fun</h3>
                   <h4>Masks</h4>
                 </div>
               </div>
-              <div class="collection-card">
-                <div class="preview-image img-2">
+              <div className="collection-card">
+                <div className="preview-image img-2">
                   <h3>Best Seller</h3>
                   <h4>Socks</h4>
                 </div>
               </div>
-              <div class="collection-card">
-                <div class="preview-image img-3">
+              <div className="collection-card">
+                <div className="preview-image img-3">
                   <h3>Fun</h3>
                   <h4>and amusing</h4>
                 </div>
               </div>
-              <div class="collection-card">
-                <div class="preview-image img-4">
+              <div className="collection-card">
+                <div className="preview-image img-4">
                   <h3>Stuff</h3>
                   <h4>better stuff</h4>
                 </div>
               </div>
-              <div class="collection-card">
-                <div class="preview-image img-4">
+              <div className="collection-card">
+                <div className="preview-image img-5">
                   <h3>other things</h3>
                   <h4>get out of here</h4>
                 </div>
               </div>
+              
             </section>
           </div>
           <h1>Things to buy</h1>
@@ -70,7 +73,7 @@ export class Home extends Component {
         }
              title="Shira Socks"
         subheader="Best Seller ⭐ 4.2"/>
-        
+       
       <CardContent className="card-text">
             </CardContent>
         </Card>
@@ -91,6 +94,11 @@ export class Home extends Component {
         
       <CardContent className="card-text">
             </CardContent>
+            <CardActions disableSpacing>
+         <IconButton aria-label="add to favorites">
+          <FavoriteIcon /> 
+        </IconButton>
+        </CardActions>
         </Card>
         <Card>
             <CardMedia
