@@ -1,6 +1,7 @@
 import { sellerService } from '../../services/sellerService'
 
-export function loadSellers() { 
+export function loadSellers() {
+    console.log('hi'); 
     return (dispatch) => {
         return sellerService.query()
             .then(sellers => {
