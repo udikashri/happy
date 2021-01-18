@@ -33,7 +33,7 @@ export class ItemFilter extends Component {
         const { filterBy } = this.state
         return (
             <section className="item-filter">
-                <input type="text" name="title" value={filterBy.title} onChange={this.handleChange} placeholder="Filter" />
+                <input type="text" name="title" value={filterBy.title} onChange={this.handleChange} placeholder="Filter" autoComplete="off"/>
                 {/* <input type="number" name="lowPrice" value={filterBy.lowPrice} onChange={this.handleChange} placeholder="low price" />
                 <input type="number" name="highPrice" value={filterBy.highPrice} onChange={this.handleChange} placeholder="high price" />
                 <input id="demo-simple-select-label">Item Type</input> */}

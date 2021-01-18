@@ -15,7 +15,7 @@ class _ItemDetails extends Component {
     sellers:{}
   }
   async componentDidMount() {
-    this.props.loadItems()
+    await this.props.loadItems()
     this.loadItem()
     await this.props.loadSellers()
     this.loadSeller()
