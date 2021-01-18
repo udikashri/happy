@@ -16,14 +16,17 @@ function query(filterBy = null) {
     console.log('query');
     let url = '';
     if (filterBy) {
-        const { title, type, color } = filterBy
-        console.log(type);
+        const { title, type, color , lowPrice , highPrice  } = filterBy
+        console.log(lowPrice);
         url += '?';
         let params = new URLSearchParams(url.search);
         color !== 'clear' && params.set('color', color);
         title && params.set('title_like', title);
         type !== 'all' && params.set('type', type);
-        url += params.toString()   
+        lowPrice && params.set('price__gte', lowPrice);
+        // highPrice !== 'all' && params.set('type', highPrice);
+        url += params.toString() 
+        console.log(url);  
     }
          return axios.get(`${baseUrl}${url}`)
             .then(res => {

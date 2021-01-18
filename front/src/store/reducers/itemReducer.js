@@ -30,7 +30,6 @@ export function itemReducer(state = initialState, action) {
       console.log(x);
       return x
     default:
-      console.log('default');
       return state
   }
 }

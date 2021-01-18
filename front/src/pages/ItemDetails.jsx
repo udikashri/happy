@@ -62,7 +62,7 @@ class _ItemDetails extends Component {
           <h1>{currItem.title}</h1>
           <div className="price">{currItem.price}$</div>
           <div className="seller-preview">
-            {/* <img src={seller.user.imgUrl} /> */}
+            <img src={seller.user.imgUrl} />
             {seller.name}
           </div>
           <button onClick={() => this.onRemove(currItem._id)} className="delete-btn">Delete</button>
