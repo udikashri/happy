@@ -7,7 +7,6 @@ export class Home extends Component {
     return (
       <>
         <section className="hero-image">
-          {/* <img src={heppyHome} /> */}
           <h1>hello Faces :)</h1>
         </section>
         <section className="app main-container">
