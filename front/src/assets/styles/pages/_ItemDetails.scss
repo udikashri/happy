@@ -1,7 +1,18 @@
 .item-details {
-width:300px;
-display:flex;
-flex-direction: column;
-align-items: center;
-margin-left: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "img item-info";
+    margin: 0 10vw;
+    img {
+        grid-area: img;
+    }
+}
+.item-info {
+    grid-area: item-info;
+    margin-top: 5px;
+    h1,
+    .price {
+        margin: 0 5vw;
+        margin-top: 10px;
+    }
 }

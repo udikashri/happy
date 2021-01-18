@@ -8,7 +8,7 @@ import { loadItems, setFilter, saveItem } from '../store/actions/itemActions'
 class _ShopApp extends Component {
 
     componentDidMount() {
-        this.props.loadItems(this.props.filterBy)
+        this.props.loadItems()
         console.log('Got from store:', this.props)
     }
 
