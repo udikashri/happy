@@ -1,10 +1,17 @@
+
+
+
 header {
-    background-color: $clr1;
+    background-color: whitesmoke;
     // padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80px;
+    position: sticky;
+    top: 0;
+    z-index : 10;
+
     .loggedin-user {
         background-color: $clr1;
         padding: 2px 8px;
@@ -25,6 +32,8 @@ nav {
     padding: 0;
     height: inherit;
     display: flex;
+    z-index : 9;
+
 
     a {
         display: flex;
@@ -32,18 +41,23 @@ nav {
         align-items: center;
         width: 100px;
         border-right: 1px solid black;
+        text-decoration: none;
 
         &:first-child {
             border-left: 1px solid black;
         }
         &:active{
             color: initial;
+            text-decoration: none;
+
         }
     }
 }
 
 nav .active {
     color: black;
+    text-decoration: none;
+
 }
 
 .logo a{

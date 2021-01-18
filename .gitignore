@@ -2,10 +2,11 @@
 
 # dependencies
 /front/node_modules
-/back/node_modules
+/backend/node_modules
 /node_modules
 /.pnp
 .pnp.js
+/front/.eslintcache
 
 # testing
 /coverage

@@ -5,11 +5,11 @@ import { connect } from 'react-redux'
 class _Header extends Component {
     render() {
         const {loggedInUser} = this.props;
-        return <div><header>
+        return <div className="header-container"><header>
             <div className="logo"><NavLink exact to="/">🧦Happy Faces</NavLink></div>
             <nav>
-                <NavLink exact to="/">Home</NavLink>
-                <NavLink to="/shop">Explore</NavLink>
+                <NavLink to="/shop">🧦Find</NavLink>
+                <NavLink exact to="/">Sell</NavLink>
                 <NavLink to="/login">Login</NavLink>
             </nav>
             {loggedInUser && <span className="loggedin-user">

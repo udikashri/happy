@@ -10,11 +10,13 @@ export const itemService = {
     editItem
 }
 
-const baseUrl = 'http://localhost:3030/items';
+// const baseUrl = 'http://localhost:3030/items';
+const baseUrl = 'http://localhost:3030/api/item';
 
 function query(filterBy = null) {
     console.log('query');
     let url = '';
+<<<<<<< HEAD
     if (filterBy) {
         const { title, type, color , lowPrice , highPrice  } = filterBy
         console.log(lowPrice);
@@ -29,6 +31,20 @@ function query(filterBy = null) {
         console.log(url);  
     }
          return axios.get(`${baseUrl}${url}`)
+=======
+    // if (filterBy) {
+    //     const { title, type, color } = filterBy
+    //     console.log(type);
+    //     url += '?';
+    //     let params = new URLSearchParams(url.search);
+    //     color !== 'clear' && params.set('color', color);
+    //     title && params.set('title_like', title);
+    //     type !== 'all' && params.set('type', type);
+    //     url += params.toString()   
+    // }
+        //  return axios.get(`${baseUrl}${url}`)
+         return axios.get(`${baseUrl}`)
+>>>>>>> fb7119ca63ce4316099ed8e8e420e49e4bfb59c8
             .then(res => {
                 return res.data
             })
