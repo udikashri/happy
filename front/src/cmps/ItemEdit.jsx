@@ -65,7 +65,7 @@ export class _ItemEdit extends Component {
     return (
       <section className="edit-box">
         <form onSubmit={(event) => { this.props.onSaveItem(event, currItem) }}>
-          <input autoFocus type="text" value={currItem.title} onChange={this.handleInput} name="title" />
+          <input autoFocus type="text" value={currItem.title} onChange={this.handleInput} name="title" placeholder="Add Item" autoComplete="off" />
           <label >Price: <input type="number" name="price" value={currItem.price} onChange={this.handleInput} /></label>
           <Uploader onFinishUpload={this.onUploadItemImage} />
           <button>Save</button>
