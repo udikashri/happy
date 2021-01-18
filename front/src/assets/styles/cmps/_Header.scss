@@ -1,10 +1,14 @@
 header {
-    background-color: $clr1;
+    background-color: whitesmoke;
     // padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80px;
+    position: sticky;
+    top: 0;
+    z-index : 10;
+
     .loggedin-user {
         background-color: $clr1;
         padding: 2px 8px;
@@ -25,6 +29,8 @@ nav {
     padding: 0;
     height: inherit;
     display: flex;
+    z-index : 9;
+
 
     a {
         display: flex;

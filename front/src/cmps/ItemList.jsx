@@ -5,7 +5,7 @@ import { ItemPreview } from './ItemPreview'
 // console.log(itemService.query())
 
 export function ItemList({ items}) {
-    return <article className="item-list">
+    return <article className="card-grid">
         {items.map(item => {
             return <ItemPreview key={item._id} item={item} />
         })}
