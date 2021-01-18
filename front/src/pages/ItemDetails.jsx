@@ -15,18 +15,11 @@ class _ItemDetails extends Component {
     sellers:{}
   }
   async componentDidMount() {
-    await this.props.loadItems()
+    this.props.loadItems()
     this.loadItem()
+    await this.props.loadSellers()
     this.loadSeller()
   }
-  async componentDidUpdate(prevProps) {
-    if (prevProps.sellers !== this.props.sellers) {
-      await this.props.loadItems()
-      this.loadItem()
-      this.loadSeller()
-    }
-  }
-
 
   loadItem = () => {
     const { itemId } = this.props.match.params
@@ -34,17 +27,13 @@ class _ItemDetails extends Component {
       return +itemId === item._id
     })
     this.setState({ currItem: selectItem[0] }, () => {
-      console.log("seletItem", selectItem[0]);
     })
   }
 
-  loadSeller = () => {
+  loadSeller = async () => {
     const sellerId = this.state.currItem.seller._id
-
-    console.log(123, this.props.sellers);
     this.props.loadSellers()
-    console.log('loading', this.props.sellers);
-    const sellers = this.props.sellers;
+    const sellers = await this.props.sellers;
     const seller = sellers.filter(seller => {
       return seller._id === sellerId
     })
@@ -65,12 +54,7 @@ class _ItemDetails extends Component {
   }
 
   render() {
-
     const { currItem, seller } = this.state
-    // if (!seller) return (
-    //   <div>Loding...</div>
-    // )
-    console.log('seller', seller);
     return (
       <section className="item-details">
         <img src={currItem.imgUrl} alt="" />
@@ -79,11 +63,9 @@ class _ItemDetails extends Component {
           <div className="price">{currItem.price}$</div>
           <div className="seller-preview">
             {/* <img src={seller.user.imgUrl} /> */}
-
-            {/* {seller.name} */}
+            {seller.name}
           </div>
           <button onClick={() => this.onRemove(currItem._id)} className="delete-btn">Delete</button>
-
           {/* <ItemEdit currItem={currItem} onSaveItem={this.onSaveItem} /> */}
         </div>
 

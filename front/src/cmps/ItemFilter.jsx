@@ -61,7 +61,7 @@ export class ItemFilter extends Component {
                     <section title="Green" onClick={() => {this.handleChangeColor('green')}} className="green"></section>
                     <section title="Purple" onClick={() => {this.handleChangeColor('purple')}} className="purple"></section>
                     <section title="Brown" onClick={() => {this.handleChangeColor('brown')}} className="brown"></section>
-                    <section title="Clear" onClick={() => {this.handleChangeColor('all')}} className="all">🚫</section>
+                    <section title="Clear" onClick={() => {this.handleChangeColor('clear')}} className="clear">🚫</section>
 
 
                 </div>

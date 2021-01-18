@@ -20,7 +20,7 @@ function query(filterBy = null) {
         console.log(type);
         url += '?';
         let params = new URLSearchParams(url.search);
-        color && params.set('color', color);
+        color !== 'clear' && params.set('color', color);
         title && params.set('title_like', title);
         type !== 'all' && params.set('type', type);
         url += params.toString()   

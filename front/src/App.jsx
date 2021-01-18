@@ -10,11 +10,12 @@ import { ItemDetails } from './pages/ItemDetails'
 import '../src/assets/styles/main.scss'
 
 import { Header } from './cmps/Header'
+import { BackOffiseSelller } from './pages/BackOffiseSelller'
 
 
 export function App() {
   return (
-    <div className="app main-container">
+    <div className="app">
       <Router>
         <Header></Header>
         <main>
@@ -22,6 +23,7 @@ export function App() {
             {/* <Route path="/user/:id" component={UserDetails} /> */}
             {/* <Route path="/login" component={LoginSignup} /> */}
             {/* <Route path="/chat" component={Chat} /> */}
+            <Route path="/seller" component={BackOffiseSelller} />
             <Route path="/item/:itemId" component={ItemDetails} />
             <Route path="/shop" component={ShopApp} />
             <Route path="/" component={Home} />
