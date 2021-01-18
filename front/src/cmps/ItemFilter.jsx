@@ -50,16 +50,18 @@ export class ItemFilter extends Component {
                 </select>
                 <div className="color-container">
 
-                    <section onClick={() => {this.handleChangeColor('red')}} className="red"></section>
-                    <section onClick={() => {this.handleChangeColor('gray')}} className="gray"></section>
-                    <section onClick={() => {this.handleChangeColor('blue')}} className="blue"></section>
-                    <section onClick={() => {this.handleChangeColor('pink')}} className="pink"></section>
-                    <section onClick={() => {this.handleChangeColor('yellow')}} className="yellow"></section>
-                    <section onClick={() => {this.handleChangeColor('black')}} className="black"></section>
-                    <section onClick={() => {this.handleChangeColor('white')}} className="white"></section>
-                    <section onClick={() => {this.handleChangeColor('green')}} className="green"></section>
-                    <section onClick={() => {this.handleChangeColor('purple')}} className="purple"></section>
-                    <section onClick={() => {this.handleChangeColor('brown')}} className="brown"></section>
+                
+                    <section title="Red" onClick={() => {this.handleChangeColor('red')}} className="red"></section>
+                    <section title="Gray" onClick={() => {this.handleChangeColor('gray')}} className="gray"></section>
+                    <section title="Blue" onClick={() => {this.handleChangeColor('blue')}} className="blue"></section>
+                    <section title="Pink" onClick={() => {this.handleChangeColor('pink')}} className="pink"></section>
+                    <section title="Yellow" onClick={() => {this.handleChangeColor('yellow')}} className="yellow"></section>
+                    <section title="White" onClick={() => {this.handleChangeColor('white')}} className="white"></section>
+                    <section title="Black" onClick={() => {this.handleChangeColor('black')}} className="black"></section>
+                    <section title="Green" onClick={() => {this.handleChangeColor('green')}} className="green"></section>
+                    <section title="Purple" onClick={() => {this.handleChangeColor('purple')}} className="purple"></section>
+                    <section title="Brown" onClick={() => {this.handleChangeColor('brown')}} className="brown"></section>
+                    <section title="Clear" onClick={() => {this.handleChangeColor('all')}} className="all">🚫</section>
 
 
                 </div>
