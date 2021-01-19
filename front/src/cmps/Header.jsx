@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import IconButton from '@material-ui/core/IconButton';
-
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 class _Header extends Component {
     render() {
@@ -12,8 +12,7 @@ class _Header extends Component {
             <nav>
                 <NavLink to="/shop">🧦Find</NavLink>
                 <NavLink exact to="/">Sell</NavLink>
-                <NavLink to="/login"><span class="material-icons">
-person</span> Login</NavLink>
+                <NavLink to="/login"><AccountCircleIcon/>Login</NavLink>
             </nav>
             {loggedInUser && <span className="loggedin-user">
 
