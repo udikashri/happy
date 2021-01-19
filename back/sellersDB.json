@@ -1,0 +1,299 @@
+{
+    "sellers": [
+        {
+            "_id": "dhoSPowvM",
+            "name": "Zack",
+            "user": {
+                "_id": "dhoSPowvM",
+                "fullname": "Zack Jordan",
+                "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/15_pj1iel.jpg"
+            },
+            "title": "homogeneous",
+            "desc": "Progressive",
+            "address": "30 Messerschmidt Terrace",
+            "reviews": [
+                {
+                    "id": "fmMopFNg",
+                    "subject": "Perfect Christmas Gift",
+                    "txt": "Well made, warm and FUNNY! They were the perfect set up for recounting a family story about a heated game of dominos.",
+                    "rate": 4,
+                    "by": {
+                        "_id": "Geku8RPrt",
+                        "fullname": "Dolores Gonzales",
+                        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/18_rwb9g1.jpg"
+                    },
+                    "item": {
+                        "title": "Smart Ass Socks",
+                        "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/socksmith_mens_smart_ass_crew_socks_230x.jpg?v=1593129038"
+                    }
+                },
+                {
+                    "id": "fmMgpNg",
+                    "subject": "very good quality socks, receive",
+                    "txt": "very good quality socks, receive many compliments!",
+                    "rate": 5,
+                    "by": {
+                        "_id": "NP7P3D",
+                        "fullname": "Shelly Groves",
+                        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/4_o2r8cs.jpg"
+                    },
+                    "item": {
+                        "title": "Science Lab Socks",
+                        "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/socksmith_mens_science_lab_blue_crew_socks_230x.jpg?v=1593207493"
+                    }
+                },
+                {
+                    "id": "fmM",
+                    "subject": "Funny socks",
+                    "txt": "Buying for stocking stuffers \nCute gifts",
+                    "rate": 3,
+                    "by": {
+                        "_id": "0DKUfiuZaj7F",
+                        "fullname": "Deeann Stirling",
+                        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/30_nvklsm.jpg"
+                    },
+                    "item": {
+                        "title": "Tacosaurus Socks",
+                        "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/SockittoMe_Awesome_Mens_Tacosaurus_Socks_IMG_0878_230x.jpg?v=1566407133"
+                    }
+                }
+            ]
+        },
+        {
+            "_id": "bv6phbrTCmj",
+            "name": "Claudia",
+            "user": {
+                "_id": "bv6phbrTCmj",
+                "fullname": "Claudia Perez",
+                "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg"
+            },
+            "title": "Fully-configurable",
+            "desc": "Re-contextualized",
+            "address": "91 Marquette Plaza",
+            "reviews": [
+                {
+                    "id": "0GeOAyllSI",
+                    "subject": "For My Mulreider",
+                    "txt": "My son went to college where the Mulerider was the mascot. He just graduated in May and I bought him these socks. He absolutely LOVES them. P.S. I bought several other pair, as well, and they are ALL awesome!",
+                    "rate": 5,
+                    "by": {
+                        "_id": "0SWww2",
+                        "fullname": "Peirce Lambrecht",
+                        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/9_gqkjqu.jpg"
+                    },
+                    "item": {
+                        "title": "Alot Of Liza Socks",
+                        "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/Hot_Sox_Mona_Lisa_Colorful_Art_Sock_Women_Green_IMG_7793_230x.jpg?v=1590518802"
+                    }
+                },
+                {
+                    "id": "0GeOAyllSI",
+                    "subject": "Loved them!!!",
+                    "txt": "The socks were awesome, the graduate loved them and is wearing them graduation night. Very prompt delivery and great quality sock!!! Will order again!!!",
+                    "rate": 3,
+                    "by": {
+                        "_id": "8SWssw2",
+                        "fullname": "Melissa Silva",
+                        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/6_qr24nq.jpg"
+                    },
+                    "item": {
+                        "title": "Middle Finger Socks",
+                        "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/mens_middle_finger_fun_socks_230x.jpg?v=1566407776"
+                    }
+                }
+            ]
+        },
+        {
+            "_id": "YjSm4WSQhwbp",
+            "name": "Jasmine",
+            "user": {
+                "_id": "YjSm4WSQhwbp",
+                "fullname": "Jasmine Aleksahkin",
+                "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg"
+            },
+            "title": "5th generation",
+            "desc": "core",
+            "address": "79 Di Loreto Trail",
+            "reviews": [
+                {
+                    "id": "4A8GIRtT",
+                    "subject": "Lots of laughs",
+                    "txt": "These socks are such fun! \nCan’t find them anywhere else.",
+                    "rate": 5,
+                    "by": {
+                        "_id": "23GTww245",
+                        "fullname": "Johnny Dean",
+                        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/5_yvygo4.jpg"
+                    },
+                    "item": {
+                        "title": "Peeling Out Socks",
+                        "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/SITM_mens_awesome_novelty_peeling_out_socks_230x.jpg?v=1565127739"
+                    }
+                },
+                {
+                    "id": "4A8GIRtT",
+                    "subject": "Fun!",
+                    "txt": "Nice quality socks, great theme!",
+                    "rate": 4,
+                    "by": {
+                        "_id": "Geku8RPrt",
+                        "fullname": "Dolores Gonzales",
+                        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/18_rwb9g1.jpg"
+                    },
+                    "item": {
+                        "title": "Muir socks On The Walls",
+                        "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/hot_sox_womens_the_kiss_crew_socks_230x.jpg?v=1590518195"
+                    }
+                },
+                {
+                    "id": "4A8GIRtT",
+                    "subject": "Decent Quality and Fast Shipping",
+                    "txt": "The socks are pretty good quality although they are a little thin. Shipping was very fast and there was a hand written note from the person who packaged them - that was a really nice personal touch that I loved.",
+                    "rate": 5,
+                    "by": {
+                        "_id": "NP7P3D",
+                        "fullname": "Shelly Groves",
+                        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/4_o2r8cs.jpg"
+                    },
+                    "item": {
+                        "title": "Laurel Burch Sun, Water, Fish Socks",
+                        "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/socksmith_laurel_burch_sun_water_fish_womens_crew_socks_flatlay_230x.jpg?v=1583518965"
+                    }
+                },
+                {
+                    "id": "4A8GIRtT",
+                    "subject": "Great purchase",
+                    "txt": "Got for my husband and he loved them, he got a pair for his coworker as well - very fun, good quality and nice gift presentation.",
+                    "rate": 5,
+                    "by": {
+                        "_id": "0DKUfiuZaj7F",
+                        "fullname": "Deeann Stirling",
+                        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/30_nvklsm.jpg"
+                    },
+                    "item": {
+                        "title": "Great Wave Socks",
+                        "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/hot_sox_mens_great_wave_crew_socks_230x.jpg?v=1590518489"
+                    }
+                }
+            ]
+        },
+        {
+            "_id": "Xh9nMze",
+            "name": "Richard",
+            "user": {
+                "_id": "Xh9nMze",
+                "fullname": "Richard Horton",
+                "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg"
+            },
+            "title": "actuating",
+            "desc": "access",
+            "address": "43870 Stone Corner Terrace",
+            "reviews": [
+                {
+                    "id": "yxAnnd",
+                    "subject": "Love!!",
+                    "txt": "My younger brother is hard to shop for and never gives me ideas.. I know he likes funky socks, so I got him 3 pairs. The “science lab”, screaming goats, and flying pigs. It was my favorite gift to give this year and he loved it. As soon as he opened it he was smiling and laughed. Thank you for a good Christmas!",
+                    "rate": 5,
+                    "by": {
+                        "_id": "0SWww2",
+                        "fullname": "Peirce Lambrecht",
+                        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/9_gqkjqu.jpg"
+                    },
+                    "item": {
+                        "title": "Lift Socks",
+                        "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/do_you_even_lift_bro_socksmith_mens_crew_socks_230x.jpg?v=1566429042"
+                    }
+                },
+                {
+                    "id": "yxAnnd",
+                    "subject": "Science rules",
+                    "txt": "These were a gift for my chemist dad's bday. He laughed and loved them. Next day they were on him. Very happy with them.",
+                    "rate": 4,
+                    "by": {
+                        "_id": "8SWssw2",
+                        "fullname": "Melissa Silva",
+                        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/6_qr24nq.jpg"
+                    },
+                    "item": {
+                        "title": "Busy Making a Fucking Difference Socks",
+                        "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/blue_q_mens_busy_making_a_difference_crew_socks_230x.jpg?v=1566408702"
+                    }
+                },
+                {
+                    "id": "yxAnnd",
+                    "subject": "Super fun socks!",
+                    "txt": "My son works in a lab, and he loved these socks!",
+                    "rate": 2,
+                    "by": {
+                        "_id": "23GTww245",
+                        "fullname": "Johnny Dean",
+                        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/5_yvygo4.jpg"
+                    },
+                    "item": {
+                        "title": "Grumpy Old Man Socks",
+                        "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/grumpy_old_man_blue_q_mens_crew_socks_230x.jpg?v=1565130157"
+                    }
+                },
+                {
+                    "id": "yxAnnd",
+                    "subject": "Love the socks!",
+                    "txt": "Great quality, comfortable, and super fun to wear. 👍👍",
+                    "rate": 3,
+                    "by": {
+                        "_id": "Geku8RPrt",
+                        "fullname": "Dolores Gonzales",
+                        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/18_rwb9g1.jpg"
+                    },
+                    "item": {
+                        "title": "This Meeting is Bullshit Socks",
+                        "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/IMG_1298_230x.jpg?v=1566407420"
+                    }
+                }
+            ]
+        },
+        {
+            "_id": "E4G3Ck",
+            "name": "Amelia",
+            "user": {
+                "_id": "E4G3Ck",
+                "fullname": "Amelia Larson",
+                "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/3_nz6vkf.jpg"
+            },
+            "title": "actuating",
+            "desc": "access",
+            "address": "43870 Stone Corner Terrace",
+            "reviews": [
+                {
+                    "id": "yxAnnd",
+                    "subject": "Great socks. Good quality. Smart",
+                    "txt": "Great socks. Good quality. Smart ass is outstanding.",
+                    "rate": 3,
+                    "by": {
+                        "_id": "dOUzmWRk",
+                        "fullname": "Tabbie Mounce",
+                        "imgUrl": "http://dummyimage.com/209x106.bmp/5fa2dd/ffffff"
+                    },
+                    "items": {
+                        "title": "Chicken Butt Socks",
+                        "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/K.Bell_mens_chicken_butt_crew_socks_230x.jpg?v=1566408657"
+                    }
+                },
+                {
+                    "id": "yxd",
+                    "subject": "Men gift",
+                    "txt": "They are thing and comfortable. Great pair of socks. He loved them.",
+                    "rate": 4,
+                    "by": {
+                        "_id": "dOUzmWRk",
+                        "fullname": "Tabbie Mounce",
+                        "imgUrl": "http://dummyimage.com/209x106.bmp/5fa2dd/ffffff"
+                    },
+                    "item": {
+                        "title": "Ringmaster of the Shitshow Socks",
+                        "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/blue_Q_crazy_novelty_ringmaster_socks_230x.jpg?v=1603372364"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -10,8 +10,19 @@ export const itemService = {
     editItem
 }
 
+/// MONGO - Line = 14-22
+// const baseUrl = 'http://localhost:3030/api/item'
+
+// function query (){
+//    return axios.get(`${baseUrl}`)
+//    .then(res => {
+//     return res.data
+//    })
+//    .catch(() => console.log('nooooo'))
+// }
+
+/// JSON - Line = 24-44
 const baseUrl = 'http://localhost:3030/items'; // json
-// const baseUrl = 'http://localhost:3030/api/item'; // mongo
 
 function query(filterBy = null) {
     console.log('query');
@@ -25,16 +36,16 @@ function query(filterBy = null) {
         title && params.set('title_like', title);
         type !== 'all' && params.set('type', type);
         url += params.toString()   
-    } // json 19-28
-         return axios.get(`${baseUrl}${url}`) /// json
-        //  return axios.get(`${baseUrl}`) /// mongo
-            .then(res => {
-                return res.data
+    } 
+         return axios.get(`${baseUrl}${url}`) 
+         .then(res => {
+             return res.data
             })
             .catch(() => console.log('nooooo'))
-}
-
-
+        }
+        
+        
+        
 
 
 
