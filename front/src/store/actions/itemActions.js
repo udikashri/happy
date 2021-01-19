@@ -38,6 +38,7 @@ export function removeItem(itemId) {
     return (dispatch) => {
         return itemService.removeItem(itemId)
         .then(items => {
+            // console.log(items);
             const action = {
                 type: 'REMOVE_ITEM',
                 itemId

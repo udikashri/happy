@@ -72,6 +72,7 @@ async function query(filterBy = {}) {
 
 async function remove(itemId) {
     try {
+        console.log("removeService" ,itemId);
         const store = asyncLocalStorage.getStore()
         const { userId, isAdmin } = store
         const collection = await dbService.getCollection('item')

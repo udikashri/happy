@@ -20,6 +20,7 @@ export const httpService = {
         return ajax(endpoint, 'PUT', data)
     },
     delete(endpoint, data) {
+        console.log('hdsf',data ,endpoint);
         return ajax(endpoint, 'DELETE', data)
     }
 }

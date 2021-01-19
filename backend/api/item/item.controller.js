@@ -3,12 +3,9 @@ const userService = require('../user/user.service')
 const itemService = require('./item.service')
 
 async function getItems(req, res) {
-    console.log('ping ');
     try {
         const items = await itemService.query(req.query)
         res.send(items)
-        console.log('items',items);
-
     } catch (err) {
         logger.error('Cannot get items', err)
         res.status(500).send({ err: 'Failed to get items' })
@@ -17,8 +14,10 @@ async function getItems(req, res) {
 
 async function deleteItem(req, res) {
     try {
+        console.log('req',req.params.id);
         await itemService.remove(req.params.id)
         res.send({ msg: 'Deleted successfully' })
+        console.log('res',res);
     } catch (err) {
         logger.error('Failed to delete item', err)
         res.status(500).send({ err: 'Failed to delete item' })
