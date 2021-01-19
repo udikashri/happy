@@ -9,7 +9,7 @@ class _ShopApp extends Component {
 
     componentDidMount() {
         this.props.loadItems()
-        console.log('Got from store:', this.props)
+        // console.log('Got from store:', this.props)
     }
 
     onSetFilter = (filterBy) => {
@@ -24,13 +24,15 @@ class _ShopApp extends Component {
     }
 
     render() {
+        const {items} = this.props
+        if(!items) return <h1>loading</h1>
         return (
             <section >
                 <h1>shop app</h1>
                 <div className="shop-container">
                     <ItemFilter onSetFilter={this.onSetFilter} />
                     <ItemEdit onSaveItem={this.onSaveItem} />
-                    <ItemList items={this.props.items} />
+                    <ItemList items={items} />
                 </div>
             </section>
         )

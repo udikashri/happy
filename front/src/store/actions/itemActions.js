@@ -14,6 +14,7 @@ export function loadItems(filterBy) {
 }
 
 export function saveItem(item){
+    console.log(item);
     return (dispatch) => {
         return itemService.saveItem(item)
             .then(saveItem => {
@@ -21,6 +22,7 @@ export function saveItem(item){
                     type: (item._id) ? 'SAVE_ITEM' : 'ADD_ITEM',
                     item: saveItem
                   }
+                  console.log(item);
                 dispatch(action)
             })
     }

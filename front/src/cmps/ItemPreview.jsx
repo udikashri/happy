@@ -8,9 +8,10 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
-export function ItemPreview(props) {
-    const { item } = props;
+export function ItemPreview({item , removeable}) {
+    
     return <section className="card-main">
+      {removeable && <button>DELETE!</button>}
         <Card>
             <CardMedia
                 className="card-media"

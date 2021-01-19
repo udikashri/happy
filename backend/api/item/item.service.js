@@ -2,16 +2,27 @@ const dbService = require('../../services/db.service')
 const ObjectId = require('mongodb').ObjectId
 const asyncLocalStorage = require('../../services/als.service')
 
-async function query(filterBy = {}) {
+async function query(filterBy =null) {
+    const { title , type} = filterBy
+    let cred = {}
     // const criteria = _buildCriteria(filterBy)
     try {
         const collection = await dbService.getCollection('item')
+        if(filterBy) {
+            if(title) {
+                const regex = new RegExp(title, 'i')
+                cred.title = regex
+            }
+            if(type) cred.type = type
+        }
+        console.log(cred);
         // var Items = await collection.find(criteria).toArray()
-        var Items = await collection.find().toArray()
+        var Items = await collection.find(cred).toArray()
         Items = Items.map(Item => {
             Item.createdAt = ObjectId(Item._id).getTimestamp()
             return Item
         })
+        // console.log('sasa' ,Items);
         return Items
     } catch (err) {
         logger.error('cannot find Items', err)
@@ -76,9 +87,8 @@ async function remove(itemId) {
         // const { userId, isAdmin } = store
         const collection = await dbService.getCollection('item')
         // remove only if user is owner/admin
-        const query = { _id: ObjectId(itemId) }
         // if (!isAdmin) query.byUserId = ObjectId(userId)
-        await collection.deleteOne(query)
+        await collection.deleteOne({ _id: ObjectId(itemId) })
         // return await collection.deleteOne({ _id: ObjectId(itemId), byUserId: ObjectId(userId) })
     } catch (err) {
         logger.error(`cannot remove item ${itemId}`, err)
@@ -98,7 +108,7 @@ async function add(item) {
         //     txt: item.txt
         // }
         const collection = await dbService.getCollection('item')
-        const res = await collection.insertOne(itemToAdd)
+        const res = await collection.insertOne(item)
         return res.ops[0];
     } catch (err) {
         logger.error('cannot insert item', err)
