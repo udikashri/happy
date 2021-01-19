@@ -1,8 +1,5 @@
-
-
-
 header {
-    background-color: whitesmoke;
+    background-color: rgba(255, 255, 255, 0.013);
     // padding: 10px;
     display: flex;
     align-items: center;
@@ -10,62 +7,63 @@ header {
     height: 80px;
     position: sticky;
     top: 0;
-    z-index : 10;
+    z-index: 10;
 
     .loggedin-user {
-        background-color: $clr1;
+        background-color: white;
         padding: 2px 8px;
         border-radius: 1em;
         align-self: flex-end;
         color: whitesmoke;
         span {
-            background-color: $clr2;
+            background-color: white;
             padding: 4px;
             margin: 10px;
             border-radius: 50%;
         }
     }
-
+    &:active {
+        color: whitesmoke;
+    }
 }
 nav {
     margin-right: 50px;
     padding: 0;
     height: inherit;
     display: flex;
-    z-index : 9;
-
 
     a {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100px;
-        border-right: 1px solid black;
+        // border-right: 1px solid black;
         text-decoration: none;
-
-        &:first-child {
-            border-left: 1px solid black;
+        color:white;
+         &:first-child {
+            // border-left: 1px solid black;
         }
-        &:active{
-            color: initial;
+        &:active {
+            color: white;
             text-decoration: none;
-
+        }
+        &:hover {
+            text-decoration: none;
         }
     }
 }
 
 nav .active {
-    color: black;
+    color: white;
     text-decoration: none;
-
 }
 
-.logo a{
+.logo a {
     margin-left: 30px;
     font-size: 2rem;
-    color: rgb(13, 61, 80);
+    color: white;
 
-    &:hover{
+    &:hover {
         text-decoration: none;
     }
 }

@@ -1,16 +1,19 @@
 import React, { Component } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
+import IconButton from '@material-ui/core/IconButton';
+
 
 class _Header extends Component {
     render() {
         const {loggedInUser} = this.props;
-        return <div className="header-container"><header>
+        return <header className="header-container">
             <div className="logo"><NavLink exact to="/">🧦Happy Faces</NavLink></div>
             <nav>
                 <NavLink to="/shop">🧦Find</NavLink>
                 <NavLink exact to="/">Sell</NavLink>
-                <NavLink to="/login">Login</NavLink>
+                <NavLink to="/login"><span class="material-icons">
+person</span> Login</NavLink>
             </nav>
             {loggedInUser && <span className="loggedin-user">
 
@@ -21,8 +24,6 @@ class _Header extends Component {
                 <span>{loggedInUser.score || 0}</span>
             </span>}
         </header>
-
-        </div>
     }
 
 }

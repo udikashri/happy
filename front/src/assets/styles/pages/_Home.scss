@@ -6,10 +6,17 @@
     }
 }
 
+.home {
+    & h2 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+}
+
 .hero-image {
-    background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-    //     // url(../../../assets/img/Home/heppy-home.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+        //     // url(../../../assets/img/Home/heppy-home.jpeg);
         url(../../../assets/img/Home/pexels-photo-1684187.jpeg);
     height: 90vh;
     margin-bottom: 8px;
@@ -18,21 +25,52 @@
     background-size: cover;
     position: relative;
     z-index: 0;
+    padding-top: 333px;
+    padding-left: 130px;
+    margin-top: -196px;
+    border:0;
 
+    & h1 {
+        font-size: 2.8125rem;
+        line-height: 1;
+        color: #fff;
+        font-weight: 500;
+        margin-bottom: 24px;
+    }
+    & h2 {
+        font-size: 3.625rem;
+        line-height: 1;
+        color: #fff;
+        margin-bottom: 24px;
+    }
+    & .btn {
+        background-color: #4a36f4;
+        font-weight: 500;
+        border: none;
+        color: whitesmoke;
+        padding: 10px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 16px;
+    }
 }
 
-.card-media{
+.card-media {
     &:hover {
-	transform: scale(1.2);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
+        transform: scale(1.2);
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+    }
 }
 .home-collection-list {
     background: whitesmoke;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 900px;
+ 
 }
 
 .collection-card {
@@ -50,18 +88,16 @@
     background-position: 50%;
     &:hover {
         transform: scale(1.2);
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
-    }
-
+}
 
 .img-1 {
     color: whitesmoke;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
         url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990427/atmosphere/header_yhs6xr.jpg);
-       
-    }
+}
 .img-2 {
     background-image: url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_happy_nhag3k.jpg);
     color: whitesmoke;
@@ -80,10 +116,8 @@
     color: whitesmoke;
 }
 
-
 .item-cards {
     width: 100%;
-    background: blue;
     gap: 20px;
     padding-left: 15px;
 }
