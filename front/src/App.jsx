@@ -19,8 +19,8 @@ export function App() {
   return (
     <div className="app">
       <Router>
-        <Header></Header>
         <main>
+        <Header></Header>
           <Switch>
             <Route path="/user/:id" component={UserDetails} />
             <Route path="/login" component={LoginSignup} />
