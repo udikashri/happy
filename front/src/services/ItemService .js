@@ -1,17 +1,13 @@
 // import { storageService } from './asyncStorageService'
 import { httpService } from './httpService'
-const SCORE_FOR_REVIEW = 10
+// const SCORE_FOR_REVIEW = 10
 
 export const itemService = {
-    login,
-    logout,
-    signup,
+
     getItems,
     getById,
     remove,
     update,
-    getLoggedinItem,
-    increaseScore
 }
 
 window.itemService = itemService
@@ -40,36 +36,30 @@ async function update(item) {
     if (getLoggedinItem()._id === item._id) _saveLocalItem(item)
 }
 
-async function increaseScore(by = SCORE_FOR_REVIEW) {
-    const item = getLoggedinItem()
-    item.score = item.score + by || by
-    await update(item)
-    return item.score
-}
 
-async function login(itemCred) {
-    // const items = await storageService.query('item')
-    // const item = items.find(item => item.itemname === itemCred.itemname)
-    // return _handleLogin(item)
+// async function login(itemCred) {
+//     // const items = await storageService.query('item')
+//     // const item = items.find(item => item.itemname === itemCred.itemname)
+//     // return _handleLogin(item)
 
-    const item = await httpService.post('auth/login', itemCred)
-    if (item) return _saveLocalItem(item)
-}
-async function signup(itemCred) {
-    // const item = await storageService.post('item', itemCred)
-    const item = await httpService.post('auth/signup', itemCred)
-    return _saveLocalItem(item)
-}
-async function logout() {
-    sessionStorage.clear()
-    return await httpService.post('auth/logout')
-}
-function _saveLocalItem(item) {
-    sessionStorage.setItem('loggedinItem', JSON.stringify(item))
-    return item
-}
+//     const item = await httpService.post('auth/login', itemCred)
+//     if (item) return _saveLocalItem(item)
+// }
+// async function signup(itemCred) {
+//     // const item = await storageService.post('item', itemCred)
+//     const item = await httpService.post('auth/signup', itemCred)
+//     return _saveLocalItem(item)
+// }
+// async function logout() {
+//     sessionStorage.clear()
+//     return await httpService.post('auth/logout')
+// }
+// function _saveLocalItem(item) {
+//     sessionStorage.setItem('loggedinItem', JSON.stringify(item))
+//     return item
+// }
 
-function getLoggedinItem() {
-    return JSON.parse(sessionStorage.getItem('loggedinItem'))
-}
+// function getLoggedinItem() {
+//     return JSON.parse(sessionStorage.getItem('loggedinItem'))
+// }
 
