@@ -573,6 +573,40 @@
       "title": "Chicken Butt Socks",
       "type": "socks",
       "likes":"4"
+    },
+    {
+      "color": "brown",
+      "description":"Slip these babies on with your hiking boots and get wanderin'! J.R.R. Tolkien knew what he was talking about when he wrote, â€œNot all who wander are lost,â€ as it says on these scenic mountain socks for men. They also have handsome details of a compass rose and a map pattern, making them a great choice for men who love travel and the outdoors. Sometimes when we're out there losing ourselves in the woods, we're actually finding ourselves, too!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/foot_traffic_mens_wanderer_crew_socks_230x.jpg?v=1571013635",
+      "price": "12",
+      "seller": {
+        "_id": "Xh9nMze",
+        "fullname": "Richard Horton",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg"
+      },
+      "tags": [
+        "art"],
+      "details": "65% Cotton, 15% Nylon, 15% Polyester, 5% Spandex",
+      "title": "Wanderer Socks",
+      "type": "socks",
+      "likes":"8"
+    },
+    {
+      "color": "colorful",
+      "description":"Slip these babies on with your hiking boots and get wanderin'! J.R.R. Tolkien knew what he was talking about when he wrote, â€œNot all who wander are lost,â€ as it says on these scenic mountain socks for men. They also have handsome details of a compass rose and a map pattern, making them a great choice for men who love travel and the outdoors. Sometimes when we're out there losing ourselves in the woods, we're actually finding ourselves, too!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/blue_Q_crazy_novelty_ringmaster_socks_230x.jpg?v=1603372364",
+      "price": "13",
+      "seller": {
+        "_id": "Xh9nMze",
+        "fullname": "Amelia Larson",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/3_nz6vkf.jpg"
+      },
+      "tags": [
+        "art"],
+      "details": "61% combed cotton; 36% nylon; 3% spandex.",
+      "title": "Ringmaster of the Shitshow Socks",
+      "type": "socks",
+      "likes":"12"
     }
   ]
 }
