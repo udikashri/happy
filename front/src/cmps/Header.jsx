@@ -11,7 +11,7 @@ class _Header extends Component {
             <div className="logo"><NavLink exact to="/">🧦Happy Faces</NavLink></div>
             <nav>
                 <NavLink to="/shop">🧦Find</NavLink>
-                <NavLink exact to="/">Sell</NavLink>
+                <NavLink exact to="/">🔖Sell</NavLink>
                 <NavLink to="/login"><AccountCircleIcon/>Login</NavLink>
             </nav>
             {loggedInUser && <span className="loggedin-user">
