@@ -1,0 +1,46 @@
+footer {
+    text-align: center;
+
+.modal-background{
+    position: fixed;
+    background-color: rgba(44, 44, 44, 0.767);
+    top: 0%;
+    height: 100vh;
+      z-index: 200000;
+
+width: 100vw
+}
+
+    h1{
+        cursor: pointer;
+    }
+    .countries-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        z-index: 2000000;
+        padding: 2rem;
+        box-shadow: 0 0 4rem rgba(0, 0, 0, 0.1);
+        .close{
+            position: absolute;
+            right: 30px;
+            cursor: pointer;
+        }
+        h3{
+            margin-top: 13px;
+            margin-bottom: 26px;
+        }
+        .grid-countries{
+            text-align: start;
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: 1fr 1fr 1fr;
+            
+            div{
+                cursor: pointer;
+            }
+        }
+    }
+}

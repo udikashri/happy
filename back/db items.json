@@ -1,0 +1,612 @@
+{
+  "items": [
+    {
+      "color": "brown",
+      "description": "OK, genius. Can you figure out what these funny men's socks mean? They feature a donkey graduate wearing a mortarboard and glasses. That's right ... it's a concept you're really familiar with. It's a smart ass! These hilariously irreverent socks are just right for the man who always has some kind of comeback ready. They're also a perfect gift for graduation!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/socksmith_mens_smart_ass_crew_socks_230x.jpg?v=1593129038",
+      "price": "10",
+      "seller": {
+        "_id": "dhoSPowvM",
+        "fullname": "Zack Jordan",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/15_pj1iel.jpg"
+      },
+      "tags": [
+        "animal"
+      ],
+      "details": "Contents: 70% Cotton, 27% Nylon, 3% Spandex",
+      "title": "Smart Ass Socks",
+      "type": "socks",
+      "likes": "7"
+    },
+    {
+      "color": "blue",
+      "description": "Don't get too much fur in your concoction! And make sure your safety goggles fit OK over your ears! These funny dog socks feature a bunch of â€œscience Labs,â€ aka Labrador retrievers in white coats who are doing chemistry experiments. A great choice for dog lovers, these geeky, punny socks will have your tail wagging!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/socksmith_mens_science_lab_blue_crew_socks_230x.jpg?v=1593207493",
+      "price": "11",
+      "seller": {
+        "_id": "dhoSPowvM",
+        "fullname": "Zack Jordan",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/15_pj1iel.jpg"
+      },
+      "tags": [
+        "animal"
+      ],
+      "details": "Contents: 70% Cotton, 27% Nylon, 3% Spandex",
+      "title": "Science Lab Socks",
+      "type": "socks",
+      "likes":"4"
+    },
+    {
+      "color": "black",
+      "description": "Combining your two favorite things: wickedly awesome dinosaurs and scrumptiously juicy tacos. Don't wait until Tuesday to proudly rock this pair of cool taco socks, but instead make every day a fiesta.",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/SockittoMe_Awesome_Mens_Tacosaurus_Socks_IMG_0878_230x.jpg?v=1566407133",
+      "price": "9",
+      "seller": {
+        "_id": "dhoSPowvM",
+        "fullname": "Zack Jordan",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/15_pj1iel.jpg"
+      },
+      "tags": [
+        "animal"
+      ],
+      "details": "Contents: 75% Cotton, 20% Polyester, 5% Spandex",
+      "title": "Tacosaurus Socks",
+      "type": "socks",
+      "likes":"8"
+    },
+    {
+      "color": "gray",
+      "description": "Some days, you just wanna lie around. We totally get it, and so do the sloths on these funny animal socks! They're using the wide stripes on these cool men's crew socks like branches, lazily hanging out and lounging around. With neutral color palettes, these socks work easily into any man's wardrobe, but you know they're really speaking to the sloth in you!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/modsock_mens_sloth_stripe_blue_crew_socks_230x.jpg?v=1592858851",
+      "price": "12",
+      "seller": {
+        "_id": "dhoSPowvM",
+        "fullname": "Zack Jordan",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/15_pj1iel.jpg"
+      },
+      "tags": [
+        "animal"
+      ],
+      "details": "Contents: 65% Cotton, 24% Nylon, 8% Polyester, 3% Spandex",
+      "title": "Sloth Stripe Socks",
+      "type": "socks",
+      "likes":"3"
+    },
+    {
+      "color": "green",
+      "description":"Dad, I need new socks! These have holes in them!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/IMG_1303_230x.jpg?v=1565127815",
+      "price": "10",
+      "seller": {
+        "_id": "dhoSPowvM",
+        "fullname": "Zack Jordan",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/15_pj1iel.jpg"
+      },
+      "tags": [
+        "animal"
+      ],
+      "details": "Contents: 62% Combed Cotton, 36% Nylon, and 2% Spandex",
+      "title": "Ain't No Bad Joke Like a Dad Joke Socks",
+      "type": "socks",
+      "likes":"7"
+    },
+    {
+      "color": "white",
+      "description":"Hummingbirds are so amazing. When they fly they beat their wings over 50 times per second! We love these hummingbird novelty socks for women because they show off those beautiful wings, along with colorful flowers, in a graphic design inspired by the work of artist Laurel Burch. They remind us of summer days and flower gardens, making them perfect for bird lovers!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/socksmith_laurel_burch_hummingbird_blossom_womens_crew_socks_230x.jpg?v=1583518842",
+      "price": "9",
+      "seller": {
+        "_id": "dhoSPowvM",
+        "fullname": "Zack Jordan",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/15_pj1iel.jpg"
+      },
+      "tags": [
+        "animal",
+        "bird"
+      ],
+      "details": "Contents: 51% Nylon, 47% Cotton, 2% Spandex",
+      "title": "Free Bird As A Socks",
+      "type": "socks",
+      "likes":"3"
+    },
+    {
+      "color": "black",
+      "description":"This painting needs no introduction. Van Gogh's famous Starry Night was painted from his view at the insane asylum, although he rightfully chose to omit the metal bars covering his window from the picture. If you are going insane over this masterpiece, rock the gorgeous painting on your unique art socks as an homage to the crazed artist himself.",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/IMG_8714_230x.jpg?v=1566570283",
+      "price": "8",
+      "seller": {
+        "_id": "bv6phbrTCmj",
+        "fullname": "Claudia Perez",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg"
+      },
+      "tags": [
+        "art", "picture"
+      ],
+      "details": "Available as a knee high and for men",
+      "title": "Has Munk With Socks",
+      "type": "socks",
+      "likes":"2"
+    },
+    {
+      "color": "black",
+      "description":"This painting needs no introduction. Van Gogh's famous Starry Night was painted from his view at the insane asylum, although he chose to omit the metal bars covering his window from the picture. If you are going insane over this masterpiece, rock the painting on your cool art socks as an homage to the crazed artist himself.",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/IMG_7927_230x.jpg?v=1566407016",
+      "price": "11",
+      "seller": {
+        "_id": "bv6phbrTCmj",
+        "fullname": "Claudia Perez",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg"
+      },
+      "tags": [
+        "art", "picture","nature"
+      ],
+      "details": "Also available for women",
+      "title": "Van Sock For Stars Night",
+      "type": "socks",
+      "likes":"5"
+    },
+    {
+      "color": "gray",
+      "description":"I scream, you scream, we all scream for Edvard Munch's modern interpretation of agony! While this world renowned piece has been the target of many high profile art thefts, you don't have to commit grand larceny to acquire this look. Show everyone you are an art connoisseur by wearing these unique socks inspired by Macaulay Culkin in Home Alone, wait, don't quote us on that one.",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/hot_sox_mens_the_scream_crew_socks_230x.jpg?v=1590518387",
+      "price": "12",
+      "seller": {
+        "_id": "bv6phbrTCmj",
+        "fullname": "Claudia Perez",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg"
+      },
+      "tags": [
+        "art", "picture"
+      ],
+      "details": "Also available for women",
+      "title": "The Sceam Socls",
+      "type": "socks",
+      "likes":"11"
+    },
+    {
+      "color": "black",
+      "description":"I scream, you scream, we all scream for Edvard Munch's modern interpretation of agony! While this world renowned piece has been the target of many high profile art thefts, you don't have to commit grand larceny to acquire this look. Show everyone you are an art connoisseur by wearing these unique socks inspired by Macaulay Culkin in Home Alone, wait, don't quote us on that one.",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/Hot_Sox_Mona_Lisa_Colorful_Art_Sock_Women_Green_IMG_7793_230x.jpg?v=1590518802",
+      "price": "10",
+      "seller": {
+        "_id": "bv6phbrTCmj",
+        "fullname": "Claudia Perez",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg"
+      },
+      "tags": [
+        "art", "picture"
+      ],
+      "details": "Contents: 53% Cotton, 28% Nylon, 16% Polyester, 2% Spandex. 1% Rubber",
+      "title": "Alot Of Liza Socks",
+      "type": "socks",
+      "likes":"6"
+    },
+    {
+      "color": "blue",
+      "description":"The funky trump crew socks are made of cotton material. You can feel the soft and gentle care the moment you put them on.",
+      "imgUrl": "https://img.dxcdn.com/newprdimgs/20190812/65941565598983.jpg",
+      "price": "12",
+      "seller": {
+        "_id": "bv6phbrTCmj",
+        "fullname": "Claudia Perez",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg"
+      },
+      "tags": [
+        "best seller","usa"
+      ],
+      "details": "Contents: 53% Cotton, 28% Nylon, 16% Polyester, 2% Spandex. 1% Rubber",
+      "title": "Trump socks",
+      "type": "socks",
+      "likes":"23"
+    },
+    {
+      "color": "black",
+      "description":"Flip them the bird without saying anything. Keep your dirty mouth at bay while adding to your clean wardrobe with these crazy middle-finger socks. Whoever you are targeting can't miss your message when you wear it loud and proud on your stylin' new pair.",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/mens_middle_finger_fun_socks_230x.jpg?v=1566407776",
+      "price": "9",
+      "seller": {
+        "_id": "bv6phbrTCmj",
+        "fullname": "Claudia Perez",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg"
+      },
+      "tags": [
+        "funny"
+      ],
+      "details": "Also available in men's XL",
+      "title": "Middle Finger Socks",
+      "type": "socks",
+      "likes":"13"
+    },
+    {
+      "color": "colorful",
+      "description":"Instead of buying a bouquet of sunflowers that will eventually wilt, go for a pair of Van Gogh's Sunflower art socks, which will always remain in bloom. These colorful blossoms are sure to add some sunshine to any rainy day outfit.",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/Hot_Sox_Sunflower_Cool_Art_Socks_Women_Spearmint_IMG_7813_large_c5636222-f32e-444a-a0ee-7979def724fb_230x.jpg?v=1590518823",
+      "price": "11",
+      "seller": {
+        "_id": "YjSm4WSQhwbp",
+        "fullname": "Jasmine Aleksahkin",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg"
+      },
+      "tags": [
+        "flower","art"],
+      "details": "53% Cotton, 44% Nylon, 2% Spandex, and 1% Nylon",
+      "title": "Sunflowers socks",
+      "type": "socks",
+      "likes":"16"
+    },
+    {
+      "color": "green",
+      "description":"We have a feeling these awesome men's banana socks will make you really appealing to others! They feature some cool bananas skateboarding down the street in sunglasses, sneakers ... and socks! Wow. That's actually tripping us out a little bit. There are tiny socks on these socks ... it's a sock-ception!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/SITM_mens_awesome_novelty_peeling_out_socks_230x.jpg?v=1565127739",
+      "price": "10",
+      "seller": {
+        "_id": "YjSm4WSQhwbp",
+        "fullname": "Jasmine Aleksahkin",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg"
+      },
+      "tags": [
+        "food"],
+      "details": "58% Cotton, 40% Polyester, and 2% Spandex.",
+      "title": "Peeling Out Socks",
+      "type": "socks",
+      "likes":"12"
+    },
+    {
+      "color": "green",
+      "description":"We have a feeling these awesome men's banana socks will make you really appealing to others! They feature some cool bananas skateboarding down the street in sunglasses, sneakers ... and socks! Wow. That's actually tripping us out a little bit. There are tiny socks on these socks ... it's a sock-ception!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/SITM_mens_awesome_novelty_peeling_out_socks_230x.jpg?v=1565127739",
+      "price": "10",
+      "seller": {
+        "_id": "YjSm4WSQhwbp",
+        "fullname": "Jasmine Aleksahkin",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg"
+      },
+      "tags": [
+        "food"],
+      "details": "58% Cotton, 40% Polyester, and 2% Spandex.",
+      "title": "Peeling Out Socks",
+      "type": "socks",
+      "likes":"14"
+    },
+    {
+      "color": "yellow",
+      "description":"Gustav Klimt's The Kiss is a painting in oil and gold leaf created during the Art Nouveau/Arts and Crafts resurgence in 1909. You can kiss boring socks goodbye by embracing this pair today, and breathe some life into your wardrobe by slipping on these colorful art socks.",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/hot_sox_womens_the_kiss_crew_socks_230x.jpg?v=1590518195",
+      "price": "13",
+      "seller": {
+        "_id": "YjSm4WSQhwbp",
+        "fullname": "Jasmine Aleksahkin",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg"
+      },
+      "tags": [
+        "love","people"],
+      "details": "48% Cotton, 26% Ployester, 24% Nylon, 2% Spandex",
+      "title": "Muir socks On The Walls",
+      "type": "socks",
+      "likes":"7"
+    },
+    {
+      "color": "colorful",
+      "description":"The sun appears over the ocean with patterned fish swimming by on these crazy colorful women's socks inspired by the work of artist Laurel Burch. The vibrant colors in these fun ocean socks are further accentuated by the metallic gold thread found throughout. They're sure to brighten any day!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/socksmith_laurel_burch_sun_water_fish_womens_crew_socks_flatlay_230x.jpg?v=1583518965",
+      "price": "9",
+      "seller": {
+        "_id": "YjSm4WSQhwbp",
+        "fullname": "Jasmine Aleksahkin",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg"
+      },
+      "tags": [
+        "nature"],
+      "details": "58% Nylon, 38% Cotton, 2% Other, 2% Spandex",
+      "title": "Laurel Burch Sun, Water, Fish Socks",
+      "type": "socks",
+      "likes":"17"
+    },
+    {
+      "color": "colorful",
+      "description":"Arguably the most famous wood-block print in the world, Hokusai created the Great Wave as one piece in a series titled Thirty-six Views of Mount Fuji. Intended to focus on the colossal mountain in the background that most viewers consider an afterthought, don't let this traditional Japanese print fall to the wayside. By wearing these unique socks, tell the world to watch out â€” because you are ready to make waves.",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/hot_sox_mens_great_wave_crew_socks_230x.jpg?v=1590518489",
+      "price": "13",
+      "seller": {
+        "_id": "YjSm4WSQhwbp",
+        "fullname": "Jasmine Aleksahkin",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg"
+      },
+      "tags": [
+        "nature"],
+      "details": "Also available for women",
+      "title": "Great Wave Socks",
+      "type": "socks",
+      "likes":"12"
+    },
+    {
+      "color": "brown",
+      "description":"A frosty cold beer sure is nice after a long day on the trail! These fun men's hiking socks feature a sunset scene over mountains and a stream, all inside the outline of a beer can designed by popular illustrator Atomic Child. With reinforced arches and cushioned footbeds, these cool socks are perfect for hiking, but they're so comfy you'll want to wear them all the time!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/socksmith_brew_with_a_view_atomic_child_mens_crew_socks_230x.jpg?v=1583707149",
+      "price": "8",
+      "seller": {
+        "_id": "YjSm4WSQhwbp",
+        "fullname": "Jasmine Aleksahkin",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg"
+      },
+      "tags": [
+        "nature","art"],
+      "details": "78% Wicking Cotton, 16% Polyester, 4% Nylon, 2% Spandex",
+      "title": "Great Wave Socks",
+      "type": "socks",
+      "likes":"6"
+    },
+    {
+      "color": "colorful",
+      "description":"Arguably the most famous wood-block print in the world, Hokusai created the Great Wave as just one piece in a series titled â€œThirty-six Views of Mount Fujiâ€. Intended to focus on the colossal mountain in the background that most viewers consider an afterthought, don't let this traditional Japanese print fall to the wayside. By wearing these colorful art socks, tell the world to watch out, because you are ready to make waves.",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/Hot_Sox_Great_Wave_Turquoise_Fun_Womens_Socks_IMG_7939_230x.jpg?v=1590518504",
+      "price": "9",
+      "seller": {
+        "_id": "YjSm4WSQhwbp",
+        "fullname": "Jasmine Aleksahkin",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg"
+      },
+      "tags": [
+        "nature","sea"],
+      "details": "Also available for men",
+      "title": "Wave Socks",
+      "type": "socks",
+      "likes":"6"
+    },
+    {
+      "color": "purple",
+      "description":"Whether a storm is brewing or the sun is shining outside your window, looking down at your Knee High Length socks, there will always be a Starry Night. The world famous Van Gogh piece needs no introduction, although you will be introducing yourself to strangers far more than usual with incredibly detailed and colorful Knee High Length socks like these.",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/IMG_9693_230x.jpg?v=1565134664",
+      "price": "10",
+      "seller": {
+        "_id": "YjSm4WSQhwbp",
+        "fullname": "Jasmine Aleksahkin",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg"
+      },
+      "tags": [
+        "nature","sky"],
+      "details": "75% Cotton, 20% Polyester, and 5% Spandex.",
+      "title": "Starry Night Knee High Socks",
+      "type": "socks",
+      "likes":"8"
+    },
+    {
+      "color": "colorful",
+      "description":"Bob Ross had an important message for all of us TV viewers to make sure we noticed â€œhappy cloudsâ€ floating by, to find joy wherever we looked. Find joy on your own feet with these cheerful men's socks that feature the famous painter and nostalgic icon, along with some of those happy clouds on a bright blue background!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/oooh_yeah_mens_bob_ross_happy_clouds_crew_socks_230x.jpg?v=1565129166",
+      "price": "14",
+      "seller": {
+        "_id": "Xh9nMze",
+        "fullname": "Richard Horton",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg"
+      },
+      "tags": [
+        "art","sky"],
+      "details": "75% Cotton, 20% Polyester, and 5% Spandex.",
+      "title": "Bob Ross Happy Clouds Socks",
+      "type": "socks",
+      "likes":"15"
+    },
+    {
+      "color": "brown",
+      "description":"Well? Do you? Because these cool weightlifting socks are only for bros who don't skip arm day! They have an awesome pattern of dumbbells, barbells and kettlebells, making them the perfect accessory to rock while you stare yourself down in the gym mirror. Pick some up for yourself and your spotter!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/do_you_even_lift_bro_socksmith_mens_crew_socks_230x.jpg?v=1566429042",
+      "price": "8",
+      "seller": {
+        "_id": "Xh9nMze",
+        "fullname": "Richard Horton",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg"
+      },
+      "tags": [
+        "sport"],
+      "details": "70% Cotton, 27% Nylon, 3% Spandex",
+      "title": "Lift Socks",
+      "type": "socks",
+      "likes":"5"
+    },
+    {
+      "color": "red",
+      "description":"Sometimes you just have to prioritize! Whether it's co-workers bugging you with trivial stuff or someone getting in the way of your hard work making the world a better place, you just have to put your foot down! You can drive the message home even more if your feet are wearing these funny men's socks that spell it out: You're â€œbusy making a fucking difference!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/blue_q_mens_busy_making_a_difference_crew_socks_230x.jpg?v=1566408702",
+      "price": "13",
+      "seller": {
+        "_id": "Xh9nMze",
+        "fullname": "Richard Horton",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg"
+      },
+      "tags": [
+        "squar"],
+      "details": "58% Cotton, 39% Nylon, 3% Spandex",
+      "title": "Busy Making a Fucking Difference Socks",
+      "type": "socks",
+      "likes":"9"
+    },
+    {
+      "color": "white",
+      "description":"How can you be grouchy in socks this cool, you old codger? These funny men's crew socks feature the words â€œGrumpy Old Manâ€ in bold red letters alongside an even bolder black-and-white checkerboard pattern like a racing flag. Wear these babies while you holler at the young whippersnappers to get off your lawn! NOW! A great gift idea for dads and other old dudes!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/grumpy_old_man_blue_q_mens_crew_socks_230x.jpg?v=1565130157",
+      "price": "13",
+      "seller": {
+        "_id": "Xh9nMze",
+        "fullname": "Richard Horton",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg"
+      },
+      "tags": [
+        "squar"],
+      "details": "57% Combed Cotton, 40% Nylon, 3% Spandex",
+      "title": "Grumpy Old Man Socks",
+      "type": "socks",
+      "likes":"9"
+    },
+    {
+      "color": "green",
+      "description":"Let your feet say what everyone in the conference room is thinking. These awesome work socks for men probably aren't the ideal choice for a typical professional setting, but you aren't a typical kinda guy. Lucky for you, these cool green socks from Blue Q look like stylish work socks until you roll up your pants a tad to show the other underlings just what you think of the latest PowerPoint presentation.",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/IMG_1298_230x.jpg?v=1566407420",
+      "price": "11",
+      "seller": {
+        "_id": "Xh9nMze",
+        "fullname": "Richard Horton",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg"
+      },
+      "tags": [
+        "squar"],
+      "details": "71% Combed Cotton, 27% Nylon, and 2% Spandex",
+      "title": "This Meeting is Bullshit Socks",
+      "type": "socks",
+      "likes":"6"
+    },
+    {
+      "color": "black",
+      "description":"Even though these cute moon socks feature loads of bright colors, they still put out a calming vibe. Inspired by the work of artist Laurel Burch, they feature the moon in profile, a pattern of stars across the toes and the word â€œPeaceâ€ at the top. We love the colorful flowers blooming on the moon, whose eyes are closed with a tranquil expression. If you've got a stressful day ahead, slip into these socks for some extra calm!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/socksmith_laurel_burch_peaceful_moon_womens_crew_socks_2898884e-0c98-4b77-8559-5973419dd295_230x.jpg?v=1583707383",
+      "price": "13",
+      "seller": {
+        "_id": "Xh9nMze",
+        "fullname": "Richard Horton",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg"
+      },
+      "tags": [
+        "stars", "nature"],
+      "details": "58% Nylon, 40% Cotton, 2% Spandex",
+      "title": "Foot Good Night Stars",
+      "type": "socks",
+      "likes":"9"
+    },
+    {
+      "color": "green",
+      "description":"Talk about a nature lover! These funny men's tree socks are perfect for the guy who, while in the woods, might take a deep breath and say, â€œI fucking love it out here.â€ Featuring a print of trees and a little snow on the ground, these socks are made to be worn hiking, camping or for whatever adventure you have planned in the great outdoors!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/blue_q_mens_i_fucking_love_it_out_here_crew_socks_230x.jpg?v=1566407680",
+      "price": "12",
+      "seller": {
+        "_id": "Xh9nMze",
+        "fullname": "Richard Horton",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg"
+      },
+      "tags": [
+        "funny"],
+      "details": "57% Cotton, 41% Nylon, 2% Spandex",
+      "title": "I Fucking Love It Out Here Socks",
+      "type": "socks",
+      "likes":"6"
+    },
+    {
+      "color": "gray",
+      "description":"Come on, dude! Open a window! Obviously, as these crazy socks say, â€œIt's OK to fart,â€ but you can at least let some fresh air in here! These ridiculously funny novelty socks are perfect for people who never fails to laugh at toilet humor and who has on occasion tried to time the length of their own farts. You know who you are!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/gumball_poodle_its_ok_to_fart_unisex_crew_socks_main_a92aeaaf-c6d1-4c0d-bcd1-39daa2308dd5_230x.jpg?v=1574284808",
+      "price": "9",
+      "seller": {
+        "_id": "Xh9nMze",
+        "fullname": "Richard Horton",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg"
+      },
+      "tags": [
+        "curses"],
+      "details": "65% Cotton, 32% Nylon, 3% Spandex",
+      "title": "It's OK to Fart Socks",
+      "type": "socks",
+      "likes":"7"
+    },
+    {
+      "color": "colorful",
+      "description":"Bold. Colorful. Iconic. Slip into the style of renowned artist Frida Kahlo with these gorgeous novelty art socks! I paint self-portraits because I am so often alone, because I am the person I know best, Kahlo said. Her rich portraits appear all over these lovely, vibrant socks, perfect for adding a little bit of inspiration to your look!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/socksmith_frida_kahlo_in_blue_awesome_socks_230x.jpg?v=1592931792",
+      "price": "7",
+      "seller": {
+        "_id": "Xh9nMze",
+        "fullname": "Richard Horton",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg"
+      },
+      "tags": [
+        "art","people"],
+      "details": " Cotton, 34% Nylon, 3% Spandex",
+      "title": "Ladys Socks",
+      "type": "socks",
+      "likes":"4"
+    },
+    {
+      "color": "purple",
+      "description":"Crew length U.S. shoe size: women’s 5–10.5, up to men's 8.5 63% cotton, 34% nylon, 3% spandex Made in Korea When avocados fall in love",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0234/4461/products/avocado-love-cute-womens-socks_857x.jpg?v=1571438751",
+      "price": "12",
+      "seller": {
+        "_id": "Xh9nMze",
+        "fullname": "Richard Horton",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg"
+      },
+      "tags": [
+        "art"],
+      "details": "Cotton, 34% Nylon, 3% Spandex",
+      "title": "Avocado Love Women's Socks",
+      "type": "socks",
+      "likes":"6"
+    },
+    {
+      "color": "black",
+      "description":"We've got a great pick for all you music lovers out there! These cool guitar socks for men feature an awesome pattern of all your favorite six-string classics, both acoustic and electric. They make a great gift idea for a guitar player or anyone who likes to rock out from time to time. Get ready for the solo!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/modsocks_mens_classic_guitars_socks_230x.jpg?v=1565124714",
+      "price": "10",
+      "seller": {
+        "_id": "Xh9nMze",
+        "fullname": "Richard Horton",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg"
+      },
+      "tags": [
+        "music"],
+      "details": "65% Cotton, 24% Nylon, 8% Polyester, 3% Spandex",
+      "title": "Classic Guitars Socks",
+      "type": "socks",
+      "likes":"8"
+    },
+    {
+      "color": "gray",
+      "description":"Some guys never grow up â€” and that's a good thing! These completely childish and completely hilarious men's crew socks recreate the classic â€œGuess what, chicken buttâ€ joke we all love so much. They've got a picture of a chicken and an arrow pointing you-know-where to make it extra clear. They're a great gift idea for that guy you know who still drops this line with glee! Aww ... just let him have this.",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/K.Bell_mens_chicken_butt_crew_socks_230x.jpg?v=1566408657",
+      "price": "9",
+      "seller": {
+        "_id": "Xh9nMze",
+        "fullname": "Richard Horton",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg"
+      },
+      "tags": [
+        "animal"],
+      "details": "44% Pima Cotton, 42% Nylon, 11% Polyester, 3% Spandex",
+      "title": "Chicken Butt Socks",
+      "type": "socks",
+      "likes":"4"
+    },
+    {
+      "color": "brown",
+      "description":"Slip these babies on with your hiking boots and get wanderin'! J.R.R. Tolkien knew what he was talking about when he wrote, â€œNot all who wander are lost,â€ as it says on these scenic mountain socks for men. They also have handsome details of a compass rose and a map pattern, making them a great choice for men who love travel and the outdoors. Sometimes when we're out there losing ourselves in the woods, we're actually finding ourselves, too!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/foot_traffic_mens_wanderer_crew_socks_230x.jpg?v=1571013635",
+      "price": "12",
+      "seller": {
+        "_id": "Xh9nMze",
+        "fullname": "Richard Horton",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg"
+      },
+      "tags": [
+        "art"],
+      "details": "65% Cotton, 15% Nylon, 15% Polyester, 5% Spandex",
+      "title": "Wanderer Socks",
+      "type": "socks",
+      "likes":"8"
+    },
+    {
+      "color": "colorful",
+      "description":"Slip these babies on with your hiking boots and get wanderin'! J.R.R. Tolkien knew what he was talking about when he wrote, â€œNot all who wander are lost,â€ as it says on these scenic mountain socks for men. They also have handsome details of a compass rose and a map pattern, making them a great choice for men who love travel and the outdoors. Sometimes when we're out there losing ourselves in the woods, we're actually finding ourselves, too!",
+      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/blue_Q_crazy_novelty_ringmaster_socks_230x.jpg?v=1603372364",
+      "price": "13",
+      "seller": {
+        "_id": "Xh9nMze",
+        "fullname": "Amelia Larson",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/3_nz6vkf.jpg"
+      },
+      "tags": [
+        "art"],
+      "details": "61% combed cotton; 36% nylon; 3% spandex.",
+      "title": "Ringmaster of the Shitshow Socks",
+      "type": "socks",
+      "likes":"12"
+    }
+  ]
+}

@@ -1,18 +1,78 @@
 .item-details {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "img item-info";
+    grid-template-rows: 50vh 20px;
+
+    grid-template-areas: "img item-info" "sep sep";
     margin: 0 10vw;
     img {
         grid-area: img;
     }
+    .border-seprator {
+        grid-area: sep;
+        background-color: dimgray;
+        left: 0;
+        height: 1vh;
+    }
 }
 .item-info {
     grid-area: item-info;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 5px;
+    color: rgb(17, 17, 17);
     h1,
     .price {
         margin: 0 5vw;
         margin-top: 10px;
+        align-self: start;
+    }
+    .price {
+    }
+    .amount {
+        display: flex;
+        div {
+            border-top: 1px solid rgb(32, 32, 32);
+            border-bottom: 1px solid rgb(32, 32, 32);
+            width: 50px;
+            display: flex;
+            align-self: center;
+            justify-content: center;
+        }
+        .changeAmount{
+            width: 30px;
+            border: 1px solid rgb(32, 32, 32);
+
+            cursor: pointer;
+        }
+    }
+
+    .buy {
+        background-color: $clr3;
+        font-size: 2rem;
+        color: white;
+        padding: 0 50px;
+        margin: 30px 10px;
+        cursor: pointer;
+    }
+
+    .item-description {
+        font-size: 0.8rem;
+    }
+}
+
+.seller-preview {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    img {
+        height: $imgLen;
+        width: $imgLen;
+        border-radius: 50px;
+    }
+    p {
+        margin: 0 11px;
     }
 }

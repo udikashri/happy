@@ -10,24 +10,24 @@ export const itemService = {
     editItem
 }
 
-// const baseUrl = 'http://localhost:3030/items';
-const baseUrl = 'http://localhost:3030/api/item';
+const baseUrl = 'http://localhost:3030/items'; // json
+// const baseUrl = 'http://localhost:3030/api/item'; // mongo
 
 function query(filterBy = null) {
     console.log('query');
     let url = '';
-    // if (filterBy) {
-    //     const { title, type, color } = filterBy
-    //     console.log(type);
-    //     url += '?';
-    //     let params = new URLSearchParams(url.search);
-    //     color !== 'clear' && params.set('color', color);
-    //     title && params.set('title_like', title);
-    //     type !== 'all' && params.set('type', type);
-    //     url += params.toString()   
-    // }
-        //  return axios.get(`${baseUrl}${url}`)
-         return axios.get(`${baseUrl}`)
+    if (filterBy) {
+        const { title, type, color } = filterBy
+        console.log(type);
+        url += '?';
+        let params = new URLSearchParams(url.search);
+        color !== 'clear' && params.set('color', color);
+        title && params.set('title_like', title);
+        type !== 'all' && params.set('type', type);
+        url += params.toString()   
+    } // json 19-28
+         return axios.get(`${baseUrl}${url}`) /// json
+        //  return axios.get(`${baseUrl}`) /// mongo
             .then(res => {
                 return res.data
             })

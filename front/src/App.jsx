@@ -11,6 +11,7 @@ import '../src/assets/styles/main.scss'
 
 import { Header } from './cmps/Header'
 import { BackOffiseSelller } from './pages/BackOffiseSelller'
+import { Footer } from './cmps/footer'
 
 
 export function App() {
@@ -29,9 +30,7 @@ export function App() {
             <Route path="/" component={Home} />
           </Switch>
         </main>
-        <footer>
-          Starter
-        </footer>
+   <Footer/>
       </Router>
     </div>
   )

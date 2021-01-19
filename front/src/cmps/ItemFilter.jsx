@@ -7,17 +7,18 @@ export class ItemFilter extends Component {
         filterBy: {
             title: '',
             type: 'all',
-            color:''
-            // price: '',
+            color:'clear',
+            lowPrice: 0,
+            // highPrice: 1000
+
         }
     }
 
 
     handleChange = ({ target }) => {
-        console.log(target);
         const field = target.name
         const value = (target.type === 'number') ? +target.value : target.value
-
+console.log(target.value);
         this.setState(prevState => ({ filterBy: { ...prevState.filterBy, [field]: value } }), () => {
             this.props.onSetFilter(this.state.filterBy)
         })
@@ -34,9 +35,9 @@ export class ItemFilter extends Component {
         return (
             <section className="item-filter">
                 <input type="text" name="title" value={filterBy.title} onChange={this.handleChange} placeholder="Filter" autoComplete="off"/>
-                {/* <input type="number" name="lowPrice" value={filterBy.lowPrice} onChange={this.handleChange} placeholder="low price" />
-                <input type="number" name="highPrice" value={filterBy.highPrice} onChange={this.handleChange} placeholder="high price" />
-                <input id="demo-simple-select-label">Item Type</input> */}
+                <input type="number" name="lowPrice" /*value={filterBy.lowPrice}*/ onChange={this.handleChange} placeholder="low price" name="lowPrice" />
+                {/* <input type="number" name="highPrice" value={filterBy.highPrice} onChange={this.handleChange} placeholder="high price" /> */}
+               
                 <select
                     // labelId="demo-simple-select-label"
                     id="demo-simple-select"
