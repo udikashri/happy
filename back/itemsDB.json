@@ -252,23 +252,6 @@
       "likes":"12"
     },
     {
-      "color": "green",
-      "description":"We have a feeling these awesome men's banana socks will make you really appealing to others! They feature some cool bananas skateboarding down the street in sunglasses, sneakers ... and socks! Wow. That's actually tripping us out a little bit. There are tiny socks on these socks ... it's a sock-ception!",
-      "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/SITM_mens_awesome_novelty_peeling_out_socks_230x.jpg?v=1565127739",
-      "price": "10",
-      "seller": {
-        "_id": "YjSm4WSQhwbp",
-        "fullname": "Jasmine Aleksahkin",
-        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg"
-      },
-      "tags": [
-        "food"],
-      "details": "58% Cotton, 40% Polyester, and 2% Spandex.",
-      "title": "Peeling Out Socks",
-      "type": "socks",
-      "likes":"14"
-    },
-    {
       "color": "yellow",
       "description":"Gustav Klimt's The Kiss is a painting in oil and gold leaf created during the Art Nouveau/Arts and Crafts resurgence in 1909. You can kiss boring socks goodbye by embracing this pair today, and breathe some life into your wardrobe by slipping on these colorful art socks.",
       "imgUrl": "https://cdn.shopify.com/s/files/1/0207/8554/products/hot_sox_womens_the_kiss_crew_socks_230x.jpg?v=1590518195",
@@ -564,8 +547,8 @@
       "price": "9",
       "seller": {
         "_id": "Xh9nMze",
-        "fullname": "Richard Horton",
-        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg"
+        "fullname": "Amelia Larson",
+        "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/3_nz6vkf.jpg"
       },
       "tags": [
         "animal"],

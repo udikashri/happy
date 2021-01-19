@@ -72,12 +72,12 @@ async function query(filterBy = {}) {
 
 async function remove(itemId) {
     try {
-        const store = asyncLocalStorage.getStore()
-        const { userId, isAdmin } = store
+        // const store = asyncLocalStorage.getStore()
+        // const { userId, isAdmin } = store
         const collection = await dbService.getCollection('item')
         // remove only if user is owner/admin
         const query = { _id: ObjectId(itemId) }
-        if (!isAdmin) query.byUserId = ObjectId(userId)
+        // if (!isAdmin) query.byUserId = ObjectId(userId)
         await collection.deleteOne(query)
         // return await collection.deleteOne({ _id: ObjectId(itemId), byUserId: ObjectId(userId) })
     } catch (err) {
@@ -88,13 +88,15 @@ async function remove(itemId) {
 
 
 async function add(item) {
+    console.log("additem" ,item);
+
     try {
         // peek only updatable fields!
-        const itemToAdd = {
-            byUserId: ObjectId(item.byUserId),
-            aboutUserId: ObjectId(item.aboutUserId),
-            txt: item.txt
-        }
+        // const itemToAdd = {
+        //     byUserId: ObjectId(item.byUserId),
+        //     aboutUserId: ObjectId(item.aboutUserId),
+        //     txt: item.txt
+        // }
         const collection = await dbService.getCollection('item')
         const res = await collection.insertOne(itemToAdd)
         return res.ops[0];

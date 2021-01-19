@@ -52,6 +52,11 @@
         background-color: rgb(116, 76, 24);
         @include circle();
     }
+    .colorful {
+        background-color: red; /* For browsers that do not support gradients */
+        background-image: linear-gradient(to bottom right, yellow, green, blue,  red, orange);
+              @include circle();
+    }
     .all {
         font-size: 25px;
         transform: rotate(180deg);

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import React, { Component } from 'react'
-import { saveItem, editItem } from '../store/actions/itemActions.js'
+import { saveItem } from '../store/actions/itemActions.js'
 import { Uploader } from './Uploader';
 
 
@@ -8,16 +8,16 @@ export class _ItemEdit extends Component {
 
   state = {
     currItem: {
-      type: "socks",
+      type: "",
       title: "",
       price: 0,
-      color: "black",
+      color: "",
       seller: {
         _id: "kwmXcp",
         name: "Kaila Melonby",
         imgUrl: "http://dummyimage.com/129x121.jpg/cc0000/ffffff"
       },
-      description: "moratorium",
+      description: "",
       imgUrl: "https://ih1.redbubble.net/image.951124242.1192/ur,socks_flatlay_medium,square,600x600-bg,f8f8f8.1.jpg",
       tags: [
         "one",
@@ -66,7 +66,10 @@ export class _ItemEdit extends Component {
       <section className="edit-box">
         <form onSubmit={(event) => { this.props.onSaveItem(event, currItem) }}>
           <input autoFocus type="text" value={currItem.title} onChange={this.handleInput} name="title" placeholder="Add Item" autoComplete="off" />
-          <label >Price: <input type="number" name="price" value={currItem.price} onChange={this.handleInput} /></label>
+          <input autoFocus type="text" value={currItem.color} onChange={this.handleInput} name="color" placeholder="Add Color" autoComplete="off" />
+          <input autoFocus type="text" value={currItem.type} onChange={this.handleInput} name="type" placeholder="Add Type" autoComplete="off" />
+          <input autoFocus type="text" value={currItem.description} onChange={this.handleInput} name="description" placeholder="Add Description" autoComplete="off" />
+          <label >Price: <input type="number" min="0" name="price" value={currItem.price} onChange={this.handleInput} /></label>
           <Uploader onFinishUpload={this.onUploadItemImage} />
           <button>Save</button>
         </form>
@@ -83,7 +86,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = {
   saveItem,
-  editItem
 }
 
 export const ItemEdit = connect(mapStateToProps, mapDispatchToProps)(_ItemEdit)

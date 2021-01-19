@@ -62,6 +62,7 @@ console.log(target.value);
                     <section title="Green" onClick={() => {this.handleChangeColor('green')}} className="green"></section>
                     <section title="Purple" onClick={() => {this.handleChangeColor('purple')}} className="purple"></section>
                     <section title="Brown" onClick={() => {this.handleChangeColor('brown')}} className="brown"></section>
+                    <section title="colorful" onClick={() => {this.handleChangeColor('colorful')}} className="colorful"></section>
                     <section title="Clear" onClick={() => {this.handleChangeColor('clear')}} className="all">🚫</section>
 
 

@@ -665,6 +665,24 @@
         "Secured",
         "tow"
       ]
+    },
+    {
+      "type": "socks",
+      "title": "Test",
+      "price": "100",
+      "color": "blue",
+      "seller": {
+        "_id": "kwmXcp",
+        "name": "Kaila Melonby",
+        "imgUrl": "http://dummyimage.com/129x121.jpg/cc0000/ffffff"
+      },
+      "description": "sdasadsadasdsad",
+      "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1611055550/h0pzguhoih8jxbk7bfyr.jpg",
+      "tags": [
+        "one",
+        "tow"
+      ],
+      "_id": 50
     }
   ],
   "orders": [

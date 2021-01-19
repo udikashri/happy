@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
 import React, { Component } from 'react'
-// import { itemService } from '../services/itemService.js'
+import { itemService } from '../services/itemService.js'
 import { loadItems, removeItem, saveItem/*, setFilter*/ } from '../store/actions/itemActions'
 import { loadSellers } from '../store/actions/sellerActions'
-import { ItemEdit } from '../cmps/ItemEdit'
+// import { ItemEdit } from '../cmps/ItemEdit'
 // import { Link } from 'react-router-dom'
 // import { ItemReview } from './ItemReview'
 // import { removeItem } from '../store/actions/itemActions.js'
@@ -12,21 +12,21 @@ import { ItemEdit } from '../cmps/ItemEdit'
 class _ItemDetails extends Component {
   state = {
     currItem: { title: '', imgUrl: '', price: 0, _id: '' },
-    seller: { name: 'udi', user: { imgUrl: '' } },
-    sellers: {},
+    // seller: { name: 'udi', user: { imgUrl: '' } },
+    // sellers: {},
     amount: 1
   }
   async componentDidMount() {
     await this.props.loadItems()
     this.loadItem()
-    await this.props.loadSellers()
-    this.loadSeller()
+    // await this.props.loadSellers()
+    // this.loadSeller()
   }
 
   loadItem = () => {
     const { itemId } = this.props.match.params
     const selectItem = this.props.items.filter(item => {
-      return +itemId === item._id
+      return   itemId === item._id
     })
     this.setState({ currItem: selectItem[0] }, () => {
     })
@@ -50,8 +50,9 @@ class _ItemDetails extends Component {
   }
 
 
-  onRemove = () => {
-    this.props.removeItem(this.state.currItem._id)
+  onRemove = async () => {
+    console.log('h');
+    await this.props.removeItem(this.state.currItem._id)
     this.props.history.push('/shop')
   }
 
@@ -65,6 +66,7 @@ class _ItemDetails extends Component {
 
   render() {
     const { currItem, seller, amount } = this.state
+    // if (!currItem) return
     return (
   
       <section className="item-details">
@@ -74,10 +76,10 @@ class _ItemDetails extends Component {
         <div className="item-info">
           <h1>{currItem.title}</h1>
           <div className="price">{currItem.price}$</div>
-          <div className="seller-preview">
+         {seller && <div className="seller-preview">
             <img src={seller.user.imgUrl} />
             {seller.name}
-          </div>
+          </div>}
           <div className="amount">
             <div onClick={(ev) => this.onChangeAmount(ev, -1)} className="changeAmount">-</div>
            <div>{amount}</div> 

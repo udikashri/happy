@@ -10,20 +10,21 @@ export const sellerService = {
     editSeller
 }
 
+/// MONGO - Line = 14-22
+// const baseUrl = 'http://localhost:3030/seller';
+
+// function query() {
+//          return axios.get(`${baseUrl}`)
+//             .then(res => {    
+//                 return res.data
+//             })
+//             .catch(() => console.log('nooooo'))
+// }
+
+/// JSON - Line = 25-33
 const baseUrl = 'http://localhost:3030/sellers';
 
-function query(filterBy = null) {
-    // let url = '';
-    // if (filterBy) {
-    //     const { title, type, color } = filterBy
-    //     console.log(type);
-    //     url += '?';
-    //     let params = new URLSearchParams(url.search);
-    //     color && params.set('color', color);
-    //     title && params.set('title_like', title);
-    //     type !== 'all' && params.set('type', type);
-    //     url += params.toString()   
-    // }
+function query() {
          return axios.get(`${baseUrl}`)
             .then(res => {    
                 return res.data

@@ -26,18 +26,18 @@ export function saveItem(item){
     }
 }
 
-export function editItem(item) {
-    console.log('hello');
-    return (dispatch) => {
-        itemService.editItem(item).then(() => { dispatch({ type: 'EDIT_ITEM', item }) })
-    }
-}
+// export function editItem(item) {
+//     return (dispatch) => {
+//         itemService.editItem(item).then(() => { dispatch({ type: 'EDIT_ITEM', item }) })
+//     }
+// }
 
 export function removeItem(itemId) {
     console.log('remove');
     return (dispatch) => {
         return itemService.removeItem(itemId)
         .then(items => {
+            // console.log(items);
             const action = {
                 type: 'REMOVE_ITEM',
                 itemId

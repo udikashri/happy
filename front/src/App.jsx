@@ -12,7 +12,8 @@ import '../src/assets/styles/main.scss'
 import { Header } from './cmps/Header'
 import { BackOffiseSelller } from './pages/BackOffiseSelller'
 import { Footer } from './cmps/footer'
-
+import { LoginSignup } from './pages/LoginSignup'
+import { UserDetails } from './pages/UserDetails'
 
 export function App() {
   return (
@@ -21,8 +22,8 @@ export function App() {
         <main>
         <Header></Header>
           <Switch>
-            {/* <Route path="/user/:id" component={UserDetails} /> */}
-            {/* <Route path="/login" component={LoginSignup} /> */}
+            <Route path="/user/:id" component={UserDetails} />
+            <Route path="/login" component={LoginSignup} />
             {/* <Route path="/chat" component={Chat} /> */}
             <Route path="/seller" component={BackOffiseSelller} />
             <Route path="/item/:itemId" component={ItemDetails} />

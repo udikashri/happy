@@ -1,0 +1,46 @@
+{
+    "users": [
+        {
+            "_id": "Geku8RPrt",
+            "fullname": "Dolores Gonzales",
+            "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/18_rwb9g1.jpg",
+            "username": "rfawdery11",
+            "password": "UNivCGon"
+        },
+        {
+            "_id": "NP7P3D",
+            "fullname": "Shelly Groves",
+            "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/4_o2r8cs.jpg",
+            "username": "sgrovesn",
+            "password": "93kB0HER"
+        },
+        {
+            "_id": "0DKUfiuZaj7F",
+            "fullname": "Deeann Stirling",
+            "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/30_nvklsm.jpg",
+            "username": "dstirlingo",
+            "password": "nIxKzite"
+        },
+        {
+            "_id": "0SWww2",
+            "fullname": "Peirce Lambrecht",
+            "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/9_gqkjqu.jpg",
+            "username": "plambrechty",
+            "password": "z0G6CZ4AZ2K"
+        },
+        {
+            "_id": "8SWssw2",
+            "fullname": "Melissa Silva",
+            "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/6_qr24nq.jpg",
+            "username": "MelissaSilva",
+            "password": "Melissa2325g"
+        },
+        {
+            "_id": "23GTww245",
+            "fullname": "Johnny Dean",
+            "imgUrl": "https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/5_yvygo4.jpg",
+            "username": "JohnnyDean",
+            "password": "z0GJohnnyAZ2K"
+        }
+    ]
+}
