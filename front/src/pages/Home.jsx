@@ -141,7 +141,7 @@ export class Home extends Component {
 
 
             </section>
-         
+
             <h2>Our Top Sellers </h2>
 
             <section className="sellers-list flex-column align-center justify-center" >
@@ -153,8 +153,8 @@ export class Home extends Component {
                 <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/6_qr24nq.jpg" className="small" />
                 <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/18_rwb9g1.jpg" className="small" />
                 <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/6_qr24nq.jpg" className="small" />
-                </div>
-               <div className="sellers-row flex space-between">
+              </div>
+              <div className="sellers-row flex space-between">
                 <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg" className="small" />
                 <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg" className="small" />
                 <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/3_nz6vkf.jpg" className="small" />
@@ -162,8 +162,8 @@ export class Home extends Component {
                 <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg" className="small" />
                 <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/30_nvklsm.jpg" className="small" />
                 <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg" className="small" />
-                
-             </div>
+
+              </div>
               <Link className="btn" to={`/sell`}>Join our Marketplace</Link>
             </section>
             <section className="seller-banner">

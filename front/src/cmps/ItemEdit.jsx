@@ -6,24 +6,56 @@ import { Uploader } from './Uploader';
 
 export class _ItemEdit extends Component {
 
+  // state = {
+  //   currItem: {
+  //     type: "",
+  //     title: "",
+  //     price: 0,
+  //     color: "",
+  //     seller: {
+  //       _id: "kwmXcp",
+  //       name: "Kaila Melonby",
+  //       imgUrl: "http://dummyimage.com/129x121.jpg/cc0000/ffffff"
+  //     },
+  //     description: "",
+  //     imgUrl: "https://ih1.redbubble.net/image.951124242.1192/ur,socks_flatlay_medium,square,600x600-bg,f8f8f8.1.jpg",
+  //     tags: [
+  //       "one",
+  //       "tow"
+  //     ]
+  //   }
+  // }
   state = {
-    currItem: {
-      type: "",
-      title: "",
-      price: 0,
-      color: "",
-      seller: {
-        _id: "kwmXcp",
-        name: "Kaila Melonby",
-        imgUrl: "http://dummyimage.com/129x121.jpg/cc0000/ffffff"
-      },
-      description: "",
-      imgUrl: "https://ih1.redbubble.net/image.951124242.1192/ur,socks_flatlay_medium,square,600x600-bg,f8f8f8.1.jpg",
-      tags: [
-        "one",
-        "tow"
-      ]
-    }
+    currItem: null
+  }
+
+  async componentDidMount() {
+    const currItem  =   {
+        // type: "",
+        title: "",
+        price: 0,
+        color: "",
+        seller: {
+        },
+        description: "",
+        imgUrl: "https://ih1.redbubble.net/image.951124242.1192/ur,socks_flatlay_medium,square,600x600-bg,f8f8f8.1.jpg",
+        tags: [
+          "one",
+          "tow"
+        ]
+      }
+    this.setState({currItem})
+
+  }
+
+  onSaveItem = async (ev) => {
+    ev.preventDefault()
+    const  item = this.state.currItem
+    item.seller._id = this.props.user._id
+    item.seller.fullname = this.props.user.fullname
+    item.seller.imgUrl = this.props.user.imgUrl
+    await this.props.saveItem(item)
+    this.props.loadUserItems()
   }
 
   async componentDidUpdate(prevProps) {
@@ -60,15 +92,14 @@ export class _ItemEdit extends Component {
 
   render() {
     const { currItem } = this.state;
-
     if (!currItem) return <h1>Loading.....</h1>
     return (
       <section className="edit-box">
-        <form onSubmit={(event) => { this.props.onSaveItem(event, currItem) }}>
+        <form onSubmit={(event) => { this.onSaveItem(event) }}>
           <input autoFocus type="text" value={currItem.title} onChange={this.handleInput} name="title" placeholder="Add Item" autoComplete="off" />
           <input autoFocus type="text" value={currItem.color} onChange={this.handleInput} name="color" placeholder="Add Color" autoComplete="off" />
-          <input autoFocus type="text" value={currItem.type} onChange={this.handleInput} name="type" placeholder="Add Type" autoComplete="off" />
-          <input autoFocus type="text" value={currItem.description} onChange={this.handleInput} name="description" placeholder="Add Description" autoComplete="off" />
+          {/* <input autoFocus type="text" value={currItem.type} onChange={this.handleInput} name="type" placeholder="Add Type" autoComplete="off" /> */}
+          <textarea rows="5" autoFocus type="text" value={currItem.description} onChange={this.handleInput} name="description" placeholder="Add Description" autoComplete="off" />
           <label >Price: <input type="number" min="0" name="price" value={currItem.price} onChange={this.handleInput} /></label>
           <Uploader onFinishUpload={this.onUploadItemImage} />
           <button>Save</button>

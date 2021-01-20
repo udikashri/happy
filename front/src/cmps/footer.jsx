@@ -11,7 +11,7 @@ export class Footer extends Component {
     // hidden
     // var visibility = 'hidden'
 
-    ompenModal = () => {
+    openModal = () => {
         var { modalVisibility } = this.state
         if (modalVisibility === 'hidden') modalVisibility = 'visible'
         else modalVisibility = 'hidden'
@@ -26,7 +26,7 @@ export class Footer extends Component {
                 <h6>© HappySocks 2021</h6>
                 <section onClick={this.ompenModal} style={{ visibility: this.state.modalVisibility }} className="modal-background"></section>
                 <div style={{ visibility: this.state.modalVisibility }} className="countries-modal" >
-                    <div onClick={this.ompenModal} className="close">X</div>
+                    <div onClick={this.openModal} className="close">X</div>
                     <h3>Change Shipping Country</h3>
                     <div className="grid-countries">
                         <div>Australia</div>
