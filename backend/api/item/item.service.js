@@ -5,7 +5,6 @@ const asyncLocalStorage = require('../../services/als.service')
 async function query(filterBy =null) {
     const { title , type} = filterBy
     let cred = {}
-    // const criteria = _buildCriteria(filterBy)
     try {
         const collection = await dbService.getCollection('item')
         if(filterBy) {
@@ -16,13 +15,11 @@ async function query(filterBy =null) {
             if(type) cred.type = type
         }
         console.log(cred);
-        // var Items = await collection.find(criteria).toArray()
         var Items = await collection.find(cred).toArray()
         Items = Items.map(Item => {
             Item.createdAt = ObjectId(Item._id).getTimestamp()
             return Item
         })
-        // console.log('sasa' ,Items);
         return Items
     } catch (err) {
         logger.error('cannot find Items', err)
