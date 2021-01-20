@@ -1,0 +1,27 @@
+.thank-you{
+    img{
+z-index: -1;
+    }
+
+    .speech {
+        position: relative;
+        font-family: arial;
+        font-size: 1.1em;
+        background: $clr7;
+        color: #fff;
+        border-radius: 20px;
+        padding: 20px;
+        max-width: 40vw;
+        right: -50vw;
+      }
+
+      .half::after {
+        content: '';
+        border: 20px solid transparent;
+        border-left: 20px solid $clr7;
+        border-top: 20px solid $clr7;
+        position: absolute;
+        bottom: -20px;
+        left: 10%;
+      } 
+}
