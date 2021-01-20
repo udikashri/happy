@@ -1,5 +1,4 @@
 .item-details {
- 
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50vh 20px;
@@ -7,9 +6,9 @@
     grid-template-areas: "img item-info" "sep sep";
     margin: 10vh 10vw 0;
     // margin-top: 500px;
-    img {
+    img.item-image {
         grid-area: img;
-        width: 200px ;
+        width: 200px;
     }
     .border-seprator {
         grid-area: sep;
@@ -32,25 +31,6 @@
         margin-top: 10px;
         align-self: start;
     }
-    .price {
-    }
-    .amount {
-        display: flex;
-        div {
-            border-top: 1px solid rgb(32, 32, 32);
-            border-bottom: 1px solid rgb(32, 32, 32);
-            width: 50px;
-            display: flex;
-            align-self: center;
-            justify-content: center;
-        }
-        .changeAmount{
-            width: 30px;
-            border: 1px solid rgb(32, 32, 32);
-
-            cursor: pointer;
-        }
-    }
 
     .buy {
         background-color: $clr3;
@@ -66,6 +46,24 @@
     }
 }
 
+.amount {
+    display: flex;
+    div {
+        border-top: 1px solid rgb(32, 32, 32);
+        border-bottom: 1px solid rgb(32, 32, 32);
+        width: 50px;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+    }
+    .changeAmount {
+        width: 30px;
+        border: 1px solid rgb(32, 32, 32);
+
+        cursor: pointer;
+    }
+}
+
 .seller-preview {
     display: flex;
     align-self: center;
@@ -77,5 +75,36 @@
     }
     p {
         margin: 0 11px;
+    }
+}
+
+.order-info-modal {
+    background-color: rgb(32, 10, 53);
+    color: rgb(224, 224, 224);
+    // border: 6px solid chartreuse;
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    left: 27vw;
+    width: 46vw;
+    padding: 10px;
+    .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        border-bottom: 1px solid rgb(32, 32, 32);
+        .total-price {
+            width: 30px;
+        }
+        img {
+            height: 100%;
+            width: 100px;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: rgb(224, 224, 224);
+        margin: 0 45% 10px;
     }
 }

@@ -6,11 +6,13 @@
 // }
 
 .card-main {
+    margin-bottom: 30px;
     width: 180px;
     display: flex;
     align-items: stretch;
     position: relative;
     .seller-preview {
+        // background-color: lawngreen;
         border-top: 1px solid rgb(223, 223, 223);
         font-size: 0.8rem;
         display: flex;
@@ -26,9 +28,7 @@
     a {
         text-decoration: none;
         color: rgb(36, 36, 36);
-        .item-img {
-            height: 170px;
-        }
+
         .card-footer {
             // border-top: 1px solid rgb(209, 209, 209);
         }
@@ -66,6 +66,6 @@
     bottom: 0;
 }
 .MuiPaper-root {
-    width: 33vw;
+    width: 40vw;
     
 }
