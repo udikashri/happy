@@ -8,7 +8,7 @@ export class ItemFilter extends Component {
             title: '',
             type: 'all',
             color:'clear',
-            lowPrice: 0,
+            // lowPrice: 0,
             // highPrice: 1000
 
         }

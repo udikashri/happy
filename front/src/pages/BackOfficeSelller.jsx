@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { _ItemEdit } from '../cmps/ItemEdit'
 import { loadItems } from '../store/actions/itemActions'
-import { ItemPreview, itemPreview } from '../cmps/ItemPreview'
+import { ItemPreview } from '../cmps/ItemPreview'
 // import { ItemAdd } from '../cmps/ItemAdd'
 import { ItemEdit } from '../cmps/ItemEdit'
 
