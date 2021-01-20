@@ -18,7 +18,8 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 export class _ItemPreview extends Component {
 
 
-  onRemove = async (itemId) => {
+  onRemove = async (ev , itemId) => {
+    ev.stopPropagation()
     // await 
     this.props.removeItem(itemId)
     // this.props.history.push('/shop')
@@ -35,15 +36,15 @@ export class _ItemPreview extends Component {
           <div className="item-card-preview" >
             <div className="title">{item.title}</div>
             <h5 className="price">${item.price}</h5>
-            {removeable && <button onClick={(event) => this.onRemove(event,item._id)} className="delete-btn">Delete</button>}
           </div>
+        </Link>
+            {removeable && <button className="delete-button" onClick={(event) => this.onRemove(event,item._id)} className="delete-btn">Delete</button>}
         <div className="seller-preview">
           <img src={item.seller.imgUrl} />
           <div >{item.seller.fullname}
         ⭐ 4.2
         </div>
         </div>
-        </Link>
       </Card>
 
     </section>

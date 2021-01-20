@@ -3,7 +3,7 @@ const ObjectId = require('mongodb').ObjectId
 const asyncLocalStorage = require('../../services/als.service')
 
 async function query(filterBy =null) {
-    const { title , type} = filterBy
+    const { title , type , color} = filterBy
     let cred = {}
     try {
         const collection = await dbService.getCollection('item')
@@ -13,6 +13,8 @@ async function query(filterBy =null) {
                 cred.title = regex
             }
             if(type) cred.type = type
+
+            if(color) cred.color = color
         }
         console.log(cred);
         var Items = await collection.find(cred).toArray()
