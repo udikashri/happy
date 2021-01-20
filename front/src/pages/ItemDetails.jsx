@@ -91,7 +91,7 @@ class _ItemDetails extends Component {
           <div className="buy"><Link to={"/thank"}>Buy Me  </Link></div>
     <div className="description">{currItem.description}</div>
          
-          <button onClick={() => this.onRemove(currItem._id)} className="delete-btn">Delete</button>
+          {/* <button onClick={() => this.onRemove(currItem._id)} className="delete-btn">Delete</button> */}
           {/* <ItemEdit currItem={currItem} onSaveItem={this.onSaveItem} /> */}
         </div>
 
