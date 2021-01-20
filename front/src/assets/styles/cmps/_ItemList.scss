@@ -1,10 +1,12 @@
 .item-list {
-    grid-area: list;
+
     display: grid;
     // grid-template-columns: repeat(4,1fr);
+    padding-left: 20px;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-
     grid-gap: 5px;
+    width:100%;
+
     // grid-template-columns: 1fr 1fr;
     // background-color: aqua;
   

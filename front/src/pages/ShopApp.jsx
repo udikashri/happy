@@ -24,16 +24,13 @@ class _ShopApp extends Component {
     // }
 
     render() {
-        const {items} = this.props
-        if(!items) return <h1>loading</h1>
+        const { items } = this.props
+        if (!items) return <h1>loading</h1>
         return (
             <section className="shop-container">
-                <h1>shop app</h1>
-                <div className="shop-container">
-                    <ItemFilter onSetFilter={this.onSetFilter} />
-                    {/* <ItemEdit onSaveItem={this.onSaveItem} /> */}
-                    <ItemList items={items} />
-                </div>
+                <ItemFilter onSetFilter={this.onSetFilter} />
+                {/* <ItemEdit onSaveItem={this.onSaveItem} /> */}
+                <ItemList items={items} />
             </section>
         )
     }
