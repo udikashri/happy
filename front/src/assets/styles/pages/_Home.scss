@@ -7,10 +7,11 @@
 }
 
 .home {
+    background-color: orange;
     h2 {
-        margin-top: 15px;
-        margin-bottom: 15px;
+        
         text-align: center;
+        color: white;
     }
 }
 
@@ -18,17 +19,18 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
         //     // url(../../../assets/img/Home/heppy-home.jpeg);
         url(../../../assets/img/Home/pexels-photo-1684187.jpeg);
-    height: 90vh;
-    margin-bottom: 8px;
-    background-position: 50%;
+    // height: 90vh;
+    // margin-bottom: 8px;
+    // background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     z-index: 0;
-    padding-top: 333px;
-    padding-left: 130px;
-    margin-top: -196px;
-    border:0;
+    // padding-top: 333px;
+    // padding-left: 130px;
+    // margin-top: -196px;
+    border: 0;
+    display: flex;
     flex-direction: column;
     height: 62vh;
     align-items: center;
@@ -48,7 +50,7 @@
         margin-bottom: 24px;
     }
     & .btn {
-        background-color:#f05d08;
+        background-color: #f05d08;
         font-weight: 500;
         border: none;
         color: whitesmoke;
@@ -61,8 +63,7 @@
         border-radius: 16px;
     }
     & .btn-2 {
-        background-color:  #4a36f4 ;
-
+        background-color: #4a36f4;
     }
 }
 
@@ -74,13 +75,14 @@
     }
 }
 .home-collection-list {
+    padding: 20px;
     background: whitesmoke;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 700px;
     grid-gap: 8px;
     gap: 8px;
- 
+    background-color: orangered;
 }
 
 .collection-card {
@@ -109,43 +111,41 @@
 }
 .img-2 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-   url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_happy_nhag3k.jpg);
+        url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_happy_nhag3k.jpg);
     color: whitesmoke;
 }
 .img-3 {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-    url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_pink_tklalh.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+        url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_pink_tklalh.jpg);
     color: whitesmoke;
 }
 .img-4 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-    url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990432/atmosphere/socks_face-removebg-preview_u5mgyo.png);
+        url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990432/atmosphere/socks_face-removebg-preview_u5mgyo.png);
     color: whitesmoke;
 }
 .img-5 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-  url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990429/atmosphere/pexels-photo-1437149_rf8m7o.jpg);
+        url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990429/atmosphere/pexels-photo-1437149_rf8m7o.jpg);
     color: whitesmoke;
 }
 
-
-
-
 .item-cards {
     width: 100%;
-    gap: 20px;
-    padding-left: 15px;
+    gap: 40px;
+    justify-content: center;
+    padding: 16px;
+    background-color: purple;
 }
-
 
 .sellers-list {
     margin: 20px;
     align-content: center;
-    text-align:center;
+    text-align: center;
 
-& .sellers-row {
-    margin-top: 20px;
-}
+    & .sellers-row {
+        margin-top: 20px;
+    }
     & .btn {
         background-color: #f436cb;
         font-weight: 500;
@@ -161,8 +161,7 @@
         align-content: center;
         margin: 20px;
     }
-    
-    }
+}
 
 .seller-banner {
     position: relative;
@@ -185,4 +184,3 @@
         transform: translate(-50%, -50%);
     }
 }
-

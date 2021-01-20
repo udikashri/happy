@@ -3,7 +3,7 @@ const userService = require('../user/user.service')
 const itemService = require('./item.service')
 
 async function getItems(req, res) {
-    console.log(req.query)
+
     try {
         const items = await itemService.query(req.query)
         res.send(items)
@@ -27,6 +27,7 @@ async function deleteItem(req, res) {
 
 
 async function addItem(req, res) {
+    console.log('hi');
     try {
         var item = req.body
         // item.byUserId = req.session.user._id

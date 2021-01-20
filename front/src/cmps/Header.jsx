@@ -16,7 +16,7 @@ class _Header extends Component {
             </nav>
             {loggedInUser && <span className="loggedin-user">
 
-                <Link to={`user/${loggedInUser._id}`}>
+                <Link to={`seller/${loggedInUser._id}`}>
                     {loggedInUser.fullname}
                 </Link>
                 

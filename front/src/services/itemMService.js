@@ -24,28 +24,28 @@ import axios from 'axios'
 /// JSON - Line = 25-45
 // const baseUrl = 'http://localhost:3030/items'; // json
 
-// function query(filterBy = null) {
-//     console.log('query');
-//     let url = '';
-//     if (filterBy) {
-//         const { title, type, color } = filterBy
-//         console.log(type);
-//         url += '?';
-//         let params = new URLSearchParams(url.search);
-//         color !== 'clear' && params.set('color', color);
-//         title && params.set('title_like', title);
-//         type !== 'all' && params.set('type', type);
-//         url += params.toString()   
-//     } 
-//          return axios.get(`${baseUrl}${url}`) 
-//          .then(res => {
-//              return res.data
-//             })
-//             .catch(() => console.log('nooooo'))
-//         }
-        
-        
-        
+function query(filterBy = null) {
+    console.log('query');
+    let url = '';
+    if (filterBy) {
+        const { title, type, color } = filterBy
+        console.log(type);
+        url += '?';
+        let params = new URLSearchParams(url.search);
+        color !== 'clear' && params.set('color', color);
+        title && params.set('title_like', title);
+        type !== 'all' && params.set('type', type);
+        url += params.toString()
+    }
+    return axios.get(`${baseUrl}${url}`)
+        .then(res => {
+            return res.data
+        })
+        .catch(() => console.log('nooooo'))
+}
+
+
+
 
 
 
