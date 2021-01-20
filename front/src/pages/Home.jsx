@@ -14,13 +14,13 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 export class Home extends Component {
   state = {}
   render() {
-    console.log('🧦Happy Faces ');
+    console.log('🧦HappySocks ');
     return (
       <>
         <section className="hero-image">
           <h2>good things come in pairs...</h2>
-          <h1>Find your match</h1>
-          <Link className="btn" to={`/shop`}>🧦 I feel lucky</Link>
+          <Link className="btn" to={`/shop`}>🧦 Find your match</Link>
+          <Link className="btn btn-2" to={`/shop`}>🎲 I feel lucky</Link>
         </section>
         <section className="app main-container">
           <div className="home">

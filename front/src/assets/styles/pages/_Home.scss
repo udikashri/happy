@@ -29,6 +29,10 @@
     padding-left: 130px;
     margin-top: -196px;
     border:0;
+    flex-direction: column;
+    height: 62vh;
+    align-items: center;
+    justify-content: center;
 
     & h1 {
         font-size: 2.8125rem;
@@ -44,7 +48,7 @@
         margin-bottom: 24px;
     }
     & .btn {
-        background-color: #4a36f4;
+        background-color:#f05d08;
         font-weight: 500;
         border: none;
         color: whitesmoke;
@@ -55,6 +59,10 @@
         margin: 4px 2px;
         cursor: pointer;
         border-radius: 16px;
+    }
+    & .btn-2 {
+        background-color:  #4a36f4 ;
+
     }
 }
 
@@ -69,13 +77,14 @@
     background: whitesmoke;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 900px;
+    height: 700px;
+    grid-gap: 8px;
+    gap: 8px;
  
 }
 
 .collection-card {
     background-position: 50%;
-    padding: 40px 0 0 40px;
 
     &:first-child {
         grid-column: 1/3;
@@ -96,23 +105,26 @@
 .img-1 {
     color: whitesmoke;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-        url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990427/atmosphere/header_yhs6xr.jpg);
+        url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990427/atmosphere/crazy-socks_1024x1024_w9hsye.jpg);
 }
 .img-2 {
-    background-image: url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_happy_nhag3k.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+   url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_happy_nhag3k.jpg);
     color: whitesmoke;
 }
 .img-3 {
-    background-image: url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_pink_tklalh.jpg);
-
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+    url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_pink_tklalh.jpg);
     color: whitesmoke;
 }
 .img-4 {
-    background-image: url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990432/atmosphere/socks_face-removebg-preview_u5mgyo.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+    url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990432/atmosphere/socks_face-removebg-preview_u5mgyo.png);
     color: whitesmoke;
 }
 .img-5 {
-    background-image: url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990429/atmosphere/pexels-photo-1437149_rf8m7o.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+  url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990429/atmosphere/pexels-photo-1437149_rf8m7o.jpg);
     color: whitesmoke;
 }
 

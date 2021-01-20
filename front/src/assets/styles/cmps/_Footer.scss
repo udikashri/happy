@@ -1,18 +1,33 @@
 footer {
-    text-align: center;
-
-.modal-background{
     position: fixed;
-    background-color: rgba(44, 44, 44, 0.767);
-    top: 0%;
-    height: 100vh;
-      z-index: 200000;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgb(9, 5, 65);
+   color: white;
+   text-align: center;
 
-width: 100vw
-}
+    .modal-background {
+        position: fixed;
+        background-color: rgba(44, 44, 44, 0.767);
+        top: 0%;
+        height: 100vh;
+        z-index: 200000;
 
-    h1{
+        width: 100vw;
+    }
+
+    h1 {
         cursor: pointer;
+    }
+    h3 {
+        margin-top: 13px;
+        margin-bottom: 26px;
+        font-size: 1em;
+        color: white;
+    }
+    h6 {
+        color: white;
     }
     .countries-modal {
         position: fixed;
@@ -23,22 +38,24 @@ width: 100vw
         z-index: 2000000;
         padding: 2rem;
         box-shadow: 0 0 4rem rgba(0, 0, 0, 0.1);
-        .close{
+        .close {
             position: absolute;
             right: 30px;
             cursor: pointer;
         }
-        h3{
+        h3 {
             margin-top: 13px;
             margin-bottom: 26px;
+            font-size: 1em;
+            color: white;
         }
-        .grid-countries{
+        .grid-countries {
             text-align: start;
             display: grid;
             grid-gap: 5px;
             grid-template-columns: 1fr 1fr 1fr;
-            
-            div{
+
+            div {
                 cursor: pointer;
             }
         }

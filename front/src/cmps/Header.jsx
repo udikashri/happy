@@ -8,7 +8,7 @@ class _Header extends Component {
     render() {
         const {loggedInUser} = this.props;
         return <header className="header-container">
-            <div className="logo"><NavLink exact to="/">🧦Happy Faces</NavLink></div>
+            <div className="logo"><NavLink exact to="/">🧦HappySocks</NavLink></div>
             <nav>
                 <NavLink to="/shop">🧦Find</NavLink>
                 <NavLink exact to="/">🔖Sell</NavLink>
