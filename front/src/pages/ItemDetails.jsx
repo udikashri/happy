@@ -14,7 +14,8 @@ class _ItemDetails extends Component {
     currItem: { title: '', imgUrl: '', price: 0, _id: '' },
     seller: { name: 'udi', user: { imgUrl: '' } },
     sellers: {},
-    amount: 1
+    amount: 1,
+    modalVisibility: 'hidden'
   }
   async componentDidMount() {
     await this.props.loadItems()
@@ -26,7 +27,7 @@ class _ItemDetails extends Component {
   loadItem = () => {
     const { itemId } = this.props.match.params
     const selectItem = this.props.items.filter(item => {
-      return   itemId === item._id
+      return itemId === item._id
     })
     this.setState({ currItem: selectItem[0] }, () => {
     })
@@ -66,26 +67,33 @@ class _ItemDetails extends Component {
     this.setState({ amount: amount })
   }
 
+  openModal = () => {
+    var { modalVisibility } = this.state
+    if (modalVisibility === 'hidden') modalVisibility = 'visible'
+    else modalVisibility = 'hidden'
+    this.setState({ modalVisibility: modalVisibility })
+    console.log(1, this.state.modalVisibility);
+  }
   render() {
     const { currItem, seller, amount } = this.state
     // if (!currItem) return
     return (
-  
-      <section className="item-details">
-            {/* <img  src={plus}/> */}
 
-        <img src={currItem.imgUrl} alt="" />
+      <section className="item-details">
+        {/* <img  src={plus}/> */}
+
+        <img className="item-image" src={currItem.imgUrl} />
         <div className="item-info">
           <h1>{currItem.title}</h1>
           <div className="price">{currItem.price}$</div>
-         {seller && <div className="seller-preview">
+          {seller && <div className="seller-preview">
             <img src={seller.user.imgUrl} />
             {seller.name}
           </div>}
           <div className="amount">
             <div onClick={(ev) => this.onChangeAmount(ev, -1)} className="changeAmount">-</div>
-           <div>{amount}</div> 
-          <div onClick={(ev) => this.onChangeAmount(ev, 1)} className="changeAmount">+</div>
+            <div>{amount}</div>
+            <div onClick={(ev) => this.onChangeAmount(ev, 1)} className="changeAmount">+</div>
           </div>
           
           <div className="buy"><Link to={"/thank"}>Buy Me  </Link></div>
@@ -94,8 +102,22 @@ class _ItemDetails extends Component {
           {/* <button onClick={() => this.onRemove(currItem._id)} className="delete-btn">Delete</button> */}
           {/* <ItemEdit currItem={currItem} onSaveItem={this.onSaveItem} /> */}
         </div>
+        <div style={{ visibility: this.state.modalVisibility }} className="order-info-modal" >
+          <div className="item">
+            <div><img src={currItem.imgUrl} /></div>
+            <div className="title"> {currItem.title}</div>
+            <div className="amount">
+              <div onClick={(ev) => this.onChangeAmount(ev, -1)} className="changeAmount">-</div>
+              <div>{amount}</div>
+              <div onClick={(ev) => this.onChangeAmount(ev, 1)} className="changeAmount">+</div>
+            </div>
+            <div className="total-price">{amount*currItem.price}</div>
+          </div>
+          <Link to={"/thank"}>Order</Link>
 
+        </div>
       </section>
+
     )
   }
 }
