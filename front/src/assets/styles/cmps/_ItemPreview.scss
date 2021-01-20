@@ -6,8 +6,9 @@
 // }
 
 .card-main {
+    text-decoration: none;
     margin-bottom: 30px;
-    width: 180px;
+    width: 100%;
     display: flex;
     align-items: stretch;
     position: relative;
@@ -51,6 +52,16 @@
     }
 }
 
+.item-img {
+    &:hover {
+        transform: scale(1.1);
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+    }
+}
+
+
+
 .card-root {
     max-width: 345;
 }
@@ -67,5 +78,5 @@
 }
 .MuiPaper-root {
     width: 40vw;
-    
+    max-width: 200px;
 }

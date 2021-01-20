@@ -37,13 +37,13 @@ export class _ItemPreview extends Component {
             <h5 className="price">${item.price}</h5>
             {removeable && <button onClick={(event) => this.onRemove(event,item._id)} className="delete-btn">Delete</button>}
           </div>
-        </Link>
         <div className="seller-preview">
           <img src={item.seller.imgUrl} />
           <div >{item.seller.fullname}
         ⭐ 4.2
         </div>
         </div>
+        </Link>
       </Card>
 
     </section>
