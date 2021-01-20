@@ -167,7 +167,7 @@ export class Home extends Component {
               <Link className="btn" to={`/sell`}>Join our Marketplace</Link>
             </section>
             <section className="seller-banner">
-             <div className="banner-text">HappyFaces changed my life!</div> 
+             <div className="banner-text">HappySocks changed my life!</div> 
              <div className="banner-text2">Bob Safam - Maatziv Garbaim</div> 
               <img src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_1400,dpr_1.0/v1/attachments/generic_asset/asset/50218c41d277f7d85feeaf3efb4549bd-1599072608122/bg-signup-1400-x1.png" alt="" />
             </section>
