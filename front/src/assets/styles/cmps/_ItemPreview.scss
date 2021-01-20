@@ -38,6 +38,10 @@
             flex-direction: column;
             font-size: 0.8rem;
             line-height: 1.3;
+
+            .title{
+                height: 40px;
+            }
             .price {
                 margin: 0 0 0.6em;
                 margin-top: 16px;
@@ -60,4 +64,8 @@
 .card-edit {
     position: absolute;
     bottom: 0;
+}
+.MuiPaper-root {
+    width: 33vw;
+    
 }

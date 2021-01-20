@@ -37,14 +37,14 @@ export function ItemPreview({item , removeable}) {
         {/* <CardContent className="card-text">
           <Typography >  </Typography> </CardContent> */}
         <div className="item-card-preview" >
-          <div>{item.title}</div>
+          <div className="title">{item.title}</div>
           <h5 className="price">${item.price}</h5>
 
         </div>
       </Link>
       <div className="seller-preview">
-        <img alt="Shira" src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-500w.jpeg" />
-        <div>Shira Socks
+        <img  src={item.seller.imgUrl}/>
+        <div >{item.seller.fullname}
         ⭐ 4.2
         </div>
       </div>
