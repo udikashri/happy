@@ -23,7 +23,7 @@ export class Footer extends Component {
         return (
             <footer>
                <h3 onClick={this.ompenModal}> 📦 Global shipping </h3>
-                <h6>© Happy Faces 2021</h6>
+                <h6>© HappySocks 2021</h6>
                 <section onClick={this.ompenModal} style={{ visibility: this.state.modalVisibility }} className="modal-background"></section>
                 <div style={{ visibility: this.state.modalVisibility }} className="countries-modal" >
                     <div onClick={this.ompenModal} className="close">X</div>

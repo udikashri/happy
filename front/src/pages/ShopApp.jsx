@@ -27,7 +27,7 @@ class _ShopApp extends Component {
         const {items} = this.props
         if(!items) return <h1>loading</h1>
         return (
-            <section >
+            <section className="shop-container">
                 <h1>shop app</h1>
                 <div className="shop-container">
                     <ItemFilter onSetFilter={this.onSetFilter} />

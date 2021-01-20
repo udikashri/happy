@@ -19,6 +19,9 @@
     .gray {
         background-color: gray;
         @include circle();
+        &:after {
+            content:'gray';
+        }
     }
     .blue {
         background-color: blue;
@@ -58,10 +61,8 @@
               @include circle();
     }
     .all {
-        font-size: 25px;
-        transform: rotate(180deg);
-        height: 40px;
-        margin-left: 23px;
-        cursor: pointer;
+        background-color: lightgray;
+        @include circle();
+        color: white
     }
 }

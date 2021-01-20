@@ -21,7 +21,7 @@
         url(../../../assets/img/Home/pexels-photo-1684187.jpeg);
     // height: 90vh;
     // margin-bottom: 8px;
-    // background-position: 50%;
+    background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -50,7 +50,7 @@
         margin-bottom: 24px;
     }
     & .btn {
-        background-color: #f05d08;
+        background-color:$clr3;
         font-weight: 500;
         border: none;
         color: whitesmoke;
@@ -63,7 +63,7 @@
         border-radius: 16px;
     }
     & .btn-2 {
-        background-color: #4a36f4;
+        background-color: $clr5;
     }
 }
 

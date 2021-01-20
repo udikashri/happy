@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import NotInterestedIcon from '@material-ui/icons/NotInterested';
 
 export class ItemFilter extends Component {
 
@@ -63,7 +63,7 @@ console.log(target.value);
                     <section title="Purple" onClick={() => {this.handleChangeColor('purple')}} className="purple"></section>
                     <section title="Brown" onClick={() => {this.handleChangeColor('brown')}} className="brown"></section>
                     <section title="colorful" onClick={() => {this.handleChangeColor('colorful')}} className="colorful"></section>
-                    <section title="Clear" onClick={() => {this.handleChangeColor('clear')}} className="all">🚫</section>
+                    <section title="Clear" onClick={() => {this.handleChangeColor('clear')}} className="all"><NotInterestedIcon/></section>
 
 
                 </div>
