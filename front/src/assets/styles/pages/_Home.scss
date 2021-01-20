@@ -18,18 +18,25 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
         //     // url(../../../assets/img/Home/heppy-home.jpeg);
         url(../../../assets/img/Home/pexels-photo-1684187.jpeg);
-    height: 90vh;
-    margin-bottom: 8px;
+    height: 70vh;
+    // margin-bottom: 8px;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    z-index: 0;
-    padding-top: 333px;
-    padding-left: 130px;
-    margin-top: -196px;
-    border:0;
-
+    width: 100vw;
+    // z-index: 0;
+    // padding-top: 333px;
+    // padding-left: 130px;
+    // margin-top: -196px;
+    // border:0;
+    & section {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
     & h1 {
         font-size: 2.8125rem;
         line-height: 1;
@@ -56,6 +63,8 @@
         cursor: pointer;
         border-radius: 16px;
     }
+    }
+   
 }
 
 .card-media {

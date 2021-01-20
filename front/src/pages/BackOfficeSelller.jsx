@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import {loadItems} from '../store/actions/itemActions'
 import {ItemPreview, itemPreview} from '../cmps/ItemPreview'
 import { ItemAdd } from '../cmps/ItemAdd'
+import { ItemEdit } from '../cmps/ItemEdit'
 
 // import { SellerDeatails } from '../cmps/SellerDeatails'
 
@@ -39,7 +40,7 @@ componentDidMount() {
         return (
             <div>
                 <h2>Helllo {loggedInUser.fullname}</h2>
-                <ItemAdd user={this.props.loggedInUser} loadUserItems={this.loadUserItems}/>
+                <ItemEdit user={this.props.loggedInUser} loadUserItems={this.loadUserItems}/>
                 {itemsToShow && itemsToShow.map(item => <ItemPreview item={item} removeable={true}/>)}
 
             </div>

@@ -12,15 +12,15 @@ import { loadSellers } from '../store/actions/sellerActions'
 class _ItemDetails extends Component {
   state = {
     currItem: { title: '', imgUrl: '', price: 0, _id: '' },
-    // seller: { name: 'udi', user: { imgUrl: '' } },
-    // sellers: {},
+    seller: { name: 'udi', user: { imgUrl: '' } },
+    sellers: {},
     amount: 1
   }
   async componentDidMount() {
     await this.props.loadItems()
     this.loadItem()
-    // await this.props.loadSellers()
-    // this.loadSeller()
+    await this.props.loadSellers()
+    this.loadSeller()
   }
 
   loadItem = () => {
@@ -34,12 +34,14 @@ class _ItemDetails extends Component {
 
   loadSeller = async () => {
     const sellerId = this.state.currItem.seller._id
+    console.log(sellerId);
     this.props.loadSellers()
     const sellers = await this.props.sellers;
-    const seller = sellers.filter(seller => {
-      return seller._id === sellerId
-    })
-    this.setState({ seller: seller[0], sellers: sellers })
+    console.log(await sellers);
+    // const seller = sellers.filter(seller => {
+    //   return seller._id === sellerId
+    // })
+    // this.setState({ seller: seller[0], sellers: sellers })
   }
 
   onSaveItem = (ev, newItem) => {
@@ -50,11 +52,11 @@ class _ItemDetails extends Component {
   }
 
 
-  onRemove = async () => {
-    console.log('h');
-    await this.props.removeItem(this.state.currItem._id)
-    this.props.history.push('/shop')
-  }
+  // onRemove = async () => {
+  //   console.log('h');
+  //   await this.props.removeItem(this.state.currItem._id)
+  //   this.props.history.push('/shop')
+  // }
 
   onChangeAmount = (ev, add) => {
     ev.preventDefault()

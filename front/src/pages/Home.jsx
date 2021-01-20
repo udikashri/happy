@@ -18,9 +18,12 @@ export class Home extends Component {
     return (
       <>
         <section className="hero-image">
-          <h2>good things come in pairs...</h2>
-          <h1>Find your match</h1>
-          <Link className="btn" to={`/shop`}>🧦 I feel lucky</Link>
+          <section className="hero-section">
+            <h2>good things come in pairs...</h2>
+            <h1>Find your match</h1>
+            <Link className="btn" to={`/shop`}>🧦 I feel lucky</Link>
+          </section>
+
         </section>
         <section className="app main-container">
           <div className="home">
@@ -140,7 +143,7 @@ export class Home extends Component {
 
 
             </section>
-         
+
             <h2>Our Top Sellers </h2>
 
             <section className="sellers-list flex-column align-center justify-center" >
@@ -152,8 +155,8 @@ export class Home extends Component {
                 <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/6_qr24nq.jpg" className="small" />
                 <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/18_rwb9g1.jpg" className="small" />
                 <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/6_qr24nq.jpg" className="small" />
-                </div>
-               <div className="sellers-row flex space-between">
+              </div>
+              <div className="sellers-row flex space-between">
                 <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg" className="small" />
                 <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg" className="small" />
                 <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/3_nz6vkf.jpg" className="small" />
@@ -161,13 +164,13 @@ export class Home extends Component {
                 <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg" className="small" />
                 <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/30_nvklsm.jpg" className="small" />
                 <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg" className="small" />
-                
-             </div>
+
+              </div>
               <Link className="btn" to={`/sell`}>Join our Marketplace</Link>
             </section>
             <section className="seller-banner">
-             <div className="banner-text">HappyFaces changed my life!</div> 
-             <div className="banner-text2">Bob Safam - Maatziv Garbaim</div> 
+              <div className="banner-text">HappyFaces changed my life!</div>
+              <div className="banner-text2">Bob Safam - Maatziv Garbaim</div>
               <img src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_1400,dpr_1.0/v1/attachments/generic_asset/asset/50218c41d277f7d85feeaf3efb4549bd-1599072608122/bg-signup-1400-x1.png" alt="" />
             </section>
 
