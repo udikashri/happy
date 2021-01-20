@@ -10,6 +10,7 @@ import { ShopApp } from './pages/ShopApp'
 import { ItemDetails } from './pages/ItemDetails'
 import '../src/assets/styles/main.scss'
 import {loadItems} from './store/actions/itemActions'
+import {loadSellers} from './store/actions/sellerActions'
 
 import { Header } from './cmps/Header'
 import { Footer } from './cmps/footer'
@@ -22,6 +23,7 @@ export class _App extends Component {
 
   componentDidMount() {
     this.props.loadItems()
+    this.props.loadSellers()
   }
   
 
@@ -60,8 +62,8 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = {
-  loadItems
-  
+  loadItems,
+  loadSellers
 
 }
 

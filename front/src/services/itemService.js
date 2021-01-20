@@ -9,8 +9,7 @@ export const itemService = {
     saveItem,
 
 }
-
-window.itemService = itemService
+    
 // Note: due to async, must run one by one...
 // itemService.signup({fullname: 'Puki Norma', itemname: 'item1', password:'123',score: 100, isAdmin: false})
 // itemService.signup({fullname: 'Master Adminov', itemname: 'admin', password:'123', score: 100, isAdmin: true})

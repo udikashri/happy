@@ -33,7 +33,7 @@ const itemRoutes = require('./api/item/item.routes')
 const {connectSockets} = require('./services/socket.service')
 // const orderRoutes = require('./api/order/order.routes')
 // const userRoutes = require('./api/user/user.routes')
-// const sellerRoutes = require('./api/seller/seller.routes')
+const sellerRoutes = require('./api/seller/seller.routes')
 
 
 // routes
@@ -46,7 +46,7 @@ app.all('*', setupAsyncLocalStorage)
 app.use('/api/item', itemRoutes)
 connectSockets(http, session)
 // app.use('/api/order', orderRoutes)
-// app.use('/api/seller', sellerRoutes)
+app.use('/api/seller', sellerRoutes)
 
 // Make every server-side-route to match the index.html
 // so when requesting http://localhost:3000/index.html/car/123 it will still respond with
