@@ -1,0 +1,46 @@
+.back-office-seller{
+    display: flex;
+    margin-top: 100px;
+    flex-direction: row;
+    .item-container{
+        margin-left: 2vw;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        div.item
+        {
+            // border: 3px solid firebrick;
+            margin: 1vw;
+        }
+    }
+}
+
+.hello-seller {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.edit-box{
+    background-color: whitesmoke;
+    margin-left: 20px;
+    width: 30%;
+    padding: 20px;
+
+}
+
+.uploader {
+    background-color: rgb(197, 123, 226);
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    & :hover{
+        color:white;
+        cursor:pointer;
+    }
+}

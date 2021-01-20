@@ -5,7 +5,7 @@ import { Home } from './pages/Home'
 // import { LoginSignup } from './pages/LoginSignup'
 // import { Chat } from './pages/Chat'
 // import { UserDetails } from './pages/UserDetails'
-import { BackOfficeSelller} from './pages/BackOfficeSelller'
+import { BackOfficeSeller} from './pages/BackOfficeSeller'
 import { ShopApp } from './pages/ShopApp'
 import { ItemDetails } from './pages/ItemDetails'
 import '../src/assets/styles/main.scss'
@@ -41,7 +41,7 @@ export class _App extends Component {
               <Route path="/login" component={LoginSignup} />
               <Route path="/thank" component={ThankYou} />
               {/* <Route path="/chat" component={Chat} /> */}
-              <Route path="/seller/:userId" component={BackOfficeSelller} />
+              <Route path="/seller/:userId" component={BackOfficeSeller} />
               <Route path="/item/:itemId" component={ItemDetails} />
               <Route path="/shop" component={ShopApp} />
               <Route path="/" component={Home} />
