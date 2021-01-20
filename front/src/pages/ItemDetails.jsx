@@ -4,7 +4,7 @@ import { itemService } from '../services/itemService.js'
 import { loadItems, removeItem, saveItem/*, setFilter*/ } from '../store/actions/itemActions'
 import { loadSellers } from '../store/actions/sellerActions'
 // import { ItemEdit } from '../cmps/ItemEdit'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 // import { ItemReview } from './ItemReview'
 // import { removeItem } from '../store/actions/itemActions.js'
 // import {plus} from '../assets/icons/plus.png'
@@ -85,7 +85,8 @@ class _ItemDetails extends Component {
            <div>{amount}</div> 
           <div onClick={(ev) => this.onChangeAmount(ev, 1)} className="changeAmount">+</div>
           </div>
-          <div className="buy">Buy Me </div>
+          
+          <div className="buy"><Link to={"/thank"}>Buy Me  </Link></div>
     <div className="description">{currItem.description}</div>
          
           <button onClick={() => this.onRemove(currItem._id)} className="delete-btn">Delete</button>
