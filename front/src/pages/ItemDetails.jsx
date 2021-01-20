@@ -95,12 +95,19 @@ class _ItemDetails extends Component {
             <div>{amount}</div>
             <div onClick={(ev) => this.onChangeAmount(ev, 1)} className="changeAmount">+</div>
           </div>
+<<<<<<< HEAD
 
           <div onClick={this.openModal} className="buy">Buy Me </div>
           {/* <div className="buy"><Link to={"/thank"}>Buy Me  </Link></div> */}
 
           <div className="description">{currItem.description}</div>
 
+=======
+          
+          <div className="buy"><Link to={"/thank"}>Buy Me  </Link></div>
+    <div className="description">{currItem.description}</div>
+         
+>>>>>>> a3bbfc4061dd7ecaadb5399329505a634ae3dd98
           {/* <button onClick={() => this.onRemove(currItem._id)} className="delete-btn">Delete</button> */}
           {/* <ItemEdit currItem={currItem} onSaveItem={this.onSaveItem} /> */}
         </div>
