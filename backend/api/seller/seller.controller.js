@@ -3,6 +3,7 @@ const userService = require('../user/user.service')
 const sellerService = require('./seller.service')
 
 async function getSellers(req, res) {
+    console.log('h',req.query);
     try {
         const sellers = await sellerService.query(req.query)
         res.send(sellers)

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import NotInterestedIcon from '@material-ui/icons/NotInterested';
 
 export class ItemFilter extends Component {
 
@@ -33,25 +33,30 @@ console.log(target.value);
     render() {
         const { filterBy } = this.state
         return (
-            <section className="item-filter">
-                <input type="text" name="title" value={filterBy.title} onChange={this.handleChange} placeholder="Filter" autoComplete="off"/>
-                <input type="number" name="lowPrice" /*value={filterBy.lowPrice}*/ onChange={this.handleChange} placeholder="low price" name="lowPrice" />
-                {/* <input type="number" name="highPrice" value={filterBy.highPrice} onChange={this.handleChange} placeholder="high price" /> */}
-               
+            <section className="item-filter" >
+                <h1>Find socks</h1>
+                <h6>Search</h6>
+
+                <div className="flex-column"> 
+                <input type="text" name="title" value={filterBy.title} onChange={this.handleChange} placeholder="Search e.g 'React socks'" autoComplete="off"/>
+                <h6>Up to price:</h6>
+                <input type="number" name="highPrice"  /*value={filterBy.lowPrice}*/ onChange={this.handleChange} placeholder="Up to $" name="highPrice" />
+                {/* <input type="number" name="highPrice" value={filterBy.highPrice} onChange={this.handleChange} placeholder="Max" /> */}
+                {/* <div>
                 <select
                     // labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     name="type"
                     value={filterBy.type}
                     onChange={this.handleChange}
-                >
+                    >
                     <option value="all">All</option>
                     <option value="socks">Socks</option>
                     <option value="masks">Masks</option>
                 </select>
+                </div>   */}
+                <h6>Filter by color:</h6>
                 <div className="color-container">
-
-                
                     <section title="Red" onClick={() => {this.handleChangeColor('red')}} className="red"></section>
                     <section title="Gray" onClick={() => {this.handleChangeColor('gray')}} className="gray"></section>
                     <section title="Blue" onClick={() => {this.handleChangeColor('blue')}} className="blue"></section>
@@ -63,9 +68,9 @@ console.log(target.value);
                     <section title="Purple" onClick={() => {this.handleChangeColor('purple')}} className="purple"></section>
                     <section title="Brown" onClick={() => {this.handleChangeColor('brown')}} className="brown"></section>
                     <section title="colorful" onClick={() => {this.handleChangeColor('colorful')}} className="colorful"></section>
-                    <section title="Clear" onClick={() => {this.handleChangeColor('clear')}} className="all">🚫</section>
+                    <section title="Clear" onClick={() => {this.handleChangeColor('clear')}} className="all"><NotInterestedIcon/></section>
 
-
+                </div>
                 </div>
             </section>
         )

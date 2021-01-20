@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom'
 class _ItemDetails extends Component {
   state = {
     currItem: { title: '', imgUrl: '', price: 0, _id: '' },
-    seller: { name: 'udi', user: { imgUrl: '' } },
+    seller: null,
     sellers: {},
     amount: 1,
     modalVisibility: 'hidden'
@@ -36,13 +36,13 @@ class _ItemDetails extends Component {
   loadSeller = async () => {
     const sellerId = this.state.currItem.seller._id
     console.log(sellerId);
-    this.props.loadSellers()
+    // this.props.loadSellers()
     const sellers = await this.props.sellers;
-    console.log(await sellers);
-    // const seller = sellers.filter(seller => {
-    //   return seller._id === sellerId
-    // })
-    // this.setState({ seller: seller[0], sellers: sellers })
+    // console.log(await sellers);
+    const seller = sellers.filter(seller => {
+      return seller._id === sellerId
+    })
+    this.setState({ seller: seller[0], sellers: sellers })
   }
 
   onSaveItem = (ev, newItem) => {

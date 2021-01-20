@@ -11,11 +11,10 @@ var axios = Axios.create({
 
 export const httpService = {
     get(endpoint, data) {
+        console.log('endpoint',endpoint,'data',data);
         return ajax(endpoint, 'GET', data)
     },
     post(endpoint, data) {
-                console.log('hdsf',data ,endpoint);
-
         return ajax(endpoint, 'POST', data)
     },
     put(endpoint, data) {
@@ -33,6 +32,7 @@ async function ajax(endpoint, method = 'get', data = null) {
             method,
             data
         })
+        console.log('res.data', res.data);
         return res.data
     } catch (err) {
         console.log(`Had Issues ${method}ing to the backend, endpoint: ${endpoint}, with data: ${data}`)

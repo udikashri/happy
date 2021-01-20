@@ -5,41 +5,15 @@ import { httpService } from './httpService'
 
 
 export const sellerService = {
-    query,
-    // removeSeller,
-    // saveSeller,
-    // editSeller
+    query
+  
 }
-
-/// MONGO - Line = 14-22
-// const baseUrl = 'http://localhost:3030/seller';
-
-// function query() {
-//          return axios.get(`${baseUrl}`)
-//             .then(res => {    
-//                 return res.data
-//             })
-//             .catch(() => console.log('nooooo'))
-// }
-
-/// JSON - Line = 25-33
-// const baseUrl = 'http://localhost:3030/sellers';
-
-// function query() {
-//          return axios.get(`${baseUrl}`)
-//             .then(res => {    
-//                 return res.data
-//             })
-//             .catch(() => console.log('nooooo'))
-// }
 
 function query() {
     // return storageService.query('item')
     // console.log(httpService.get(`item`));
     return httpService.get(`seller`)
 }
-
-
 
 
 

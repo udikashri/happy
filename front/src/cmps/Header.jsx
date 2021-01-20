@@ -17,7 +17,7 @@ class _Header extends Component {
             {loggedInUser && <span className="loggedin-user">
 
                 <Link to={`seller/${loggedInUser._id}`}>
-                    {loggedInUser.fullname}
+                <img className="item-img" src = {loggedInUser.imgUrl} />
                 </Link>
                 
                 <span>{loggedInUser.score || 0}</span>
