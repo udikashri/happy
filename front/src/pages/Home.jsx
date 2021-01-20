@@ -18,20 +18,11 @@ export class Home extends Component {
     return (
       <>
         <section className="hero-image">
-<<<<<<< HEAD
-          <section className="hero-section">
-            <h2>good things come in pairs...</h2>
-            <h1>Find your match</h1>
-            <Link className="btn" to={`/shop`}>🧦 I feel lucky</Link>
-          </section>
-
-=======
           <h2>good things come in pairs...</h2>
           <div className="flex">
           <Link className="btn" to={`/shop`}>🧦 Find your match</Link>
           <Link className="btn btn-2" to={`/shop`}>🎲 I feel lucky</Link>
           </div>
->>>>>>> 778157200b7bcdd0e4ebff3a70dd9647b14e8a78
         </section>
         <section className="app">
           <div className="home main-container">
