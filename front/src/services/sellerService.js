@@ -34,6 +34,7 @@ export const sellerService = {
 // }
 
 function query() {
+    console.log(555555,httpService.get(`seller`));
     // return storageService.query('item')
     // console.log(httpService.get(`item`));
     return httpService.get(`seller`)
