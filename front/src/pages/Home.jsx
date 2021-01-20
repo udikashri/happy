@@ -14,22 +14,29 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 export class Home extends Component {
   state = {}
   render() {
-    console.log('🧦Happy Faces ');
+    console.log('🧦HappySocks ');
     return (
       <>
         <section className="hero-image">
+<<<<<<< HEAD
           <section className="hero-section">
             <h2>good things come in pairs...</h2>
             <h1>Find your match</h1>
             <Link className="btn" to={`/shop`}>🧦 I feel lucky</Link>
           </section>
 
+=======
+          <h2>good things come in pairs...</h2>
+          <div className="flex">
+          <Link className="btn" to={`/shop`}>🧦 Find your match</Link>
+          <Link className="btn btn-2" to={`/shop`}>🎲 I feel lucky</Link>
+          </div>
+>>>>>>> 778157200b7bcdd0e4ebff3a70dd9647b14e8a78
         </section>
-        <section className="app main-container">
-          <div className="home">
+        <section className="app">
+          <div className="home main-container">
             <h2>🧵 Our FullStack</h2>
-
-            <section className="item-cards flex">
+            <section className="item-cards full flex">
               <Card>
                 <CardMedia
                   className="card-media"
@@ -109,7 +116,7 @@ export class Home extends Component {
               </Card>
             </section>
 
-            <section className="home-collection-list">
+            <section className="home-collection-list full">
               <div className="collection-card img-1">
                 <div className="preview-image ">
                   <h3>Fun</h3>
@@ -176,7 +183,7 @@ export class Home extends Component {
 
 
             <h2> 👩‍💻 Hacker Socks </h2>
-            <section className="item-cards flex">
+            <section className="item-cards full flex">
               <Card>
                 <CardMedia
                   className="card-media"

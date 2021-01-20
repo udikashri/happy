@@ -7,17 +7,22 @@ header {
     justify-content: space-between;
     height: 80px;
     position: fixed;
+<<<<<<< HEAD
     // top: 0;
+=======
+    width: 100vw;
+    top: 0;
+>>>>>>> 778157200b7bcdd0e4ebff3a70dd9647b14e8a78
     z-index: 10;
 
     .loggedin-user {
-        background-color: white;
+        background-color: purple;
         padding: 2px 8px;
         border-radius: 1em;
         align-self: flex-end;
         color: whitesmoke;
         span {
-            background-color: white;
+            background-color: purple;
             padding: 4px;
             margin: 10px;
             border-radius: 50%;
@@ -40,12 +45,12 @@ nav {
         width: 100px;
         // border-right: 1px solid black;
         text-decoration: none;
-        color:white;
+        color:purple;
          &:first-child {
             // border-left: 1px solid black;
         }
         &:active {
-            color: white;
+            color: purple;
             text-decoration: none;
         }
         &:hover {
@@ -55,14 +60,14 @@ nav {
 }
 
 nav .active {
-    color: white;
+    color: purple;
     text-decoration: none;
 }
 
 .logo a {
     margin-left: 30px;
     font-size: 2rem;
-    color: white;
+    color: purple;
 
     &:hover {
         text-decoration: none;
