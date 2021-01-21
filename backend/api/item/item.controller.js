@@ -6,6 +6,7 @@ async function getItems(req, res) {
 
     try {
         const items = await itemService.query(req.query)
+        
         res.send(items)
     } catch (err) {
         logger.error('Cannot get items', err)
@@ -15,10 +16,8 @@ async function getItems(req, res) {
 
 async function deleteItem(req, res) {
     try {
-        // console.log('req',req.params.id);
         await itemService.remove(req.params.id)
         res.send({ msg: 'Deleted successfully' })
-        // console.log('res',res);
     } catch (err) {
         logger.error('Failed to delete item', err)
         res.status(500).send({ err: 'Failed to delete item' })
@@ -27,7 +26,6 @@ async function deleteItem(req, res) {
 
 
 async function addItem(req, res) {
-    console.log('hi');
     try {
         var item = req.body
         // item.byUserId = req.session.user._id
