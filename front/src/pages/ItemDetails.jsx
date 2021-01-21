@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { itemService } from '../services/itemService.js'
 import { loadItems, removeItem, saveItem/*, setFilter*/ } from '../store/actions/itemActions'
 import { loadSellers } from '../store/actions/sellerActions'
-import {Review} from '../cmps/Review'
+import { Review } from '../cmps/Review'
 // import { ItemEdit } from '../cmps/ItemEdit'
 import { Link } from 'react-router-dom'
 import CreditCardIcon from '@material-ui/icons/CreditCard';
@@ -14,7 +14,7 @@ class _ItemDetails extends Component {
     seller: null,
     sellers: {},
     amount: 1,
-    modalVisibility: 'hidden',
+    modalVisibility: 'visible',
     rate: {
       stars: '',
       avg: 0
@@ -97,7 +97,7 @@ class _ItemDetails extends Component {
 
         <img className="item-image" src={currItem.imgUrl} />
 
- 
+
 
         {/* ************* Item Info  ********************* */}
         <div className="item-info">
@@ -133,17 +133,17 @@ class _ItemDetails extends Component {
         </div>
         <section className="border-seprator"></section>
 
-       {/* ************* Item Reviews  ********************* */}
+        {/* ************* Item Reviews  ********************* */}
 
-       <div className="reviews">
-       <h3>reviews:</h3>
+        <div className="reviews">
+          <h3>reviews:</h3>
           {seller && seller.reviews.map(review => {
-            return <Review key={review.id} review={review}/>
+            return <Review key={review.id} review={review} />
           })}
-          
-</div>
 
-       {/* ************* Seller Info  ********************* */}
+        </div>
+
+        {/* ************* Seller Info  ********************* */}
         <div className="seller-details">
           <h3>About The Seller</h3>
           {seller &&
@@ -158,11 +158,12 @@ class _ItemDetails extends Component {
           }
           <div className="content-me">Content Me</div>
         </div>
+
         {/***************    Order Modal   ***************/}
         <section onClick={this.openModal} style={{ visibility: this.state.modalVisibility }} className="modal-background"></section>
         <div style={{ visibility: this.state.modalVisibility }} className="order-info-modal" >
-          <div className="item">
-            <div><img src={currItem.imgUrl} /></div>
+          {/* <div className="item">
+
             <div className="title"> {currItem.title}</div>
             <div className="amount">
               <div onClick={(ev) => this.onChangeAmount(ev, -1)} className="changeAmount">-</div>
@@ -171,7 +172,19 @@ class _ItemDetails extends Component {
             </div>
             <div className="total-price">{amount * currItem.price}</div>
           </div>
-          <Link to={"/thank"}>Order</Link>
+          <Link to={"/thank"}>Order</Link> */}
+
+
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+          </tr>
+          <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+          </tr>
         </div>
 
       </section>
