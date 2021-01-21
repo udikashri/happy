@@ -18,8 +18,10 @@ export class Review extends Component {
       console.log("review", review.by);
     return <section className="card-main">
         {review.by.fullname}
-        number 76666666666666666666666666666
-
+        <img src= {review.by.imgUrl}/>
+{review.rate}
+{review.item.title}
+<div>{review.txt}</div>
     </section>
   }
 }
