@@ -1,27 +1,37 @@
-.thank-you{
-    img{
-z-index: -1;
-    }
+.thank-you {
+  margin-top: 10vh;
+  height: 75vh;
 
-    .speech {
-        position: relative;
-        font-family: arial;
-        font-size: 1.1em;
-        background: $clr7;
-        color: #fff;
-        border-radius: 20px;
-        padding: 20px;
-        max-width: 40vw;
-        right: -50vw;
-      }
+  .thank-msg{
+    margin: 20px;
+  }
+  img {
+    z-index: -1;
+    position: absolute;
+    width: 55%;
+    height: 55%;
+    right: 0;
+    top: 200px;
+  }
 
-      .half::after {
-        content: '';
-        border: 20px solid transparent;
-        border-left: 20px solid $clr7;
-        border-top: 20px solid $clr7;
-        position: absolute;
-        bottom: -20px;
-        left: 10%;
-      } 
+  .speech {
+    position: relative;
+    font-family: arial;
+    font-size: 1.1em;
+    background-color: $clr7;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 40vw;
+    right: -50vw;
+  }
+
+  .half::after {
+    content: "";
+    border: 20px solid transparent;
+    border-right: 20px solid $clr7;
+    border-top: 20px solid $clr7;
+    position: absolute;
+    bottom: -20px;
+    right: 10%;
+  }
 }
