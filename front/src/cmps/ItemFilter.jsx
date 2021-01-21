@@ -8,8 +8,9 @@ export class ItemFilter extends Component {
             title: '',
             type: 'all',
             color: 'clear',
-            lowPrice: 0,
-            highPrice: 1000
+            tags: []
+            // lowPrice: 0,
+            // highPrice: 1000
 
         }
     }
@@ -22,6 +23,12 @@ export class ItemFilter extends Component {
         this.setState(prevState => ({ filterBy: { ...prevState.filterBy, [field]: value } }), () => {
             this.props.onSetFilter(this.state.filterBy)
         })
+        // const params = new URLSearchParams()
+        // if (this.state.title) {
+        //   params.append("title", this.state.title)
+        //  else {
+        //   params.delete("tags")
+        // }
     }
 
     handleChangeColor = (color) => {
@@ -40,6 +47,7 @@ export class ItemFilter extends Component {
 
                 <div className="flex-column">
                     <input type="text" name="title" value={filterBy.title} onChange={this.handleChange} placeholder="Search e.g 'React socks'" autoComplete="off" />
+                    {/* <input type="text" name="tags" value={filterBy.title} onChange={this.handleChange} placeholder="Search e.g 'React socks'" autoComplete="off" /> */}
                     <h6>Up to price:</h6>
                     <input type="number" name="lowPrice"  /*value={filterBy.lowPrice}*/ onChange={this.handleChange} placeholder="Up to $" /*name="highPrice"*/ />
                     <input type="number" name="highPrice" /*value={filterBy.highPrice}*/ onChange={this.handleChange} placeholder="Max" />

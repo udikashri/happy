@@ -3,7 +3,7 @@ const ObjectId = require('mongodb').ObjectId
 const asyncLocalStorage = require('../../services/als.service')
 
 async function query(filterBy =null) {
-    var { title , type , color , lowPrice ,highPrice} = filterBy
+    const { title , type , color,tags} = filterBy
     let cred = {}
     try {
         const collection = await dbService.getCollection('item')
@@ -12,37 +12,16 @@ async function query(filterBy =null) {
                 const regex = new RegExp(title, 'i')
                 cred.title = regex
             }
-            // if(type) cred.type = type
+            if(type) cred.type = type
             if(color) cred.color = color
-            if(lowPrice){
-                // lowPrice = +lowPrice 
-                console.log('lowPrice' , lowPrice);
-                cred.price = {$gt:lowPrice}
-            } 
-            console.log('cred',cred);
-            // if(highPrice) cred.price = highPrice > -Infinity
+            if(tags) cred.tags = {$in:[tags]}
         }
-        console.log(cred);
         var items = await collection.find(cred).toArray()
+        console.log('items',items);
         items = items.map(item => {
             item.createdAt = ObjectId(item._id).getTimestamp()
-            // console.log(Item.price);
             return item
         })
-
-        // const newItems = items.find(item =>{
-        //     console.log(item);
-        //     return item
-        // })
-
-
-        // var newItems = Items.find(Item => {
-        //     Item = Item.price >= lowPrice
-        //     console.log(Item.price);
-        //     // console.log(Item);
-        //     return Item
-        // })
-        // console.log('newItems',newItems);
         return items
     } catch (err) {
         logger.error('cannot find Items', err)

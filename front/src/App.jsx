@@ -21,10 +21,7 @@ import {ThankYou} from './pages/ThankYou'
 
 export class _App extends Component {
 
-  componentDidMount() {
-    this.props.loadItems()
-    this.props.loadSellers()
-  }
+
   
 
   render() {

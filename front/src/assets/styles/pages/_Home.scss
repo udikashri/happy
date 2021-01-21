@@ -64,7 +64,7 @@
         border-radius: 16px;
     }
     & .btn-2 {
-        background-color: $clr5;
+        background-color: #b70d28;
     }
 }
 
@@ -76,11 +76,13 @@
     }
 }
 .home-collection-list {
+    margin-top: 25px;
     padding: 20px;
     background: whitesmoke;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 700px;
+    height: 750px;
+    width:117%;
     grid-gap: 8px;
     gap: 8px;
     background-color: orangered;
