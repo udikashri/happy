@@ -26,7 +26,7 @@ class _Home extends Component {
 
 
   render() {
-    console.log('🧦HappySocks ');
+    console.log('🧦HappySocks');
     return (
       <>
         <section className="hero-image">
