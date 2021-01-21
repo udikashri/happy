@@ -7,6 +7,7 @@
     grid-template-areas: "img item-info" "sep sep" "reviews seller";
     margin: 10vh 10vw 0;
     // margin-top: 500px;
+
     img.item-image {
         grid-area: img;
         width: 300px;
@@ -14,6 +15,7 @@
         height: 47vh;
     }
     .border-seprator {
+        margin: 10px 0;
         grid-area: sep;
         background-color: dimgray;
         left: 0;
@@ -32,7 +34,7 @@
         align-self: start;
         h1,
         .price {
-            margin: 0 5vw;
+            margin: 0 40px;
             margin-top: 10px;
             align-self: start;
         }
@@ -45,6 +47,14 @@
         padding: 0 50px;
         margin: 20px 10px;
         cursor: pointer;
+        transition: 1s;
+
+        &:hover {
+            -webkit-box-shadow: 0px 0px 0px 6px #433450, 0px 0px 0px 12px #696177, 0px 0px 0px 18px #b7b1c0,
+                0px 0px 0px 24px #dbdadd, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+            box-shadow:  0px 0px 0px 6px #433450, 0px 0px 0px 12px #696177,
+                0px 0px 0px 18px #b2b5b2, 0px 0px 0px 24px #daddda, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+        }
     }
 
     .description {
@@ -84,8 +94,8 @@
         margin-right: 10px;
     }
     img {
-        height: $imgLen;
-        width: $imgLen;
+        height: 35px;
+        width: 35px;
         border-radius: 50px;
     }
     .best-seller {
@@ -107,7 +117,7 @@
 }
 
 .order-info-modal {
-    background-color: rgb(32, 10, 53);
+    background-color: rgb(154, 149, 158);
     color: rgb(224, 224, 224);
     // border: 6px solid chartreuse;
     position: absolute;
@@ -138,37 +148,36 @@
 }
 .reviews {
     grid-area: reviews;
-    background-color: khaki;
+    margin: 0 30px;
 }
 .seller-details {
     grid-area: seller;
     padding: 2% 5%;
-h3{
-    margin-bottom: 15px;
-}
+    h3 {
+        margin-bottom: 15px;
+    }
     img {
         border-radius: 50%;
         height: 110px;
         width: 110px;
         margin-right: 3vw;
-      
     }
 
-    .info{
-         color: rgb(126, 50, 50);
+    .info {
+        color: rgb(126, 50, 50);
         display: flex;
     }
 
-    .content-me{
-        border: 1px solid #9D033F;
+    .content-me {
+        border: 1px solid #9d033f;
         padding: 5px 15px;
         margin-top: 10px;
         width: 140px;
-        margin-left: 7vw;
-transition: .5s;
+        margin-left: 150px;
+        transition: 0.5s;
 
-        &:hover{
-            background-color: #9D033F;
+        &:hover {
+            background-color: #9d033f;
             color: white;
             cursor: pointer;
         }

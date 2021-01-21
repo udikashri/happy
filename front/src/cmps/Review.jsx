@@ -5,23 +5,21 @@ import React, { Component } from 'react'
 export class Review extends Component {
 
 
-  onRemove = async (ev , itemId) => {
-    ev.stopPropagation()
-    // await 
-    this.props.removeItem(itemId)
-    // this.props.history.push('/shop')
-  }
 
 
-  render() {
-      const {review} = this.props
-      console.log("review", review.by);
-    return <section className="card-main">
-        {review.by.fullname}
-        <img src= {review.by.imgUrl}/>
-{review.rate}
-{review.item.title}
-<div>{review.txt}</div>
-    </section>
-  }
+    render() {
+        const { review } = this.props
+        return <section className="review">
+
+            <div className="by-info">
+                <img src={review.by.imgUrl} />
+                <div>
+                    <h5>{review.by.fullname}              ⭐<span>{review.rate}</span></h5>
+                    
+                    <h6>Purchased Socks - {review.item.title}</h6>
+                </div>
+            </div>
+            <div className="review-text">{review.txt}</div>
+        </section>
+    }
 }

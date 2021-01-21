@@ -1,0 +1,35 @@
+.reviews {
+    .review {
+        border-bottom: solid 2px black;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+
+        .by-info {
+            color: rgb(126, 50, 50);
+            display: flex;
+            align-items: center;
+            h5 {
+                margin-bottom: 0px;
+                span {
+                    color: rgb(223, 163, 34);
+                }
+            }
+        }
+        img {
+            border: 1px solid black;
+            height: 35px;
+            width: 35px;
+            border-radius: 50px;
+            margin-right: 15px;
+        }
+        &:last-child {
+            border: none;
+        }
+
+        .review-text {
+            margin-left: 10px;
+            text-indent: 10px;
+            color: rgb(53, 8, 8);
+        }
+    }
+}

@@ -2,8 +2,17 @@
   margin-top: 10vh;
   height: 75vh;
 
-  .thank-msg{
+  .thank-msg {
     margin: 20px;
+font-size: 30px;
+font-family: Apple Chancery, cursive;
+    a{
+      color: black;
+      &:hover{
+        text-decoration: none;
+       
+      }
+    }
   }
   img {
     z-index: -1;
@@ -19,10 +28,12 @@
     font-family: arial;
     font-size: 1.1em;
     background-color: $clr7;
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 20px;
-    max-width: 40vw;
+    max-width: 300px;
     right: -50vw;
+    text-align: center;
+    color: black;
   }
 
   .half::after {
