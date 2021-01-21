@@ -30,10 +30,10 @@ async function query(filterBy =null) {
             return item
         })
 
-        const newItems = items.find(item =>{
-            console.log(item);
-            return item
-        })
+        // const newItems = items.find(item =>{
+        //     console.log(item);
+        //     return item
+        // })
 
 
         // var newItems = Items.find(Item => {
