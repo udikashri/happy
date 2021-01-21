@@ -8,8 +8,8 @@ export class ItemFilter extends Component {
             title: '',
             type: 'all',
             color: 'clear',
-            // lowPrice: 0,
-            // highPrice: 1000
+            lowPrice: 0,
+            highPrice: 1000
 
         }
     }
@@ -41,8 +41,8 @@ export class ItemFilter extends Component {
                 <div className="flex-column">
                     <input type="text" name="title" value={filterBy.title} onChange={this.handleChange} placeholder="Search e.g 'React socks'" autoComplete="off" />
                     <h6>Up to price:</h6>
-                    <input type="number" name="highPrice"  /*value={filterBy.lowPrice}*/ onChange={this.handleChange} placeholder="Up to $" name="highPrice" />
-                    {/* <input type="number" name="highPrice" value={filterBy.highPrice} onChange={this.handleChange} placeholder="Max" /> */}
+                    <input type="number" name="lowPrice"  /*value={filterBy.lowPrice}*/ onChange={this.handleChange} placeholder="Up to $" /*name="highPrice"*/ />
+                    <input type="number" name="highPrice" /*value={filterBy.highPrice}*/ onChange={this.handleChange} placeholder="Max" />
                     <h6>Filter by color:</h6>
                     <PickColor handleChangeColor={this.handleChangeColor} />
 
