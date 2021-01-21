@@ -6,10 +6,8 @@ import { loadSellers } from '../store/actions/sellerActions'
 import {Review} from '../cmps/Review'
 // import { ItemEdit } from '../cmps/ItemEdit'
 import { Link } from 'react-router-dom'
-// import { ItemReview } from './ItemReview'
-// import { removeItem } from '../store/actions/itemActions.js'
-// import {plus} from '../assets/icons/plus.png'
-
+import CreditCardIcon from '@material-ui/icons/CreditCard';
+import ShoppingCartSharpIcon from '@material-ui/icons/ShoppingCartSharp';
 class _ItemDetails extends Component {
   state = {
     currItem: { title: '', imgUrl: '', price: 0, _id: '' },
@@ -118,6 +116,7 @@ class _ItemDetails extends Component {
           </div>}
 
           {/* *************** Change Amount ****************    */}
+          <h3>How Much Pairs would You Like?</h3>
           <div className="amount">
             <div onClick={(ev) => this.onChangeAmount(ev, -1)} className="change-amount">-</div>
             <div>{amount}</div>
@@ -137,7 +136,7 @@ class _ItemDetails extends Component {
        {/* ************* Item Reviews  ********************* */}
 
        <div className="reviews">
-       
+       <h3>reviews:</h3>
           {seller && seller.reviews.map(review => {
             return <Review key={review.id} review={review}/>
           })}
