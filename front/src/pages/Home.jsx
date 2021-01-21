@@ -11,8 +11,20 @@ import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-export class Home extends Component {
+import { loadItems, setFilter } from '../store/actions/itemActions'
+import { loadSellers } from '../store/actions/sellerActions'
+import { connect } from 'react-redux'
+
+
+class _Home extends Component {
   state = {}
+
+  componentDidMount() {
+    this.props.loadItems()
+    this.props.loadSellers()
+  }
+
+
   render() {
     console.log('🧦HappySocks ');
     return (
@@ -63,11 +75,11 @@ export class Home extends Component {
 
                 <CardContent className="card-text">
                 </CardContent>
-                <CardActions disableSpacing>
+                {/* <CardActions disableSpacing>
                   <IconButton aria-label="add to favorites">
                     <FavoriteIcon />
                   </IconButton>
-                </CardActions>
+                </CardActions> */}
               </Card>
               <Card>
                 <CardMedia
@@ -107,7 +119,7 @@ export class Home extends Component {
               </Card>
             </section>
 
-            <section className="home-collection-list full">
+            <section className="home-collection-list ">
               <div className="collection-card img-1">
                 <div className="preview-image ">
                   <h3>Fun</h3>
@@ -211,9 +223,9 @@ export class Home extends Component {
                 <CardContent className="card-text">
                 </CardContent>
                 <CardActions disableSpacing>
-                  <IconButton aria-label="add to favorites">
+                  {/* <IconButton aria-label="add to favorites">
                     <FavoriteIcon />
-                  </IconButton>
+                  </IconButton> */}
                 </CardActions>
               </Card>
               <Card>
@@ -264,3 +276,21 @@ export class Home extends Component {
     )
   }
 }
+
+const mapStateToProps = state => {
+  return {
+      items: state.itemModule.items,
+      sellers: state.sellerModule.sellers,
+      filterBy: state.itemModule.filterBy,
+  }
+}
+
+const mapDispatchToProps = {
+  loadItems,
+  loadSellers,
+  setFilter,
+
+
+}
+
+export const Home = connect(mapStateToProps, mapDispatchToProps)(_Home);

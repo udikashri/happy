@@ -8,14 +8,35 @@ import { loadItems, setFilter, saveItem } from '../store/actions/itemActions'
 class _ShopApp extends Component {
 
     componentDidMount() {
-        this.props.loadItems()
-        // console.log('Got from store:', this.props)
+        const queryString = this.props.location.search;
+        console.log('q', queryString);
+        const urlParams = new URLSearchParams(queryString);
+        const tag = urlParams.get('tag')
+        console.log('tag', tag);
+        if (tag) {
+            const filterBy = {tags:[tag]}
+            this.props.loadItems(filterBy)
+        } else {
+            this.props.loadItems()
+        }
+        console.log('Got from store:', this.props)
     }
+
+    // componentDidUpdate() {
+
+    //     // history.push({search: params.toString()})
+    // }
+
+
 
     onSetFilter = (filterBy) => {
         this.props.setFilter(filterBy)
         this.props.loadItems(filterBy)
     }
+
+
+
+
 
     // onSaveItem = (ev, newItem) => {
     //     ev.preventDefault()
@@ -28,7 +49,7 @@ class _ShopApp extends Component {
         if (!items) return <h1>loading</h1>
         return (
             <section className="shop-container">
-                <ItemFilter onSetFilter={this.onSetFilter} />
+                <ItemFilter onSetFilter={this.onSetFilter} loadItems={this.props.loadItems} location={this.props.location} />
                 {/* <ItemEdit onSaveItem={this.onSaveItem} /> */}
                 <ItemList items={items} />
             </section>
@@ -47,7 +68,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = {
     loadItems,
     setFilter,
-    saveItem
+    saveItem,
 
 }
 

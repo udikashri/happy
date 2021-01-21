@@ -23,13 +23,14 @@ export const itemService = {
 function query(filterBy = null) {
     let url = '';
     if (filterBy) {
-        const { title, type, color } = filterBy
-        console.log(type);
+        const { title, type, color,tags } = filterBy
+        console.log('tags',tags);
         url += '?';
         let params = new URLSearchParams(url.search);
-        color !== 'clear' && params.set('color', color);
+        color && color !== 'clear' && params.set('color', color);
         title && params.set('title', title);
-        type !== 'all' && params.set('type', type);
+        type && type !== 'all' && params.set('type', type);
+        (tags.length) && params.set('tags', tags);
         url += params.toString()
     }
     console.log('url' ,url)
