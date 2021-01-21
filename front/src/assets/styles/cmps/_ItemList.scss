@@ -1,5 +1,6 @@
 .item-list {
-
+    // margin-left: 25vw;
+    grid-area: list;
     display: grid;
     // grid-template-columns: repeat(4,1fr);
     padding-left: 20px;

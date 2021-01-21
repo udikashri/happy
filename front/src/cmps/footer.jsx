@@ -12,6 +12,7 @@ export class Footer extends Component {
     // var visibility = 'hidden'
 
     openModal = () => {
+        console.log(111);
         var { modalVisibility } = this.state
         if (modalVisibility === 'hidden') modalVisibility = 'visible'
         else modalVisibility = 'hidden'
