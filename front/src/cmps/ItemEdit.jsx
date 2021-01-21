@@ -1,7 +1,9 @@
 import { connect } from 'react-redux'
 import React, { Component } from 'react'
 import { saveItem } from '../store/actions/itemActions.js'
-import { Uploader } from './Uploader';
+import { Uploader } from './Uploader'
+import { PickColor } from './PickColor'
+// import NotInterestedIcon from '@material-ui/icons/NotInterested'
 
 
 export class _ItemEdit extends Component {
@@ -29,7 +31,7 @@ export class _ItemEdit extends Component {
     currItem: null
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     const currItem  =   {
         // type: "",
         title: "",
@@ -90,6 +92,12 @@ export class _ItemEdit extends Component {
     console.log('img url', url);
   }
 
+  handleChangeColor = (color) => {
+    console.log(color);
+    this.setState(prevState => ({ currItem: { ...prevState.currItem, color: color } }), () => {
+    })
+}
+
   render() {
     const { currItem } = this.state;
     if (!currItem) return <h1>Loading.....</h1>
@@ -97,10 +105,10 @@ export class _ItemEdit extends Component {
       <section className="edit-box">
         <form onSubmit={(event) => { this.onSaveItem(event) }}>
           <input autoFocus type="text" value={currItem.title} onChange={this.handleInput} name="title" placeholder="Add Item" autoComplete="off" />
-          <input autoFocus type="text" value={currItem.color} onChange={this.handleInput} name="color" placeholder="Add Color" autoComplete="off" />
-          {/* <input autoFocus type="text" value={currItem.type} onChange={this.handleInput} name="type" placeholder="Add Type" autoComplete="off" /> */}
+                    {/* <input autoFocus type="text" value={currItem.type} onChange={this.handleInput} name="type" placeholder="Add Type" autoComplete="off" /> */}
           <textarea rows="5" autoFocus type="text" value={currItem.description} onChange={this.handleInput} name="description" placeholder="Add Description" autoComplete="off" />
           <label >Price: <input type="number" min="0" name="price" value={currItem.price} onChange={this.handleInput} /></label>
+          <PickColor handleChangeColor={this.handleChangeColor} />
           <Uploader onFinishUpload={this.onUploadItemImage} />
           <button>Save</button>
         </form>

@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { itemService } from '../services/itemService.js'
 import { loadItems, removeItem, saveItem/*, setFilter*/ } from '../store/actions/itemActions'
 import { loadSellers } from '../store/actions/sellerActions'
+import {Review} from '../cmps/Review'
 // import { ItemEdit } from '../cmps/ItemEdit'
 import { Link } from 'react-router-dom'
 // import { ItemReview } from './ItemReview'
@@ -16,7 +17,10 @@ class _ItemDetails extends Component {
     sellers: {},
     amount: 1,
     modalVisibility: 'hidden',
-    rate: ''
+    rate: {
+      stars: '',
+      avg: 0
+    }
   }
   async componentDidMount() {
     await this.props.loadItems()
@@ -36,10 +40,8 @@ class _ItemDetails extends Component {
 
   loadSeller = async () => {
     const sellerId = this.state.currItem.seller._id
-    console.log(sellerId);
     // this.props.loadSellers()
     const sellers = await this.props.sellers;
-    // console.log(await sellers);
     const seller = sellers.filter(seller => {
       return seller._id === sellerId
     })
@@ -52,14 +54,14 @@ class _ItemDetails extends Component {
     var rateSum = reviews.reduce((accumulator, review) => {
       return accumulator + review.rate
     }, 0)
-    const rateNum = Math.floor(rateSum / reviews.length);
-    var rate = ''
-    for (var i = 0; i < rateNum; i++) {
-      rate += '⭐'
 
+    const avg = rateSum / reviews.length;
+    var stars = ''
+    for (var i = 0; i < Math.floor(avg); i++) {
+      stars += '⭐'
     }
-
-    this.setState({ rate: rate }, () => { console.log("evg", this.state.rate) })
+    const rate = { stars, avg: avg.toFixed(2) }
+    this.setState({ rate: rate })
   }
 
   onSaveItem = (ev, newItem) => {
@@ -69,12 +71,6 @@ class _ItemDetails extends Component {
     this.props.history.push('/shop')
   }
 
-
-  // onRemove = async () => {
-  //   console.log('h');
-  //   await this.props.removeItem(this.state.currItem._id)
-  //   this.props.history.push('/shop')
-  // }
 
   onChangeAmount = (ev, add) => {
     ev.preventDefault()
@@ -94,7 +90,7 @@ class _ItemDetails extends Component {
 
   render() {
     const { currItem, seller, amount, rate } = this.state
-    if (seller) console.log('seller', seller.reviews[1].rate);
+    // if (seller) console.log('seller', seller);
     // if (!currItem) return
     return (
 
@@ -102,6 +98,8 @@ class _ItemDetails extends Component {
         {/* <img  src={plus}/> */}
 
         <img className="item-image" src={currItem.imgUrl} />
+
+ 
 
         {/* ************* Item Info  ********************* */}
         <div className="item-info">
@@ -116,7 +114,7 @@ class _ItemDetails extends Component {
             <img src={seller.user.imgUrl} />
             <span> {seller.name}</span>
             <span className="best-seller"> best seller </span>
-            <span>{rate}</span>
+            <span>{rate.stars}</span>
           </div>}
 
           {/* *************** Change Amount ****************    */}
@@ -134,7 +132,33 @@ class _ItemDetails extends Component {
           {/* <button onClick={() => this.onRemove(currItem._id)} className="delete-btn">Delete</button> */}
           {/* <ItemEdit currItem={currItem} onSaveItem={this.onSaveItem} /> */}
         </div>
+        <section className="border-seprator"></section>
 
+       {/* ************* Item Reviews  ********************* */}
+
+       <div className="reviews">
+          reviews
+          {/* {seller && seller.reviews.map(review => {
+            return <Review key={review.id} review={review}/>
+          })} */}
+          
+</div>
+
+       {/* ************* Seller Info  ********************* */}
+        <div className="seller-details">
+          <h3>About The Seller</h3>
+          {seller &&
+            <div className="info">
+              <img src={seller.user.imgUrl} />
+              <div>
+                <h4> {seller.user.fullname}</h4>
+                <h5>{seller.address}</h5>
+                <div> {rate.stars} {rate.avg} ({seller.reviews.length}  {seller.reviews.length === 1 ? "review" : "reviews"})</div>
+              </div>
+            </div>
+          }
+          <div className="content-me">Content Me</div>
+        </div>
         {/***************    Order Modal   ***************/}
         <section onClick={this.openModal} style={{ visibility: this.state.modalVisibility }} className="modal-background"></section>
         <div style={{ visibility: this.state.modalVisibility }} className="order-info-modal" >

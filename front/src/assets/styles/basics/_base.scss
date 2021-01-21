@@ -46,3 +46,23 @@ a:hover {
     text-decoration: underline;
 }
 
+button {
+    width: 14.2em;
+    border-radius: 2em;
+
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+input {
+    border-color: orange;
+    border-radius: 2em;
+    margin: 0;
+}
+
+input:focus{
+    outline: 0;
+}
+

@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { _ItemEdit } from '../cmps/ItemEdit'
 import { loadItems } from '../store/actions/itemActions'
-import { ItemPreview, itemPreview } from '../cmps/ItemPreview'
+import { ItemPreview } from '../cmps/ItemPreview'
 // import { ItemAdd } from '../cmps/ItemAdd'
 import { ItemEdit } from '../cmps/ItemEdit'
 
 // import { SellerDeatails } from '../cmps/SellerDeatails'
 
-export class _BackOfficeSelller extends Component {
+export class _BackOfficeSeller extends Component {
     state = {
         itemsToShow: null,
         isAdd: false
@@ -38,20 +38,21 @@ export class _BackOfficeSelller extends Component {
         if (!loggedInUser || !itemsToShow) return <h1>Loading..</h1>
         if (itemsToShow.length === 0) return <h1>There is no items for you .. add some :)</h1>
         return (
-            <div className="backOffice-selller">
-                <h2>Helllo {loggedInUser.fullname}</h2>
-                <ItemEdit user={this.props.loggedInUser} loadUserItems={this.loadUserItems} />
-                <div className="item-container">
-                    {itemsToShow && itemsToShow.map(item => 
-                    <div key={item._id} className="item">
-                    <ItemPreview item={item} removeable={true} /></div>
-                    )}
+            <>
+                <h2 className="hello-seller">👋Helllo {loggedInUser.fullname}</h2>
+                <div className="back-office-seller">
+                    <ItemEdit className="add-Item-back" user={this.props.loggedInUser} loadUserItems={this.loadUserItems} />
+                    <div className="item-container">
+                        {itemsToShow && itemsToShow.map(item =>
+                            <div key={item._id} className="item">
+                                <ItemPreview item={item} removeable={true} /></div>
+                        )}
+                    </div>
                 </div>
-            </div>
+            </>
         )
     }
 }
-
 const mapStateToProps = state => {
     return {
 
@@ -65,4 +66,4 @@ const mapDispatchToProps = {
 
 }
 
-export const BackOfficeSelller = connect(mapStateToProps, mapDispatchToProps)(_BackOfficeSelller);
+export const BackOfficeSeller = connect(mapStateToProps, mapDispatchToProps)(_BackOfficeSeller);

@@ -1,21 +1,23 @@
 .item-details {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50vh 20px;
 
-    grid-template-areas: "img item-info" "sep sep";
+    grid-template-rows: 50vh 10px 1fr;
+
+    grid-template-areas: "img item-info" "sep sep" "reviews seller";
     margin: 10vh 10vw 0;
     // margin-top: 500px;
     img.item-image {
         grid-area: img;
         width: 300px;
         margin: 0 auto;
+        height: 47vh;
     }
     .border-seprator {
         grid-area: sep;
         background-color: dimgray;
         left: 0;
-        height: 1vh;
+        height: 1px;
     }
 }
 .item-info {
@@ -26,16 +28,15 @@
     justify-content: space-between;
     margin-top: 5px;
     color: rgb(17, 17, 17);
-    .header{
+    .header {
         align-self: start;
-           h1,
-    .price {
-        margin: 0 5vw;
-        margin-top: 10px;
-        align-self: start;
-    } 
+        h1,
+        .price {
+            margin: 0 5vw;
+            margin-top: 10px;
+            align-self: start;
+        }
     }
-
 
     .buy {
         background-color: $clr3;
@@ -78,7 +79,8 @@
     display: flex;
     align-self: start;
     justify-content: space-between;
-    span,img{
+    span,
+    img {
         margin-right: 10px;
     }
     img {
@@ -86,7 +88,7 @@
         width: $imgLen;
         border-radius: 50px;
     }
-    .best-seller{
+    .best-seller {
         color: rgb(223, 163, 34);
         font-weight: bold;
     }
@@ -132,5 +134,43 @@
         text-decoration: none;
         color: rgb(224, 224, 224);
         margin: 0 45% 10px;
+    }
+}
+.reviews {
+    grid-area: reviews;
+    background-color: khaki;
+}
+.seller-details {
+    grid-area: seller;
+    padding: 2% 5%;
+h3{
+    margin-bottom: 15px;
+}
+    img {
+        border-radius: 50%;
+        height: 110px;
+        width: 110px;
+        margin-right: 3vw;
+      
+    }
+
+    .info{
+         color: rgb(126, 50, 50);
+        display: flex;
+    }
+
+    .content-me{
+        border: 1px solid #9D033F;
+        padding: 5px 15px;
+        margin-top: 10px;
+        width: 140px;
+        margin-left: 7vw;
+transition: .5s;
+
+        &:hover{
+            background-color: #9D033F;
+            color: white;
+            cursor: pointer;
+        }
     }
 }
