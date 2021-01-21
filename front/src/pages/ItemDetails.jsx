@@ -15,7 +15,8 @@ class _ItemDetails extends Component {
     seller: null,
     sellers: {},
     amount: 1,
-    modalVisibility: 'hidden'
+    modalVisibility: 'hidden',
+    rate: ''
   }
   async componentDidMount() {
     await this.props.loadItems()
@@ -42,7 +43,23 @@ class _ItemDetails extends Component {
     const seller = sellers.filter(seller => {
       return seller._id === sellerId
     })
-    this.setState({ seller: seller[0], sellers: sellers })
+    this.setState({ seller: seller[0], sellers: sellers }, () => {
+      this.rateCalculator(seller[0].reviews)
+    })
+  }
+
+  rateCalculator = (reviews) => {
+    var rateSum = reviews.reduce((accumulator, review) => {
+      return accumulator + review.rate
+    }, 0)
+    const rateNum = Math.floor(rateSum / reviews.length);
+    var rate = ''
+    for (var i = 0; i < rateNum; i++) {
+      rate += '⭐'
+
+    }
+
+    this.setState({ rate: rate }, () => { console.log("evg", this.state.rate) })
   }
 
   onSaveItem = (ev, newItem) => {
@@ -72,10 +89,12 @@ class _ItemDetails extends Component {
     if (modalVisibility === 'hidden') modalVisibility = 'visible'
     else modalVisibility = 'hidden'
     this.setState({ modalVisibility: modalVisibility })
-    console.log(1, this.state.modalVisibility);
   }
+
+
   render() {
-    const { currItem, seller, amount } = this.state
+    const { currItem, seller, amount, rate } = this.state
+    if (seller) console.log('seller', seller.reviews[1].rate);
     // if (!currItem) return
     return (
 
@@ -83,17 +102,28 @@ class _ItemDetails extends Component {
         {/* <img  src={plus}/> */}
 
         <img className="item-image" src={currItem.imgUrl} />
+
+        {/* ************* Item Info  ********************* */}
         <div className="item-info">
-          <h1>{currItem.title}</h1>
-          <div className="price">{currItem.price}$</div>
+          <div className="header">
+            <h1>{currItem.title}</h1>
+            <div className="price">${currItem.price}.00</div>
+          </div>
+
+
+          {/* *************** Seller Previwe ****************    */}
           {seller && <div className="seller-preview">
             <img src={seller.user.imgUrl} />
-            {seller.name}
+            <span> {seller.name}</span>
+            <span className="best-seller"> best seller </span>
+            <span>{rate}</span>
           </div>}
+
+          {/* *************** Change Amount ****************    */}
           <div className="amount">
-            <div onClick={(ev) => this.onChangeAmount(ev, -1)} className="changeAmount">-</div>
+            <div onClick={(ev) => this.onChangeAmount(ev, -1)} className="change-amount">-</div>
             <div>{amount}</div>
-            <div onClick={(ev) => this.onChangeAmount(ev, 1)} className="changeAmount">+</div>
+            <div onClick={(ev) => this.onChangeAmount(ev, 1)} className="change-amount">+</div>
           </div>
 
           <div onClick={this.openModal} className="buy">Buy Me </div>
@@ -104,6 +134,9 @@ class _ItemDetails extends Component {
           {/* <button onClick={() => this.onRemove(currItem._id)} className="delete-btn">Delete</button> */}
           {/* <ItemEdit currItem={currItem} onSaveItem={this.onSaveItem} /> */}
         </div>
+
+        {/***************    Order Modal   ***************/}
+        <section onClick={this.openModal} style={{ visibility: this.state.modalVisibility }} className="modal-background"></section>
         <div style={{ visibility: this.state.modalVisibility }} className="order-info-modal" >
           <div className="item">
             <div><img src={currItem.imgUrl} /></div>
@@ -113,11 +146,11 @@ class _ItemDetails extends Component {
               <div>{amount}</div>
               <div onClick={(ev) => this.onChangeAmount(ev, 1)} className="changeAmount">+</div>
             </div>
-            <div className="total-price">{amount*currItem.price}</div>
+            <div className="total-price">{amount * currItem.price}</div>
           </div>
           <Link to={"/thank"}>Order</Link>
-
         </div>
+
       </section>
 
     )
