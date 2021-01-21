@@ -24,16 +24,18 @@
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    // background-position: top;
+    // background-attachment: fixed;
+    background-position: bottom;
     position: relative;
     z-index: 0;
+    background-image: rgba(0, 0, 0, 0.1);
     // padding-top: 333px;
     // padding-left: 130px;
     // margin-top: -196px;
     border: 0;
     display: flex;
     flex-direction: column;
-    height: 62vh;
+    height: 25rem;
     align-items: center;
     justify-content: center;
 
@@ -48,6 +50,9 @@
         font-size: 3.625rem;
         line-height: 1;
         color: #fff;
+        // background-color: rgba(0, 0, 0, 0.02);
+        font-style: italic;
+        font-family:-webkit-pictograph;
         margin-bottom: 24px;
     }
     & .btn {
@@ -82,7 +87,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 750px;
-    width:117%;
+    width:93.1vw;
     grid-gap: 8px;
     gap: 8px;
     background-color: orangered;
