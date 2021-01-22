@@ -8,13 +8,15 @@ import { Review } from '../cmps/Review'
 import { Link } from 'react-router-dom'
 import CreditCardIcon from '@material-ui/icons/CreditCard';
 import ShoppingCartSharpIcon from '@material-ui/icons/ShoppingCartSharp';
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 class _ItemDetails extends Component {
   state = {
     currItem: { title: '', imgUrl: '', price: 0, _id: '' },
     seller: null,
     sellers: {},
     amount: 1,
-    modalVisibility: 'visible',
+    modalVisibility: 'hidden',
     rate: {
       stars: '',
       avg: 0
@@ -173,18 +175,40 @@ class _ItemDetails extends Component {
             <div className="total-price">{amount * currItem.price}</div>
           </div>
           <Link to={"/thank"}>Order</Link> */}
+          <h3><ShoppingCartSharpIcon /> Cart Details</h3>
+          <div  onClick={this.openModal} className="close"><HighlightOffIcon/></div>
+          <table>
+            <tr>
+              <th>Card Details</th>
+              <th>Price</th>
+              <th>Amount</th>
+              <th>Item</th>
+              <th>Total Price</th>
+            </tr>
+            <tr>
+              <td><CreditCardIcon /><MoreHorizIcon/></td>
+              <td>${currItem.price}</td>
+              <td>{amount}</td>
+              <td>{currItem.title}</td>
+              <td>${currItem.price * amount}</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>Shiping</td>
+              <td>$70</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td className="final-price">${currItem.price * amount+ 70}</td>
+            </tr>
+          </table>
+        <Link to={"/thank"}>Order</Link>
 
-
-          <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Age</th>
-          </tr>
-          <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-          </tr>
         </div>
 
       </section>
