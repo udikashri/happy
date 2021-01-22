@@ -28,7 +28,7 @@
     background-position: bottom;
     position: relative;
     z-index: 0;
-    background-image: rgba(0, 0, 0, 0.1);
+    // background-image: rgba(0, 0, 0, 0.1);
     // padding-top: 333px;
     // padding-left: 130px;
     // margin-top: -196px;
@@ -51,8 +51,8 @@
         line-height: 1;
         color: #fff;
         // background-color: rgba(0, 0, 0, 0.02);
-        font-style: italic;
-        font-family:-webkit-pictograph;
+        // font-style: italic;
+        // font-family:-webkit-pictograph;
         margin-bottom: 24px;
     }
     & .btn {
