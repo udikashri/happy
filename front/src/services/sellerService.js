@@ -15,33 +15,3 @@ function query() {
     return httpService.get(`seller`)
 }
 
-
-
-// async function removeSeller(sellerId) {
-//     const remove = await axios.delete(`${baseUrl}/${sellerId}`)
-//     return remove.data
-//     // return axios.delete(`${baseUrl}/${sellerId}`)
-//     // .then(res => res.data)
-// }
-// function toggleSeller(seller) {
-//     seller.isDone = !seller.isDone
-//     return save(seller)
-// }
-// function saveSeller(sellerToSave) {
-//     if (sellerToSave._id) {
-//         console.log('service');
-//         // UPDATE
-//         return axios.put(`${baseUrl}/${sellerToSave._id}`, sellerToSave)
-//             .then(res => res.data)
-//     } else {
-//         // CREATE
-//         return axios.post(baseUrl, sellerToSave)
-//             .then(res => res.data)
-//     }
-// }
-
-// function editSeller(seller) {
-//     console.log('hi');
-//     return axios.put(`${baseUrl}/${seller._id}`, seller)
-//         .then(res => res.data)
-// }

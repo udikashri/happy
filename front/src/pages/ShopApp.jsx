@@ -9,7 +9,7 @@ class _ShopApp extends Component {
 
     componentDidMount() {
         const queryString = this.props.location.search;
-        console.log('q', queryString);
+        // console.log('q', queryString);
         const urlParams = new URLSearchParams(queryString);
         const tag = urlParams.get('tag')
         console.log('tag', tag);
@@ -19,7 +19,7 @@ class _ShopApp extends Component {
         } else {
             this.props.loadItems()
         }
-        console.log('Got from store:', this.props)
+        // console.log('Got from store:', this.props)
     }
 
     // componentDidUpdate() {

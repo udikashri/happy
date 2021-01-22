@@ -19,7 +19,7 @@ export class ItemFilter extends Component {
     handleChange = ({ target }) => {
         const field = target.name
         const value = (target.type === 'number') ? +target.value : target.value
-        console.log(target.value);
+        // console.log(target.value);
         this.setState(prevState => ({ filterBy: { ...prevState.filterBy, [field]: value } }), () => {
             this.props.onSetFilter(this.state.filterBy)
         })
@@ -32,7 +32,6 @@ export class ItemFilter extends Component {
     }
 
     handleChangeColor = (color) => {
-        console.log(color);
         this.setState(prevState => ({ filterBy: { ...prevState.filterBy, color: color } }), () => {
             this.props.onSetFilter(this.state.filterBy)
         })

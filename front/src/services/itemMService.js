@@ -25,7 +25,6 @@ import axios from 'axios'
 // const baseUrl = 'http://localhost:3030/items'; // json
 
 function query(filterBy = null) {
-    console.log('query');
     let url = '';
     if (filterBy) {
         const { title, type, color } = filterBy
@@ -41,7 +40,6 @@ function query(filterBy = null) {
         .then(res => {
             return res.data
         })
-        .catch(() => console.log('nooooo'))
 }
 
 
@@ -75,7 +73,6 @@ function saveItem(itemToSave) {
 }
 
 function editItem(item) {
-    console.log('hi');
     return axios.put(`${baseUrl}/${item._id}`, item)
         .then(res => res.data)
 }

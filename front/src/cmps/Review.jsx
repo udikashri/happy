@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-import Card from '@material-ui/core/Card';
 import React, { Component } from 'react'
 
 export class Review extends Component {

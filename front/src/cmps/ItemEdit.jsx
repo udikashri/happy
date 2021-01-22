@@ -67,7 +67,7 @@ export class _ItemEdit extends Component {
   async componentDidUpdate(prevProps) {
     if (prevProps.currItem !== this.props.currItem) {
       const { currItem } = this.props
-      console.log(await currItem);
+      // console.log(await currItem);
       this.setState({ currItem })
     }
   }
