@@ -14,6 +14,19 @@ async function getItems(req, res) {
     }
 }
 
+async function updateItem(req, res) {
+    try {
+        const item = req.body
+        const savedItem = await itemService.update(item)
+        res.send(savedItem)
+
+    } catch (err) {
+        logger.error('Failed to add item', err)
+        res.status(500).send({ err: 'Failed to add item' })
+    }
+}
+
+
 async function deleteItem(req, res) {
     try {
         await itemService.remove(req.params.id)
@@ -43,5 +56,6 @@ async function addItem(req, res) {
 module.exports = {
     getItems,
     deleteItem,
-    addItem
+    addItem,
+    updateItem
 }

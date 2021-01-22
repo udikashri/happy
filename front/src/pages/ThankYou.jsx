@@ -14,20 +14,25 @@ export class ThankYou extends Component {
 
     componentDidMount() {
         eventBusService.on('order', (msgOrder) => {
-            var newOrder = this.state.order
-            newOrder = {
-                amount: msgOrder.amount,
-                title: msgOrder.title
-            }
-            this.doSetState(newOrder)
+            console.log(msgOrder);
+            const {order} = this.state
+            // newOrder = {
+            //     amount: msgOrder.amount,
+            //     title: msgOrder.title
+            // }
+            order.amount = msgOrder.amount
+            console.log(order);
+            this.setState({ order })
         })
     }
+    componentWillUnmount(){
+        eventBusService.off()
+}
+    // doSetState = (newOrder) => {
+    //     t, () => {
+    //     }, console.log('order', this.state.order))
 
-    doSetState = (newOrder) => {
-        this.setState({ order: newOrder }, () => {
-        }, console.log('order', this.state.order))
-
-    }
+    // }
 
     render() {
         const { order } = this.state

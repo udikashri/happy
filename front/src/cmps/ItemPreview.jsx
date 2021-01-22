@@ -17,6 +17,9 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 
 export class _ItemPreview extends Component {
 
+  state = {
+    currItem: null
+  }
 
   onRemove = async (ev, itemId) => {
     ev.stopPropagation()
@@ -24,6 +27,18 @@ export class _ItemPreview extends Component {
     this.props.removeItem(itemId)
     // this.props.history.push('/shop')
   }
+  // onEdit = async (ev, itemId) => {
+  //   ev.stopPropagation()
+  //   // await 
+  //   const currItem = this.props.items.find(item => {
+  //     return item._id === itemId
+  //   })
+
+  //   await this.setState({currItem})
+  //   console.log(currItem);
+  //   console.log(this.state.currItem);
+  //   // this.props.history.push('/shop')
+  // }
 
 
   render() {
@@ -56,18 +71,19 @@ export class _ItemPreview extends Component {
           // title={item.title}
         />
 
-        <CardHeader
+        {item.seller &&<CardHeader
           avatar={
             <Avatar src={item.seller.imgUrl} className="small" />
           }
           title={item.title}
-          subheader={`${item.seller.fullname}  ⭐ 4.2`} />
+          subheader={`${item.seller.fullname}  ⭐ 4.2`} />}
         </Link>
 
         <CardContent className="card-text">
+          {removeable && <button className="delete-button" onClick={(event) => this.props.onEdit(event, item._id)} className="delete-btn">Edit</button>}
           {removeable && <button className="delete-button" onClick={(event) => this.onRemove(event, item._id)} className="delete-btn">Delete</button>}
           {/* <span className="likes"></span> */}
-          <span className="price">{item.likes}❤ </span>                  
+          <span className="price">{item.likes}❤</span>                  
           <span>${item.price}</span>
           
         </CardContent>
@@ -83,7 +99,7 @@ const mapStateToProps = state => {
   return {
 
     // loggedInUser: state.userModule.loggedInUser,
-    // items: state.itemModule.items
+    items: state.itemModule.items
   }
 }
 

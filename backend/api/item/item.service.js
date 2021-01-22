@@ -30,6 +30,57 @@ async function query(filterBy =null) {
 }
 
 
+async function update(item) {
+    try {
+        // peek only updatable fields!
+        const itemToSave = {
+            _id: ObjectId(item._id),
+            title: item.title,
+            price: item.price,
+            color: item.color,
+            imgUrl: item.imgUrl,
+            description: item.description,
+            likes: item.likes,
+            details: item.details,
+            tags: item.tags
+            // type: item.type,
+            // createdAt: item.createdAt,
+            // inStock: item.inStock,
+
+            // {
+            //     // type: "",
+            //     // title: '',
+            //     // price: 0,
+            //     // color: '',
+            //     // seller: {
+            //     //   _id:'E4G3Ck',
+            //     //   fullname:'Amelia Larson',
+            //     //   imgUrl:'https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/3_nz6vkf.jpg'
+            //     // },
+            //     // description: '',
+            //     // imgUrl: 'https://ih1.redbubble.net/image.951124242.1192/ur,socks_flatlay_medium,square,600x600-bg,f8f8f8.1.jpg',
+            //     // tags: [
+            //     //   ''
+            //     // ],
+            //     // likes:'',
+            //     // details:''
+            //   }
+
+
+
+        }
+
+        // like gItems
+        const collection = await dbService.getCollection('item')
+        await collection.updateOne({ '_id': itemToSave._id }, { $set: itemToSave })
+        return itemToSave
+    } catch (err) {
+        logger.error('cannot insert item', err)
+        throw err
+    }
+}
+
+
 // async function query(filterBy = {}) {
 //     try {
 //         // const criteria = _buildCriteria(filterBy)
@@ -123,7 +174,8 @@ function _buildCriteria(filterBy) {
 module.exports = {
     query,
     remove,
-    add
+    add,
+    update
 }
 
 

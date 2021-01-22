@@ -57,12 +57,15 @@ export class _ItemEdit extends Component {
   onSaveItem = async (ev) => {
     ev.preventDefault()
     const  item = this.state.currItem
-    // item.seller._id = this.props.user._id
-    // item.seller.fullname = this.props.user.fullname
-    // item.seller.imgUrl = this.props.user.imgUrl
+    item.seller._id = this.props.user._id
+    item.seller.fullname = this.props.user.fullname
+    item.seller.imgUrl = this.props.user.imgUrl
     await this.props.saveItem(item)
     this.props.loadUserItems()
   }
+// async componentDidMount() {
+//   console.log(this.props.editItem);
+// }
 
   async componentDidUpdate(prevProps) {
     if (prevProps.currItem !== this.props.currItem) {
@@ -122,9 +125,9 @@ export class _ItemEdit extends Component {
         <form onSubmit={(event) => { this.onSaveItem(event) }}>
           <input autoFocus type="text" value={currItem.title} onChange={this.handleInput} name="title" placeholder="Add Item" autoComplete="off" />
           <input autoFocus type="text" value={currItem.tags} onChange={this.handleTagsInput} name="tags" placeholder="Animal,Art" autoComplete="off" />
-          <input autoFocus type="text" value={currItem.seller._id} onChange={this.handleInput} name="_id" placeholder="sellerId" autoComplete="off" />
+          {/* <input autoFocus type="text" value={currItem.seller._id} onChange={this.handleInput} name="_id" placeholder="sellerId" autoComplete="off" />
           <input autoFocus type="text" value={currItem.seller.fullname} onChange={this.handleInput} name="fullname" placeholder="sellerFullname" autoComplete="off" />
-          <input autoFocus type="text" value={currItem.seller.imgUrl} onChange={this.handleInput} name="imgUrl" placeholder="sellerImgUrl" autoComplete="off" />
+          <input autoFocus type="text" value={currItem.seller.imgUrl} onChange={this.handleInput} name="imgUrl" placeholder="sellerImgUrl" autoComplete="off" /> */}
           <input autoFocus type="text" value={currItem.likes} onChange={this.handleInput} name="likes" placeholder="Likes" autoComplete="off" />
           <input autoFocus type="text" value={currItem.details} onChange={this.handleInput} name="details" placeholder="Details" autoComplete="off" />
                     {/* <input autoFocus type="text" value={currItem.type} onChange={this.handleInput} name="type" placeholder="Add Type" autoComplete="off" /> */}
