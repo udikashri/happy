@@ -12,15 +12,13 @@ class _Header extends Component {
             <nav>
                 <NavLink to="/shop">🧦Find</NavLink>
                 <NavLink exact to="/">🔖Sell</NavLink>
-                <NavLink to="/login"><AccountCircleIcon/>Login</NavLink>
+               {!loggedInUser && <NavLink to="/login"><AccountCircleIcon/>Login</NavLink>}
             </nav>
             {loggedInUser && <span className="loggedin-user">
 
                 <Link to={`seller/${loggedInUser._id}`}>
                 <img className="item-img" src = {loggedInUser.imgUrl} />
-                </Link>
-                
-                <span>{loggedInUser.score || 0}</span>
+                </Link>                
             </span>}
         </header>
     }

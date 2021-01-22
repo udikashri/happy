@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    grid-template-rows: 490px 25px 1fr;
+    grid-template-rows: 450px 10px 1fr;
 
     grid-template-areas: "img item-info" "sep sep" "reviews seller";
     margin: 100px 10vw 0;
