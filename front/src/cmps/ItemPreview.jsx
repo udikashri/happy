@@ -18,7 +18,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 export class _ItemPreview extends Component {
 
 
-  onRemove = async (ev , itemId) => {
+  onRemove = async (ev, itemId) => {
     ev.stopPropagation()
     // await 
     this.props.removeItem(itemId)
@@ -27,10 +27,10 @@ export class _ItemPreview extends Component {
 
 
   render() {
-    const { item , removeable } = this.props
+    const { item, removeable } = this.props
     return <section className="card-main">
       {/* {removeable && <button>DELETE!</button>} */}
-      <Card>
+      {/* <Card>
         <Link to={`/item/${item._id}`}>
           <img className="item-img" src={item.imgUrl} alt="" />
           <div className="item-card-preview" >
@@ -38,7 +38,7 @@ export class _ItemPreview extends Component {
             <h5 className="price">${item.price}</h5>
           </div>
         </Link>
-            {removeable && <button className="delete-button" onClick={(event) => this.onRemove(event,item._id)} className="delete-btn">Delete</button>}
+        {removeable && <button className="delete-button" onClick={(event) => this.onRemove(event, item._id)} className="delete-btn">Delete</button>}
         <div className="seller-preview">
           <img src={item.seller.imgUrl} />
           <div >{item.seller.fullname}
@@ -46,6 +46,34 @@ export class _ItemPreview extends Component {
         </div>
         </div>
       </Card>
+ */}
+
+      <Card>
+         <Link to={`/item/${item._id}`}>
+        <CardMedia
+          className="card-media"
+          image={item.imgUrl}
+          // title={item.title}
+        />
+
+        <CardHeader
+          avatar={
+            <Avatar src={item.seller.imgUrl} className="small" />
+          }
+          title={item.title}
+          subheader={`${item.seller.fullname}  ⭐ 4.2`} />
+        </Link>
+
+        <CardContent className="card-text">
+          {removeable && <button className="delete-button" onClick={(event) => this.onRemove(event, item._id)} className="delete-btn">Delete</button>}
+          {/* <span className="likes"></span> */}
+          <span className="price">{item.likes}❤ </span>                  
+          <span>${item.price}</span>
+          
+        </CardContent>
+      </Card>
+
+
 
     </section>
   }
@@ -54,8 +82,8 @@ export class _ItemPreview extends Component {
 const mapStateToProps = state => {
   return {
 
-      // loggedInUser: state.userModule.loggedInUser,
-      // items: state.itemModule.items
+    // loggedInUser: state.userModule.loggedInUser,
+    // items: state.itemModule.items
   }
 }
 
