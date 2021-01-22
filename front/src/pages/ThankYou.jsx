@@ -18,10 +18,14 @@ class _ThankYou extends Component {
     componentDidMount() {
         const newOrder = this.props.order
         this.setState({ order: newOrder })
-        var items = this.props.items.map(item =>{
-            console.log(4,item.tags);
-            return 1
+        var items = this.props.items.filter((item,i) => {
+            return item.tags.some(tag => {
+                return tag === newOrder.tag
+            })
+              
+
         })
+        items = items.slice(0, 4)
         console.log(404, items);
         this.setState({ items: items })
 
@@ -40,7 +44,7 @@ class _ThankYou extends Component {
 
                 <div className="speech half">thank you for you purchase</div>
                 <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611052878/atmosphere/3485-removebg-preview_1_gy43es.png" alt="img" />
-                {/* < ItemList items={items} /> */}
+                < ItemList items={items} />
             </section>)
 
 
