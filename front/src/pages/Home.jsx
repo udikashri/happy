@@ -32,8 +32,8 @@ class _Home extends Component {
         <section className="hero-image">
           <h2>good things come in pairs...</h2>
           <div className="flex">
-          <Link className="btn" to={`/shop`}>🧦 Find your match</Link>
-          <Link className="btn btn-2" to={`/shop`}>🎲 I feel lucky</Link>
+            <Link className="btn" to={`/shop`}>🧦 Find your match</Link>
+            <Link className="btn btn-2" to={`/shop`}>🎲 I feel lucky</Link>
           </div>
         </section>
         <section className="app">
@@ -118,7 +118,7 @@ class _Home extends Component {
                 </CardContent>
               </Card>
             </section>
-
+            {/* 
             <section className="home-collection-list ">
               <div className="collection-card img-1">
                 <div className="preview-image ">
@@ -150,9 +150,33 @@ class _Home extends Component {
                   <h4>get out of here</h4>
                 </div>
               </div>
+            </section> */}
 
 
-            </section>
+            <div className="container" >
+              <div className="gallery">
+                <figure className="gallery__item gallery__item--1">
+                  <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301257/atmosphere/spo_dfghzs.jpg" alt="Gallery image 1" className="gallery__img" />
+                </figure>
+                <figure className="gallery__item gallery__item--2">
+                  <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301259/atmosphere/80_vwru5z.png" alt="Gallery image 2" className="gallery__img" />
+                </figure>
+                <figure className="gallery__item gallery__item--3">
+                  <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301259/atmosphere/pp_zxik7v.jpg" alt="Gallery image 3" className="gallery__img" />
+                </figure>
+                <figure className="gallery__item gallery__item--4">
+                  <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301259/atmosphere/food_h3x9ri.png" alt="Gallery image 4" className="gallery__img" />
+                </figure>
+                <figure className="gallery__item gallery__item--5">
+                  <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301258/atmosphere/sp_cxahqx.jpg" alt="Gallery image 5" className="gallery__img" />
+                </figure>
+                <figure className="gallery__item gallery__item--6">
+                  <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301258/atmosphere/ot_co9rh2.jpg" alt="Gallery image 6" className="gallery__img" />
+                </figure>
+              </div>
+            </div>
+
+
 
             <h2>Our Top Sellers </h2>
 
@@ -179,8 +203,8 @@ class _Home extends Component {
               <Link className="btn" to={`/sell`}>Join our Marketplace</Link>
             </section>
             <section className="seller-banner">
-             <div className="banner-text">HappySocks changed my life!</div> 
-             <div className="banner-text2">Bob Safam - Maatziv Garbaim</div> 
+              <div className="banner-text">HappySocks changed my life!</div>
+              <div className="banner-text2">Bob Safam - Maatziv Garbaim</div>
               <img src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_1400,dpr_1.0/v1/attachments/generic_asset/asset/50218c41d277f7d85feeaf3efb4549bd-1599072608122/bg-signup-1400-x1.png" alt="" />
             </section>
 
@@ -271,7 +295,7 @@ class _Home extends Component {
 
 
 
-        </section>
+        </section >
       </>
     )
   }
@@ -279,9 +303,9 @@ class _Home extends Component {
 
 const mapStateToProps = state => {
   return {
-      items: state.itemModule.items,
-      sellers: state.sellerModule.sellers,
-      filterBy: state.itemModule.filterBy,
+    items: state.itemModule.items,
+    sellers: state.sellerModule.sellers,
+    filterBy: state.itemModule.filterBy,
   }
 }
 
