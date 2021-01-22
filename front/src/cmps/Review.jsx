@@ -7,7 +7,6 @@ export class Review extends Component {
 
     render() {
         const { review } = this.props
-        console.log('lll' ,review);
         // if (!review.by) return
         return <section className="review">
 

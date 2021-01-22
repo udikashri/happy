@@ -28,11 +28,6 @@ export function saveItem(item){
     }
 }
 
-// export function editItem(item) {
-//     return (dispatch) => {
-//         itemService.editItem(item).then(() => { dispatch({ type: 'EDIT_ITEM', item }) })
-//     }
-// }
 
 export function removeItem(itemId) {
     console.log('remove');

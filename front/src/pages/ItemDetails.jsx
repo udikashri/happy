@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
 import React, { Component } from 'react'
-import { eventBusService } from '../services/eventBusService'
 import { loadItems, removeItem, saveItem/*, setFilter*/ } from '../store/actions/itemActions'
 import { loadSellers } from '../store/actions/sellerActions'
+import { setOrder } from '../store/actions/orderActions'
 import { Review } from '../cmps/Review'
 // import { ItemEdit } from '../cmps/ItemEdit'
 import { Link } from 'react-router-dom'
@@ -87,17 +87,17 @@ class _ItemDetails extends Component {
     this.setState({ modalVisibility: modalVisibility })
   }
 
-  onOrder =   () =>{
-    const {amount} = this.state
-    const {title} = this.state.currItem
-    const order = {amount, title}
-    eventBusService.emit('order', order)
+  onOrder = () => {
+    const { amount } = this.state
+    const { title } = this.state.currItem
+    const tag = this.state.currItem.tags ? this.state.currItem.tags[0]:''
+    const order = { amount, title, tag }
+    this.props.setOrder(order)
   }
 
   render() {
     const { currItem, seller, amount, rate } = this.state
-    // if (seller) console.log('seller', seller);
-    // if (!currItem) return
+
     return (
 
       <section className="item-details">
@@ -117,14 +117,14 @@ class _ItemDetails extends Component {
 
           {/* *************** Seller Previwe ****************    */}
           {seller && <div className="seller-preview">
-            <img src={seller.user.imgUrl} alt="img"/>
+            <img src={seller.user.imgUrl} alt="img" />
             <span> {seller.name}</span>
             <span className="best-seller"> best seller </span>
             <span>{rate.stars}</span>
           </div>}
 
           {/* *************** Change Amount ****************    */}
-          <h3>How Much Pairs would You Like?</h3>
+          <h3>How Many Pairs would You Like?</h3>
           <div className="amount">
             <div onClick={(ev) => this.onChangeAmount(ev, -1)} className="change-amount">-</div>
             <div>{amount}</div>
@@ -132,7 +132,6 @@ class _ItemDetails extends Component {
           </div>
 
           <div onClick={this.openModal} className="buy">Buy Me </div>
-          {/* <div className="buy"><Link to={"/thank"}>Buy Me  </Link></div> */}
 
           <div className="description">{currItem.description}</div>
 
@@ -156,7 +155,7 @@ class _ItemDetails extends Component {
           <h3>About The Seller</h3>
           {seller &&
             <div className="info">
-              <img src={seller.user.imgUrl} alt="img"/>
+              <img src={seller.user.imgUrl} alt="img" />
               <div>
                 <h4> {seller.user.fullname}</h4>
                 <h5>{seller.address}</h5>
@@ -170,9 +169,9 @@ class _ItemDetails extends Component {
         {/***************    Order Modal   ***************/}
         <section onClick={this.openModal} style={{ visibility: this.state.modalVisibility }} className="modal-background"></section>
         <div style={{ visibility: this.state.modalVisibility }} className="order-info-modal" >
-       
+
           <h3><ShoppingCartSharpIcon /> Cart Details</h3>
-          <div  onClick={this.openModal} className="close"><HighlightOffIcon/></div>
+          <div onClick={this.openModal} className="close"><HighlightOffIcon /></div>
           <table>
             <tr>
               <th>Card Details</th>
@@ -182,7 +181,7 @@ class _ItemDetails extends Component {
               <th>Total Price</th>
             </tr>
             <tr>
-              <td><CreditCardIcon /><MoreHorizIcon/></td>
+              <td><CreditCardIcon /><MoreHorizIcon /></td>
               <td>${currItem.price}</td>
               <td>{amount}</td>
               <td>{currItem.title}</td>
@@ -200,10 +199,12 @@ class _ItemDetails extends Component {
               <td>&nbsp;</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
-              <td className="final-price">${currItem.price * amount+ 70}</td>
+              <td className="final-price">${currItem.price * amount + 70}</td>
             </tr>
           </table>
-        <Link onClick={this.onOrder} to={"/thank"}>Order</Link>
+          <Link onClick={this.onOrder} to={"/thank"}>Order</Link>
+          {/* <Link onClick={this.onOrder}>Order</Link> */}
+
 
         </div>
 
@@ -228,9 +229,8 @@ const mapDispatchToProps = {
   loadItems,
   removeItem,
   saveItem,
-  loadSellers
-  //     // setFilter,
-  //     // logout,
+  loadSellers,
+  setOrder
 }
 
 export const ItemDetails = connect(mapStateToProps, mapDispatchToProps)(_ItemDetails);
