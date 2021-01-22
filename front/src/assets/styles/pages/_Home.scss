@@ -80,18 +80,18 @@
         transition: 0.3s ease-in-out;
     }
 }
-.home-collection-list {
-    margin-top: 25px;
-    padding: 20px;
-    background: whitesmoke;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: 750px;
-    width:93.1vw;
-    grid-gap: 8px;
-    gap: 8px;
-    background-color: orangered;
-}
+// .home-collection-list {
+//     margin-top: 25px;
+//     padding: 20px;
+//     background: whitesmoke;
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     height: 750px;
+//     width:93.1vw;
+//     grid-gap: 8px;
+//     gap: 8px;
+//     background-color: orangered;
+// }
 
 .collection-card {
     background-position: 50%;
@@ -112,31 +112,37 @@
     }
 }
 
-.img-1 {
-    color: whitesmoke;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-        url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990427/atmosphere/crazy-socks_1024x1024_w9hsye.jpg);
-}
-.img-2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-        url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_happy_nhag3k.jpg);
-    color: whitesmoke;
-}
-.img-3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-        url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_pink_tklalh.jpg);
-    color: whitesmoke;
-}
-.img-4 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-        url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990432/atmosphere/socks_face-removebg-preview_u5mgyo.png);
-    color: whitesmoke;
-}
-.img-5 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-        url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990429/atmosphere/pexels-photo-1437149_rf8m7o.jpg);
-    color: whitesmoke;
-}
+// .img-1 {
+//     color: whitesmoke;
+//     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+//         // url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990427/atmosphere/crazy-socks_1024x1024_w9hsye.jpg);
+//         url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301258/atmosphere/ot_co9rh2.jpg);
+// }
+// .img-2 {
+//     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+//         // url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_happy_nhag3k.jpg);
+//         url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301259/atmosphere/80_vwru5z.png);
+//         color: whitesmoke;
+// }
+// .img-3 {
+//     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+//         // url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_pink_tklalh.jpg);
+//         url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301259/atmosphere/pp_zxik7v.jpg);
+
+//         color: whitesmoke;
+// }
+// .img-4 {
+//     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+//         // url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990432/atmosphere/socks_face-removebg-preview_u5mgyo.png);
+//         url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301258/atmosphere/an_dsules.jpg);
+//         color: whitesmoke;
+// }
+// .img-5 {
+//     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+//         // url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990429/atmosphere/pexels-photo-1437149_rf8m7o.jpg);
+//         url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301257/atmosphere/spo_dfghzs.jpg);
+//     color: whitesmoke;
+// }
 
 .item-cards {
     width: 100%;
@@ -191,4 +197,112 @@
         left: 84%;
         transform: translate(-50%, -50%);
     }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; 
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #333;
+  font-weight: 300;
+  line-height: 1.6; 
+}
+
+.container {
+    width: 100%;
+    height: 95%;
+    margin: 2rem auto;
+    background-color: #660082;
+    padding: 8px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: 1.5rem; 
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; 
+}
+
+.gallery__item--1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  /** Alternative Syntax **/
+  /* grid-column: 1 / span 2;  */
+  /* grid-row: 1 / span 2; */
+}
+
+.gallery__item--2 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  /** Alternative Syntax **/
+  /* grid-column: 3 / span 2;  */
+  /* grid-row: 1 / span 2; */
+}
+
+.gallery__item--3 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 6;
+
+  /** Alternative Syntax **/
+  /* grid-column: 5 / span 4;
+  grid-row: 1 / span 5; */
+}
+
+.gallery__item--4 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 6;
+
+  /** Alternative Syntax **/
+  /* grid-column: 1 / span 4;  */
+  /* grid-row: 3 / span 3; */
+}
+
+.gallery__item--5 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 6;
+  grid-row-end: 9;
+
+  /** Alternative Syntax **/
+  /* grid-column: 1 / span 4; */
+  /* grid-row: 6 / span 3; */
+}
+
+.gallery__item--6 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 6;
+  grid-row-end: 9;
+
+  /** Alternative Syntax **/
+  /* grid-column: 5 / span 4; */
+  /* grid-row: 6 / span 3; */
 }
