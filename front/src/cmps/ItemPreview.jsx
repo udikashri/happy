@@ -32,7 +32,7 @@ export class _ItemPreview extends Component {
       {/* {removeable && <button>DELETE!</button>} */}
       <Card>
         <Link to={`/item/${item._id}`}>
-          <img className="item-img" src={item.imgUrl} alt="" />
+          <img className="item-img" src={item.imgUrl} alt="img" />
           <div className="item-card-preview" >
             <div className="title">{item.title}</div>
             <h5 className="price">${item.price}</h5>
@@ -40,7 +40,7 @@ export class _ItemPreview extends Component {
         </Link>
             {removeable && <button className="delete-button" onClick={(event) => this.onRemove(event,item._id)} className="delete-btn">Delete</button>}
         <div className="seller-preview">
-          <img src={item.seller.imgUrl} />
+          <img src={item.seller.imgUrl} alt="img"/>
           <div >{item.seller.fullname}
         ⭐ 4.2
         </div>

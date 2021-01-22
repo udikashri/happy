@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { _ItemEdit } from '../cmps/ItemEdit'
+// import { _ItemEdit } from '../cmps/ItemEdit'
 import { loadItems } from '../store/actions/itemActions'
 import { ItemPreview } from '../cmps/ItemPreview'
 // import { ItemAdd } from '../cmps/ItemAdd'
@@ -10,8 +10,7 @@ import { ItemEdit } from '../cmps/ItemEdit'
 
 export class _BackOfficeSeller extends Component {
     state = {
-        itemsToShow: null,
-        isAdd: false
+        itemsToShow: null
     }
 
 
@@ -34,7 +33,7 @@ export class _BackOfficeSeller extends Component {
     render() {
 
         const { loggedInUser } = this.props
-        const { itemsToShow, isAdd } = this.state
+        const { itemsToShow } = this.state
         if (!loggedInUser || !itemsToShow) return <h1>Loading..</h1>
         if (itemsToShow.length === 0) return <h1>There is no items for you .. add some :)</h1>
         return (

@@ -24,7 +24,6 @@ export function sellerReducer(state = initialState, action) {
       return { ...state, sellers: state.sellers.filter(seller => seller._id !== action.sellerId) }
     case 'FILTER':
       const x = { ...state, filterBy: action.filterBy }
-      console.log(x);
       return x
     default:
       return state

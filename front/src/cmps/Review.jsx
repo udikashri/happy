@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-import Card from '@material-ui/core/Card';
 import React, { Component } from 'react'
 
 export class Review extends Component {
@@ -12,7 +10,7 @@ export class Review extends Component {
         return <section className="review">
 
             <div className="by-info">
-                <img src={review.by.imgUrl} />
+                <img src={review.by.imgUrl} alt="img"/>
                 <div>
                     <h5>{review.by.fullname}              ⭐<span>{review.rate}</span></h5>
                     

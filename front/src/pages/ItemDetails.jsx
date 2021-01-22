@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import React, { Component } from 'react'
-import { itemService } from '../services/itemService.js'
+import { eventBusService } from '../services/eventBusService'
 import { loadItems, removeItem, saveItem/*, setFilter*/ } from '../store/actions/itemActions'
 import { loadSellers } from '../store/actions/sellerActions'
 import { Review } from '../cmps/Review'
@@ -87,6 +87,12 @@ class _ItemDetails extends Component {
     this.setState({ modalVisibility: modalVisibility })
   }
 
+  onOrder =   () =>{
+    const {amount} = this.state
+    const {title} = this.state.currItem
+    const order = {amount, title}
+    eventBusService.emit('order', order)
+  }
 
   render() {
     const { currItem, seller, amount, rate } = this.state
@@ -97,7 +103,7 @@ class _ItemDetails extends Component {
       <section className="item-details">
         {/* <img  src={plus}/> */}
 
-        <img className="item-image" src={currItem.imgUrl} />
+        <img className="item-image" src={currItem.imgUrl} alt="img" />
 
 
 
@@ -111,7 +117,7 @@ class _ItemDetails extends Component {
 
           {/* *************** Seller Previwe ****************    */}
           {seller && <div className="seller-preview">
-            <img src={seller.user.imgUrl} />
+            <img src={seller.user.imgUrl} alt="img"/>
             <span> {seller.name}</span>
             <span className="best-seller"> best seller </span>
             <span>{rate.stars}</span>
@@ -150,7 +156,7 @@ class _ItemDetails extends Component {
           <h3>About The Seller</h3>
           {seller &&
             <div className="info">
-              <img src={seller.user.imgUrl} />
+              <img src={seller.user.imgUrl} alt="img"/>
               <div>
                 <h4> {seller.user.fullname}</h4>
                 <h5>{seller.address}</h5>
@@ -164,17 +170,7 @@ class _ItemDetails extends Component {
         {/***************    Order Modal   ***************/}
         <section onClick={this.openModal} style={{ visibility: this.state.modalVisibility }} className="modal-background"></section>
         <div style={{ visibility: this.state.modalVisibility }} className="order-info-modal" >
-          {/* <div className="item">
-
-            <div className="title"> {currItem.title}</div>
-            <div className="amount">
-              <div onClick={(ev) => this.onChangeAmount(ev, -1)} className="changeAmount">-</div>
-              <div>{amount}</div>
-              <div onClick={(ev) => this.onChangeAmount(ev, 1)} className="changeAmount">+</div>
-            </div>
-            <div className="total-price">{amount * currItem.price}</div>
-          </div>
-          <Link to={"/thank"}>Order</Link> */}
+       
           <h3><ShoppingCartSharpIcon /> Cart Details</h3>
           <div  onClick={this.openModal} className="close"><HighlightOffIcon/></div>
           <table>
@@ -207,7 +203,7 @@ class _ItemDetails extends Component {
               <td className="final-price">${currItem.price * amount+ 70}</td>
             </tr>
           </table>
-        <Link to={"/thank"}>Order</Link>
+        <Link onClick={this.onOrder} to={"/thank"}>Order</Link>
 
         </div>
 

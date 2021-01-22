@@ -12,12 +12,10 @@ export class Footer extends Component {
     // var visibility = 'hidden'
 
     openModal = () => {
-        console.log(111);
         var { modalVisibility } = this.state
         if (modalVisibility === 'hidden') modalVisibility = 'visible'
         else modalVisibility = 'hidden'
         this.setState({ modalVisibility: modalVisibility })
-        console.log(this.state.modalVisibility);
     }
     render() {
 
@@ -25,7 +23,7 @@ export class Footer extends Component {
             <footer>
                <h3 onClick={this.ompenModal}> 📦 Global shipping </h3>
                 <h6>© HappySocks 2021</h6>
-                <section onClick={this.ompenModal} style={{ visibility: this.state.modalVisibility }} className="modal-background"></section>
+                <section onClick={this.openModal} style={{ visibility: this.state.modalVisibility }} className="modal-background"></section>
                 <div style={{ visibility: this.state.modalVisibility }} className="countries-modal" >
                     <div onClick={this.openModal} className="close">X</div>
                     <h3>Change Shipping Country</h3>

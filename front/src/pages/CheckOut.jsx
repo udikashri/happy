@@ -24,13 +24,11 @@ class _CheckOut extends Component {
 
         this.setState({ currItem: selectItem[0] }, () => {
         }, () => {
-            console.log(133, selectItem);
         })
     }
 
     render() {
         const { currItem } = this.state
-        console.log(currItem);
         return (<div>
             <h1>checkOut Me</h1>
             Contact information

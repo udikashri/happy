@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
-import IconButton from '@material-ui/core/IconButton';
+// import IconButton from '@material-ui/core/IconButton';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 class _Header extends Component {

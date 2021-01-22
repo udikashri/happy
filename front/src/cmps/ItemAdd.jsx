@@ -51,7 +51,7 @@ export class _ItemAdd extends Component {
         }
       }
     })
-    console.log('img url', url);
+    // console.log('img url', url);
   }
 
   onSaveItem = async (ev) => {
