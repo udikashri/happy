@@ -3,11 +3,13 @@ import React, { Component } from 'react'
 import { itemService } from '../services/itemService.js'
 import { loadItems, removeItem, saveItem/*, setFilter*/ } from '../store/actions/itemActions'
 import { loadSellers } from '../store/actions/sellerActions'
-import {Review} from '../cmps/Review'
+import { Review } from '../cmps/Review'
 // import { ItemEdit } from '../cmps/ItemEdit'
 import { Link } from 'react-router-dom'
 import CreditCardIcon from '@material-ui/icons/CreditCard';
 import ShoppingCartSharpIcon from '@material-ui/icons/ShoppingCartSharp';
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 class _ItemDetails extends Component {
   state = {
     currItem: { title: '', imgUrl: '', price: 0, _id: '' },
@@ -97,7 +99,7 @@ class _ItemDetails extends Component {
 
         <img className="item-image" src={currItem.imgUrl} />
 
- 
+
 
         {/* ************* Item Info  ********************* */}
         <div className="item-info">
@@ -133,17 +135,17 @@ class _ItemDetails extends Component {
         </div>
         <section className="border-seprator"></section>
 
-       {/* ************* Item Reviews  ********************* */}
+        {/* ************* Item Reviews  ********************* */}
 
-       <div className="reviews">
-       <h3>reviews:</h3>
+        <div className="reviews">
+          <h3>reviews:</h3>
           {seller && seller.reviews.map(review => {
-            return <Review key={review.id} review={review}/>
+            return <Review key={review.id} review={review} />
           })}
-          
-</div>
 
-       {/* ************* Seller Info  ********************* */}
+        </div>
+
+        {/* ************* Seller Info  ********************* */}
         <div className="seller-details">
           <h3>About The Seller</h3>
           {seller &&
@@ -158,11 +160,12 @@ class _ItemDetails extends Component {
           }
           <div className="content-me">Content Me</div>
         </div>
+
         {/***************    Order Modal   ***************/}
         <section onClick={this.openModal} style={{ visibility: this.state.modalVisibility }} className="modal-background"></section>
         <div style={{ visibility: this.state.modalVisibility }} className="order-info-modal" >
-          <div className="item">
-            <div><img src={currItem.imgUrl} /></div>
+          {/* <div className="item">
+
             <div className="title"> {currItem.title}</div>
             <div className="amount">
               <div onClick={(ev) => this.onChangeAmount(ev, -1)} className="changeAmount">-</div>
@@ -171,7 +174,41 @@ class _ItemDetails extends Component {
             </div>
             <div className="total-price">{amount * currItem.price}</div>
           </div>
-          <Link to={"/thank"}>Order</Link>
+          <Link to={"/thank"}>Order</Link> */}
+          <h3><ShoppingCartSharpIcon /> Cart Details</h3>
+          <div  onClick={this.openModal} className="close"><HighlightOffIcon/></div>
+          <table>
+            <tr>
+              <th>Card Details</th>
+              <th>Price</th>
+              <th>Amount</th>
+              <th>Item</th>
+              <th>Total Price</th>
+            </tr>
+            <tr>
+              <td><CreditCardIcon /><MoreHorizIcon/></td>
+              <td>${currItem.price}</td>
+              <td>{amount}</td>
+              <td>{currItem.title}</td>
+              <td>${currItem.price * amount}</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>Shiping</td>
+              <td>$70</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td className="final-price">${currItem.price * amount+ 70}</td>
+            </tr>
+          </table>
+        <Link to={"/thank"}>Order</Link>
+
         </div>
 
       </section>

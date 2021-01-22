@@ -47,13 +47,11 @@
         padding: 0 50px;
         margin: 20px 10px;
         cursor: pointer;
-        transition: 1s;
+        transition: .5s;
 
         &:hover {
-            -webkit-box-shadow: 0px 0px 0px 6px #433450, 0px 0px 0px 12px #696177, 0px 0px 0px 18px #b7b1c0,
-                0px 0px 0px 24px #dbdadd, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-            box-shadow:  0px 0px 0px 6px #433450, 0px 0px 0px 12px #696177,
-                0px 0px 0px 18px #b2b5b2, 0px 0px 0px 24px #daddda, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+            -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 28px 15px rgba(0,0,0,0.11); 
+            box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 28px 15px rgba(0,0,0,0.11);
         }
     }
 
@@ -108,7 +106,7 @@
 }
 .modal-background {
     position: fixed;
-    background-color: rgba(44, 44, 44, 0.767);
+    background-color: rgba(44, 44, 44, 0.904);
     top: 0%;
     height: 100vh;
     z-index: 9;
@@ -117,33 +115,58 @@
 }
 
 .order-info-modal {
-    background-color: rgb(154, 149, 158);
-    color: rgb(224, 224, 224);
+    background-color: rgb(206, 197, 214);
+    color: black;
     // border: 6px solid chartreuse;
     position: absolute;
     z-index: 10;
     top: 20%;
-    left: 27vw;
-    width: 46vw;
+    left: 20vw;
+    width: 60vw;
     padding: 10px;
-    .item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        border-bottom: 1px solid rgb(32, 32, 32);
-        .total-price {
-            width: 30px;
-        }
-        img {
-            height: 100%;
-            width: 100px;
+    .close {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 10px;
+        .MuiSvgIcon-root {
+            font-size: 30px;
         }
     }
+    h3 {
+        color: rgb(83, 47, 47);
+        margin: 10px;
+    }
+
+    table {
+        width: 10px;
+        width: 99%;
+        text-align: center;
+
+        td {
+            height: 65px;
+        }
+        .final-price {
+            border-top: 1px solid black;
+        }
+    }
+
     a {
         text-decoration: none;
-        color: rgb(224, 224, 224);
+        color: rgb(66, 20, 27);
+        text-align: center;
+        font-size: 1.5rem;
         margin: 0 45% 10px;
+        border: 1px solid rgb(66, 20, 27);
+        padding: 5px 15px;
+        border-radius: 10px;
+        // transition: 0.5s;
+
+        &:hover {
+            background-color: rgb(98, 36, 45);
+            color: rgb(206, 197, 214);
+        }
     }
 }
 .reviews {
