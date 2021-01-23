@@ -5,6 +5,8 @@ import { loadItems } from '../store/actions/itemActions'
 import { ItemPreview } from '../cmps/ItemPreview'
 // import { ItemAdd } from '../cmps/ItemAdd'
 import { ItemEdit } from '../cmps/ItemEdit'
+import CircularProgress from '@material-ui/core/CircularProgress'
+
 
 // import { SellerDeatails } from '../cmps/SellerDeatails'
 
@@ -62,7 +64,11 @@ export class _BackOfficeSeller extends Component {
 
         const { loggedInUser } = this.props
         const { itemsToShow } = this.state
-        if (!loggedInUser || !itemsToShow) return <h1>Loading..</h1>
+        if (!loggedInUser || !itemsToShow) return (
+            <div className="center">
+            <CircularProgress />
+          </div>
+        )
         if (itemsToShow.length === 0) return <h1>There is no items for you .. add some :)</h1>
         return (
             <>

@@ -15,6 +15,15 @@
             height: 480px;
         }
     }
+    button.delete-btn {
+        margin: 10px 12.5px;
+
+    }
+}
+
+div.price-likes{
+    display: flex;
+    justify-content: space-between;
 }
 
 .hello-seller {
@@ -26,6 +35,8 @@
     background-color: whitesmoke;
     margin-left: 20px;
     width: 250px;
+    // height: 550px;
+    position: sticky;
     padding: 20px;
 
 }
