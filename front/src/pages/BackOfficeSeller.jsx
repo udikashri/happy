@@ -50,7 +50,6 @@ export class _BackOfficeSeller extends Component {
     }
 
     loadUserItems = async () => {
-
         const { items, loggedInUser } = this.props
         if (items.length === 0) {
             await this.props.loadItems()
