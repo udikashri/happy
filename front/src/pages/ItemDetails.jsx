@@ -32,7 +32,7 @@ class _ItemDetails extends Component {
 
   loadItem = () => {
     const { itemId } = this.props.match.params
-    const selectItem = this.props.items.find(item =>  itemId === item._id)
+    const selectItem = this.props.items.find(item => itemId === item._id)
     this.setState({ currItem: selectItem }, () => {
     })
   }
@@ -89,23 +89,22 @@ class _ItemDetails extends Component {
   onOrder = () => {
     const { amount } = this.state
     const { title } = this.state.currItem
-    const tag = this.state.currItem.tags ? this.state.currItem.tags[0]:''
+    const tag = this.state.currItem.tags ? this.state.currItem.tags[0] : ''
     const order = { amount, title, tag }
     this.props.setOrder(order)
   }
 
   render() {
     const { currItem, seller, amount, rate } = this.state
-    if(!currItem.imgUrl) return(
+    if (!currItem.imgUrl) return (
       <div className="center">
-        <CircularProgress/>
+        <CircularProgress />
       </div>
-      ) 
+    )
 
     return (
 
       <section className="item-details">
-        {/* <img  src={plus}/> */}
 
         <img className="item-image" src={currItem.imgUrl} alt="img" />
 
@@ -138,13 +137,20 @@ class _ItemDetails extends Component {
           <div onClick={this.openModal} className="buy">Buy Me </div>
 
           <div className="description">{currItem.description}</div>
+          <div className="tag-title">Related Tags:</div>
+          <div className="tags-container">
+            {currItem.tags.map(tag => {
+              return <div className="tag">
+                <Link onClick={this.onOrder} to={`/shop?tag=${tag}`}>{tag}</Link>
 
-          {/* <button onClick={() => this.onRemove(currItem._id)} className="delete-btn">Delete</button> */}
-          {/* <ItemEdit currItem={currItem} onSaveItem={this.onSaveItem} /> */}
+
+              </div>
+            })}
+          </div>
         </div>
         <section className="border-seprator"></section>
 
-        {/* ************* Item Reviews  ********************* */}
+        {/* ************* Seller Reviews  ********************* */}
 
         <div className="reviews">
           <h3>reviews:</h3>

@@ -47,11 +47,12 @@
         padding: 0 50px;
         margin: 20px 10px;
         cursor: pointer;
-        transition: .5s;
+        transition: 0.5s;
 
         &:hover {
-            -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 28px 15px rgba(0,0,0,0.11); 
-            box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 28px 15px rgba(0,0,0,0.11);
+            -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+                5px 5px 28px 15px rgba(0, 0, 0, 0.11);
+            box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 28px 15px rgba(0, 0, 0, 0.11);
         }
     }
 
@@ -102,6 +103,34 @@
     }
     p {
         margin: 0 11px;
+    }
+}
+.tag-title{
+    margin-top: 10px;
+    font-weight: bold;
+    align-self: start;
+}
+.tags-container {
+    color: rgb(155, 155, 155);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .tag {
+        padding: 0px 10px;
+        margin: 0 10px;
+        border: 1px solid rgb(155, 155, 155);
+        display: flex;
+align-items: start;
+        a {
+            margin: 0;
+            color: dimgray;
+            text-transform: uppercase;
+            font-size: .8rem;
+            &:hover {
+                text-decoration: none;
+                
+            }
+        }
     }
 }
 .modal-background {

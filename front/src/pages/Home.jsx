@@ -33,89 +33,95 @@ class _Home extends Component {
           <h2>good things come in pairs...</h2>
           <div className="flex">
             <Link className="btn" to={`/shop`}>🧦 Find your match</Link>
-            <Link className="btn btn-2" to={`/shop`}>🎲 I feel lucky</Link>
+            <Link className="btn btn-2" to={`/item/600ab40822fe2c973b33a4cc`}>🎲 I feel lucky</Link>
           </div>
         </section>
         <section className="app">
           <div className="home main-container">
-            <h2>🧵 Our FullStack</h2>
+            {/* <h2>🧵 Our FullStack</h2> */}
             <section className="item-cards full flex">
               <Card>
-                <CardMedia
-                  className="card-media"
-                  image="https://cdn.shopify.com/s/files/1/0271/0270/7784/products/Visual_Merch_village_Self-Portrait-V-Gogh_01_1600x.png?v=1605117057"
-                  title="great stuff"
-                />
+                <Link to={`/item/600ab40822fe2c973b33a4d7`}>
+                  <CardMedia
+                    className="card-media"
+                    image="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611427479/hf/items/Visual_Merch_village_Self-Portrait-V-Gogh_01_1600x_zmwq3j.png"
+                    title="great stuff"
+                  />
 
-                <CardHeader
-                  avatar={
-                    <Avatar alt="Shira" src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-500w.jpeg" className="small" />
+                  <CardHeader
+                    avatar={
+                      <Avatar alt="Shira" src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-500w.jpeg" className="small" />
 
-                  }
-                  title="Shira Socks"
-                  subheader="Best Seller ⭐ 4.2" />
-
-                <CardContent className="card-text">
-                </CardContent>
+                    }
+                    title="Shira Socks"
+                    subheader="Best Seller ⭐ 4.2" />
+                </Link>
               </Card>
               <Card>
-                <CardMedia
-                  className="card-media"
-                  image="https://cdn.shopify.com/s/files/1/0271/0270/7784/products/1080x1080_Carrousel_Mondrian_1_1600x.jpg?v=1601317722"
-                  title="great stuff"
-                />
+                <Link to={`/item/600ab40922fe2c973b33a528`}>
 
-                <CardHeader
-                  avatar={
-                    <Avatar alt="Shira" src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" className="small" />
+                  <CardMedia
+                    className="card-media"
+                    image="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611427450/hf/items/1080x1080_Carrousel_Mondrian_1_1600x_ancbva.jpg"
+                    title="great stuff"
+                  />
 
-                  }
-                  title="Joe stuff"
-                  subheader="Top Seller ⭐⭐⭐" />
+                  <CardHeader
+                    avatar={
+                      <Avatar alt="Shira" src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" className="small" />
 
-                <CardContent className="card-text">
-                </CardContent>
-                {/* <CardActions disableSpacing>
+                    }
+                    title="Joe stuff"
+                    subheader="Top Seller ⭐⭐⭐" />
+
+
+                  {/* <CardActions disableSpacing>
                   <IconButton aria-label="add to favorites">
                     <FavoriteIcon />
                   </IconButton>
                 </CardActions> */}
+                </Link>
+
               </Card>
               <Card>
-                <CardMedia
-                  className="card-media"
-                  image="https://cdn.shopify.com/s/files/1/0271/0270/7784/products/1080x1080_Carrousel_Gauguin_1_400x.jpg?v=1601317794"
-                  title="great stuff"
-                />
+                <Link to={`/item/600ab40822fe2c973b33a4f1`}>
 
-                <CardHeader
-                  avatar={
-                    <Avatar alt="bob" src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-500w.jpeg" className="small" />
+                  <CardMedia
+                    className="card-media"
+                    image="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611427460/hf/items/Visual_Merch_Great_Wave_01_1600x_wo3zd8.jpg"
+                    title="great stuff"
+                  />
 
-                  }
-                  title="Bob Masks"
-                  subheader="Funny Seller ⭐ 4.2" />
+                  <CardHeader
+                    avatar={
+                      <Avatar alt="bob" src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-500w.jpeg" className="small" />
 
-                <CardContent className="card-text">
-                </CardContent>
+                    }
+                    title="Bob Masks"
+                    subheader="Funny Seller ⭐ 4.2" />
+
+                </Link>
+
               </Card>
               <Card>
-                <CardMedia
-                  className="card-media"
-                  image="https://cdn.shopify.com/s/files/1/0271/0270/7784/products/Visual_Merch_Great_Wave_01_1600x.jpg?v=1601317906"
-                  title="great stuff"
-                />
+                <Link to={`/item/600ab40a22fe2c973b33a5e3`}>
 
-                <CardHeader
-                  avatar={
-                    <Avatar alt="Shira" src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" className="small" />
+                  <CardMedia
+                    className="card-media"
+                    image="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611427449/hf/items/1080x1080_Carrousel_Gauguin_1_1600x_dc0gwt.jpg"
+                    title="great stuff"
+                  />
 
-                  }
-                  title="Miryam lib"
-                  subheader="Featurd Seller 🧵" />
+                  <CardHeader
+                    avatar={
+                      <Avatar alt="Shira" src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" className="small" />
 
-                <CardContent className="card-text">
-                </CardContent>
+                    }
+                    title="Miryam lib"
+                    subheader="Featurd Seller 🧵" />
+
+                </Link>
+
               </Card>
             </section>
             {/* 
@@ -177,35 +183,36 @@ class _Home extends Component {
             </div>
 
 
+            <section className="top-sellers">
+              <h2>Our Top Sellers </h2>
+              <section className="sellers-list flex-column align-center justify-center" >
+                <div className="sellers-row flex  space-between">
+                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/10_vnikfz.jpg" className="small" />
+                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/8_tzi2ty.jpg" className="small" />
+                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/11_egixh0.jpg" className="small" />
+                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/18_rwb9g1.jpg" className="small" />
+                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/16_trr5zq.jpg" className="small" />
+                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/9_gqkjqu.jpg" className="small" />
+                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/6_qr24nq.jpg" className="small" />
+                </div>
+                <div className="sellers-row flex space-between">
+                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg" className="small" />
+                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg" className="small" />
+                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/3_nz6vkf.jpg" className="small" />
+                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/4_o2r8cs.jpg" className="small" />
+                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/11_egixh0.jpg" className="small" />
+                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/30_nvklsm.jpg" className="small" />
+                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg" className="small" />
 
-            <h2>Our Top Sellers </h2>
+                </div>
+                            </section>
+              <section className="seller-banner">
+                <div className="banner-text">HappySocks changed my life!</div>
+                <div className="banner-text2">Bob Safam - Maatziv Garbaim</div>
+                <img src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_1400,dpr_1.0/v1/attachments/generic_asset/asset/50218c41d277f7d85feeaf3efb4549bd-1599072608122/bg-signup-1400-x1.png" alt="" />
+                <Link className="btn" to={`/sell`}>Join our Marketplace</Link>
 
-            <section className="sellers-list flex-column align-center justify-center" >
-              <div className="sellers-row flex  space-between">
-                <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/10_vnikfz.jpg" className="small" />
-                <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/8_tzi2ty.jpg" className="small" />
-                <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/11_egixh0.jpg" className="small" />
-                <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/18_rwb9g1.jpg" className="small" />
-                <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/6_qr24nq.jpg" className="small" />
-                <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/18_rwb9g1.jpg" className="small" />
-                <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/6_qr24nq.jpg" className="small" />
-              </div>
-              <div className="sellers-row flex space-between">
-                <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg" className="small" />
-                <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg" className="small" />
-                <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/3_nz6vkf.jpg" className="small" />
-                <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/30_nvklsm.jpg" className="small" />
-                <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg" className="small" />
-                <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/30_nvklsm.jpg" className="small" />
-                <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg" className="small" />
-
-              </div>
-              <Link className="btn" to={`/sell`}>Join our Marketplace</Link>
-            </section>
-            <section className="seller-banner">
-              <div className="banner-text">HappySocks changed my life!</div>
-              <div className="banner-text2">Bob Safam - Maatziv Garbaim</div>
-              <img src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_1400,dpr_1.0/v1/attachments/generic_asset/asset/50218c41d277f7d85feeaf3efb4549bd-1599072608122/bg-signup-1400-x1.png" alt="" />
+              </section>
             </section>
 
 
@@ -226,13 +233,12 @@ class _Home extends Component {
                   title="Shira Socks"
                   subheader="Best Seller ⭐ 4.2" />
 
-                <CardContent className="card-text">
-                </CardContent>
+
               </Card>
               <Card>
                 <CardMedia
                   className="card-media"
-                  image="https://ih1.redbubble.net/image.984109788.7935/ur,socks_flatlay_medium,square,1000x1000-bg,f8f8f8.1.jpg"
+                  image="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611428206/hf/items/ur_socks_flatlay_medium_square_1000x1000-bg_f8f8f8.1_1_pltfyu.jpg"
                   title="great stuff"
                 />
 
@@ -244,8 +250,7 @@ class _Home extends Component {
                   title="Joe stuff"
                   subheader="Top Seller ⭐⭐⭐" />
 
-                <CardContent className="card-text">
-                </CardContent>
+
                 <CardActions disableSpacing>
                   {/* <IconButton aria-label="add to favorites">
                     <FavoriteIcon />
@@ -255,7 +260,7 @@ class _Home extends Component {
               <Card>
                 <CardMedia
                   className="card-media"
-                  image="https://ih1.redbubble.net/image.1888658350.5592/ur,socks_size_comparison_medium,tall_portrait,750x1000-bg,f8f8f8.1.jpg"
+                  image="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611428175/hf/items/ur_socks_size_comparison_medium_tall_portrait_750x1000-bg_f8f8f8.1_gkmznv.jpg"
                   title="great stuff"
                 />
 
@@ -267,8 +272,7 @@ class _Home extends Component {
                   title="Bob Masks"
                   subheader="Funny Seller ⭐ 4.2" />
 
-                <CardContent className="card-text">
-                </CardContent>
+
               </Card>
               <Card>
                 <CardMedia
@@ -285,8 +289,7 @@ class _Home extends Component {
                   title="Miryam lib"
                   subheader="Featurd Seller 🧵" />
 
-                <CardContent className="card-text">
-                </CardContent>
+
               </Card>
             </section>
           </div>
