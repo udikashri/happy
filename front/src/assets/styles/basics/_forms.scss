@@ -3,7 +3,7 @@ button {
     background-color: $clr1;
     color:whitesmoke;
     padding: 5px 10px;
-    margin: 5px 16px;
+    margin: 10px 0px;
     width: 14.2em;
     border-radius: 2em;
     // margin-inline-start: 5px;
@@ -13,6 +13,6 @@ button:hover {
 }
 form > * {
     display: block;
-    width: 200px;
+    width: 180px;
     margin: 10px 0px;
 }

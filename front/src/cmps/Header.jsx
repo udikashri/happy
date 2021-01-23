@@ -8,18 +8,21 @@ class _Header extends Component {
     render() {
         const {loggedInUser} = this.props;
         return <header className="header-container">
+
             <div className="logo"><NavLink exact to="/">🧦HappySocks</NavLink></div>
+
+
             <nav>
                 <NavLink to="/shop">🧦Find</NavLink>
                 <NavLink exact to="/">🔖Sell</NavLink>
                {!loggedInUser && <NavLink to="/login"><AccountCircleIcon/>Login</NavLink>}
-            </nav>
             {loggedInUser && <span className="loggedin-user">
 
                 <Link to={`seller/${loggedInUser._id}`}>
                 <img className="item-img" src = {loggedInUser.imgUrl} />
                 </Link>                
             </span>}
+            </nav>
         </header>
     }
 

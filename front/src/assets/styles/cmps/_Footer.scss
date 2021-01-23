@@ -13,7 +13,6 @@ footer {
         top: 0%;
         height: 100vh;
         z-index: 200000;
-
         width: 100vw;
     }
 
@@ -21,13 +20,16 @@ footer {
         cursor: pointer;
     }
     h3 {
-        margin-top: 13px;
-        margin-bottom: 26px;
+        padding-top: 13px;
+        margin-top: 0px;
+        margin-bottom: 10px;
         font-size: 1em;
         color: white;
     }
     h6 {
         color: white;
+        margin-top: 0px;
+        padding-bottom: 5px;
     }
     .countries-modal {
         position: fixed;

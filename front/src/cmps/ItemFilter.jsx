@@ -44,7 +44,7 @@ export class ItemFilter extends Component {
                 <h1>Find socks</h1>
                 <h6>Search</h6>
 
-                <div className="flex-column">
+                <div className="filter-input-container">
                     <input type="text" name="title" value={filterBy.title} onChange={this.handleChange} placeholder="Search e.g 'React socks'" autoComplete="off" />
                     {/* <input type="text" name="tags" value={filterBy.title} onChange={this.handleChange} placeholder="Search e.g 'React socks'" autoComplete="off" /> */}
                     <h6>Up to price:</h6>

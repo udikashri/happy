@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import React, { Component } from 'react'
+import CircularProgress from '@material-ui/core/CircularProgress'
 import { loadItems, removeItem, saveItem/*, setFilter*/ } from '../store/actions/itemActions'
 import { loadSellers } from '../store/actions/sellerActions'
 import { setOrder } from '../store/actions/orderActions'
@@ -31,10 +32,8 @@ class _ItemDetails extends Component {
 
   loadItem = () => {
     const { itemId } = this.props.match.params
-    const selectItem = this.props.items.filter(item => {
-      return itemId === item._id
-    })
-    this.setState({ currItem: selectItem[0] }, () => {
+    const selectItem = this.props.items.find(item =>  itemId === item._id)
+    this.setState({ currItem: selectItem }, () => {
     })
   }
 
@@ -97,6 +96,11 @@ class _ItemDetails extends Component {
 
   render() {
     const { currItem, seller, amount, rate } = this.state
+    if(!currItem.imgUrl) return(
+      <div className="center">
+        <CircularProgress/>
+      </div>
+      ) 
 
     return (
 
@@ -163,7 +167,7 @@ class _ItemDetails extends Component {
               </div>
             </div>
           }
-          <div className="content-me">Content Me</div>
+          <div className="content-me">Contact Me</div>
         </div>
 
         {/***************    Order Modal   ***************/}

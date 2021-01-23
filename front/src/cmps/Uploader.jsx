@@ -13,13 +13,13 @@ export class Uploader extends Component {
   render() {
     const { isUploading } = this.state
     return (
-      <div className="uploader"
+      <button className="uploader"
         // style={ uploadStyle }
         >
         <label htmlFor="imageUploader">{ isUploading ? 'Uploading....' : 'Upload Image' }</label>
         <input onChange={ this.onUploadImg } hidden
           type="file" accept="image/*" id="imageUploader" />
-      </div>
+      </button>
     )
   }
 }

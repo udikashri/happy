@@ -2,18 +2,25 @@
     margin-left: 20px;
     padding: 20px;
     background-color: whitesmoke;
+    width: 250px;
     height: 500px;
     position: sticky;
     left: 0;
     top: 86px;
+    
+    & h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 12px;
+    }
 }
 
-
-
-h1,h2,h3,h4,h5,h6 {
-margin-top: 12px;
+.filter-input-container > * {
+    width: 180px;
 }
-
 
 @mixin circle {
     height: 25px;
@@ -25,11 +32,13 @@ margin-top: 12px;
 
 .color-container {
     width: 25vw;
-    
+
     // position: fixed;
     margin-top: 10px;
+    margin-inline-start: 8px;
+    // margin: 10px;
     display: grid;
-    grid-template-columns: repeat(4, 25px);
+    grid-template-columns: repeat(4, 35px);
     grid-gap: 6px;
     .red {
         background-color: red;
@@ -38,7 +47,7 @@ margin-top: 12px;
     .gray {
         background-color: gray;
         @include circle();
-           }
+    }
     .blue {
         background-color: blue;
         @include circle();
@@ -73,12 +82,12 @@ margin-top: 12px;
     }
     .colorful {
         background-color: red; /* For browsers that do not support gradients */
-        background-image: linear-gradient(to bottom right, yellow, green, blue,  red, orange);
-              @include circle();
+        background-image: linear-gradient(to bottom right, yellow, green, blue, red, orange);
+        @include circle();
     }
     .all {
         background-color: lightgray;
         @include circle();
-        color: white
+        color: white;
     }
 }
