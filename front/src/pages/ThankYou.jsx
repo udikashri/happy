@@ -3,7 +3,8 @@ import { Component } from "react";
 import { Link } from "react-router-dom";
 import { getOrder } from '../store/actions/orderActions'
 import { loadItems } from '../store/actions/itemActions'
-import { ItemList } from '../cmps/ItemList'
+import { ItemPreview } from '../cmps/ItemPreview'
+import CircularProgress from '@material-ui/core/CircularProgress'
 
 class _ThankYou extends Component {
     state = {
@@ -18,11 +19,11 @@ class _ThankYou extends Component {
     componentDidMount() {
         const newOrder = this.props.order
         this.setState({ order: newOrder })
-        var items = this.props.items.filter((item,i) => {
+        var items = this.props.items.filter((item, i) => {
             return item.tags.some(tag => {
                 return tag === newOrder.tag
             })
-              
+
 
         })
         items = items.slice(0, 4)
@@ -38,6 +39,12 @@ class _ThankYou extends Component {
 
     render() {
         const { order, items } = this.state
+        if (!items.length) return (
+            <div className="center">
+                <CircularProgress />
+            </div>
+        )
+
         return (
             <section className="thank-you">
                 <div className="thank-msg">
@@ -47,7 +54,16 @@ class _ThankYou extends Component {
 
                 <div className="speech half">thank you for you purchase</div>
                 <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611052878/atmosphere/3485-removebg-preview_1_gy43es.png" alt="img" />
-                < ItemList items={items} />
+
+
+                {/* ************* Item With Same Tag Preview  ********************* */}
+
+                <div className="item-thank-conainer">
+
+                    {items.map(item => {
+                        return <ItemPreview key={item._id} item={item} /*removeable={false}*/ />
+                    })}
+                </div>
             </section>)
 
 

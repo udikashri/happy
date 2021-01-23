@@ -18,8 +18,15 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 export class _ItemPreview extends Component {
 
   state = {
-    currItem: null
+    item: null,
+    isLike: false
   }
+
+  async componentDidMount() {
+    this.setState({ item: this.props.item })
+  }
+
+
 
   onRemove = async (ev, itemId) => {
     ev.stopPropagation()
@@ -27,65 +34,50 @@ export class _ItemPreview extends Component {
     this.props.removeItem(itemId)
     // this.props.history.push('/shop')
   }
-  // onEdit = async (ev, itemId) => {
-  //   ev.stopPropagation()
-  //   // await 
-  //   const currItem = this.props.items.find(item => {
-  //     return item._id === itemId
-  //   })
 
-  //   await this.setState({currItem})
-  //   console.log(currItem);
-  //   console.log(this.state.currItem);
-  //   // this.props.history.push('/shop')
-  // }
+  onLikes = () => {
+    var copyItem = this.state.item
+    var { isLike } = this.state
+    if (isLike) copyItem.likes--
+    else copyItem.likes++
+    this.setState({ item: copyItem, isLike:!isLike })
+
+    console.log('likes', this.state.item);
+  }
 
 
   render() {
-    const { item, removeable } = this.props
+    const { removeable } = this.props
+    var { item, isLike } = this.state
+    if (!item) {
+      console.log(555);
+      item = this.props
+    }
     return <section className="card-main">
-      {/* {removeable && <button>DELETE!</button>} */}
-      {/* <Card>
-        <Link to={`/item/${item._id}`}>
-          <img className="item-img" src={item.imgUrl} alt="img" />
-          <div className="item-card-preview" >
-            <div className="title">{item.title}</div>
-            <h5 className="price">${item.price}</h5>
-          </div>
-        </Link>
-        {removeable && <button className="delete-button" onClick={(event) => this.onRemove(event, item._id)} className="delete-btn">Delete</button>}
-        <div className="seller-preview">
-          <img src={item.seller.imgUrl} alt="img"/>
-          <div >{item.seller.fullname}
-        ⭐ 4.2
-        </div>
-        </div>
-      </Card>
- */}
 
       <Card>
-         <Link to={`/item/${item._id}`}>
-        <CardMedia
-          className="card-media"
-          image={item.imgUrl}
+        <Link to={`/item/${item._id}`}>
+          <CardMedia
+            className="card-media"
+            image={item.imgUrl}
           // title={item.title}
-        />
+          />
 
-        {item.seller &&<CardHeader
-          avatar={
-            <Avatar src={item.seller.imgUrl} className="small" />
-          }
-          title={item.title}
-          subheader={`${item.seller.fullname}  ⭐ 4.2`} />}
+          {item.seller && <CardHeader
+            avatar={
+              <Avatar src={item.seller.imgUrl} className="small" />
+            }
+            title={item.title}
+            subheader={item.seller.fullname} />}
         </Link>
 
         <CardContent className="card-text">
           {/* <span className="likes"></span> */}
-          <span className="price">{item.likes}❤</span>                  
-          <span>${item.price}</span>
+          <span onClick={this.onLikes} className="price likes">{item.likes} {isLike?'❤️' :'🤍'}</span>
+          <span className="price">${item.price}</span>
         </CardContent>
-          {removeable && <button className="delete-button" onClick={(event) => this.props.onEdit(event, item._id)} className="delete-btn">Edit</button>}
-          {removeable && <button className="delete-button" onClick={(event) => this.onRemove(event, item._id)} className="delete-btn">Delete</button>}
+        {removeable && <button className="delete-button" onClick={(event) => this.props.onEdit(event, item._id)} className="delete-btn">Edit</button>}
+        {removeable && <button className="delete-button" onClick={(event) => this.onRemove(event, item._id)} className="delete-btn">Delete</button>}
       </Card>
 
 

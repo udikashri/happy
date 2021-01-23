@@ -1,7 +1,13 @@
 .thank-you {
   margin-top: 100px;
-  height: 75vh;
+  height: 850px;
 
+  .item-thank-conainer{
+    // background-color: turquoise;
+    margin-top: 140px;
+    display: flex;
+    justify-content: center;
+  }
   .thank-msg {
     margin: 240px 300px 0px;
     font-size: 30px;
@@ -54,3 +60,4 @@
     right: 10%;
   }
 }
+
