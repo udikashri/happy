@@ -35,7 +35,7 @@ export class _ItemEdit extends Component {
     const currItem  =   {
         // type: "",
         title: '',
-        price: 0,
+        price: '',
         color: '',
         seller: {
           _id:'E4G3Ck',
@@ -76,7 +76,9 @@ export class _ItemEdit extends Component {
   }
 
   handleInput = ({ target }) => {
-    const { name, value } = target
+    var { name, value ,type } = target
+    console.log('type',type);
+    if (type === 'number') value = +value
     this.setState(prevState => {
       return {
         currItem: {
@@ -123,7 +125,7 @@ export class _ItemEdit extends Component {
     return (
       <section className="edit-box">
         <form onSubmit={(event) => { this.onSaveItem(event) }}>
-          <input autoFocus type="text" value={currItem.title} onChange={this.handleInput} name="title" placeholder="Add Item" autoComplete="off" />
+          <input autoFocus type="text" value={currItem.title} onChange={this.handleInput} name="title" placeholder="title" autoComplete="off" />
           <input autoFocus type="text" value={currItem.tags} onChange={this.handleTagsInput} name="tags" placeholder="Animal,Art" autoComplete="off" />
           {/* <input autoFocus type="text" value={currItem.seller._id} onChange={this.handleInput} name="_id" placeholder="sellerId" autoComplete="off" />
           <input autoFocus type="text" value={currItem.seller.fullname} onChange={this.handleInput} name="fullname" placeholder="sellerFullname" autoComplete="off" />

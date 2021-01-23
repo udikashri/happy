@@ -3,7 +3,8 @@ const ObjectId = require('mongodb').ObjectId
 const asyncLocalStorage = require('../../services/als.service')
 
 async function query(filterBy =null) {
-    const { title , type , color,tags , lowPrice} = filterBy
+    const { title , type , color,tags , lowPrice,highPrice} = filterBy
+    console.log(lowPrice);
     let cred = {}
     try {
         const collection = await dbService.getCollection('item')
@@ -15,10 +16,11 @@ async function query(filterBy =null) {
             if(type) cred.type = type
             if(color) cred.color = color
             if(tags) cred.tags = {$in:[tags]}
-            if(lowPrice) cred.price = {$gte:lowPrice}
+            if(lowPrice) cred.price = {$gte:+lowPrice} 
+            if(highPrice) cred.price = {$gte:+highPrice} 
         }
         var items = await collection.find(cred).toArray()
-        console.log('items',items);
+        // console.log('items',items);
         items = items.map(item => {
             item.createdAt = ObjectId(item._id).getTimestamp()
             return item
