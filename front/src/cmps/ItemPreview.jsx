@@ -80,13 +80,12 @@ export class _ItemPreview extends Component {
         </Link>
 
         <CardContent className="card-text">
-          {removeable && <button className="delete-button" onClick={(event) => this.props.onEdit(event, item._id)} className="delete-btn">Edit</button>}
-          {removeable && <button className="delete-button" onClick={(event) => this.onRemove(event, item._id)} className="delete-btn">Delete</button>}
           {/* <span className="likes"></span> */}
           <span className="price">{item.likes}❤</span>                  
           <span>${item.price}</span>
-          
         </CardContent>
+          {removeable && <button className="delete-button" onClick={(event) => this.props.onEdit(event, item._id)} className="delete-btn">Edit</button>}
+          {removeable && <button className="delete-button" onClick={(event) => this.onRemove(event, item._id)} className="delete-btn">Delete</button>}
       </Card>
 
 

@@ -15,15 +15,16 @@ export class _BackOfficeSeller extends Component {
     }
 
 
-    componentDidMount() {
-        this.loadUserItems()
+    async componentDidMount() {
+       await this.loadUserItems()
     }
 
     async componentDidUpdate(prevState) {
-        if (prevState.currItem !== this.state.currItem) {
-        //   const { currItem } = this.state
-        //   // console.log(await currItem);
-        //   this.setState({ currItem })
+        if (prevState.itemsToShow !== this.state.itemsToShow) {
+          const { itemsToShow } = this.state
+          
+          console.log(await itemsToShow);
+        //   this.setState({ itemsToShow })
         // const { currItem } = this.props
         // // console.log(await currItem);
         // this.setState({ currItem })
