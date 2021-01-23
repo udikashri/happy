@@ -3,9 +3,9 @@ if (sessionStorage.loggedinUser) localLoggedinUser = JSON.parse(sessionStorage.l
 
 const initialState = {
   loggedInUser: {
-    fullname: 'Zack Jordan',
-    _id: 'dhoSPowvM',
-    imgUrl: 'https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/15_pj1iel.jpg'
+    fullname: 'Claudia Perez',
+    _id: 'bv6phbrTCmj',
+    imgUrl: 'https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg'
   },
   users: []
 }
