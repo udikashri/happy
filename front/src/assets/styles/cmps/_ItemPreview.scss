@@ -42,14 +42,17 @@
     }
     .MuiCardContent-root:last-child{
         position: absolute;
+        justify-content: space-between;
         bottom: 0;
     }
-    .price {
-        // align-self: flex-end;
-        // color: red;
-        // bottom: 100px;
-        margin-inline-end: 117px;
-    }
+    // .price-likes {
+    //     // align-self: flex-end;
+    //     // display: flex;
+    //     // color: red;
+    //     // bottom: 100px;
+    //     // justify-self: space-between;
+    //     // align-items: space-between;
+    // }
     a {
         text-decoration: none;
         color: rgb(36, 36, 36);
