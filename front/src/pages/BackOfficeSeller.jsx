@@ -6,7 +6,7 @@ import { ItemPreview } from '../cmps/ItemPreview'
 // import { ItemAdd } from '../cmps/ItemAdd'
 import { ItemEdit } from '../cmps/ItemEdit'
 import CircularProgress from '@material-ui/core/CircularProgress'
-
+import { Order } from '../cmps/Order'
 
 // import { SellerDeatails } from '../cmps/SellerDeatails'
 
