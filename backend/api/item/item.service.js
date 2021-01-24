@@ -16,12 +16,12 @@ async function query(filterBy =null) {
                 const regex = new RegExp(title, 'i')
                 cred.title = regex
             }
+            if (userId) cred = {"seller._id":userId}
             if(type) cred.type = type
             if(color) cred.color = color
             if(tags) cred.tags = {$in:[tags]}
             if(lowPrice) cred.price = {$gte:+lowPrice} 
             if(highPrice) cred.price = {$gte:+highPrice} 
-            if (userId) cred = {"seller._id":userId}
             // if (userId) cred.seller._Id = userId
 
             // if(userId && userId !== 'clear' && sellerCred) sellerCred =  {"seller._id":userId}
