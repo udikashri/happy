@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 export class Order extends Component {
-    // accepted  sent arrive
+   
     state = {
         order: {
             buyer: {
@@ -20,7 +20,7 @@ export class Order extends Component {
                 "name": "Tacosaurus Socks",
                 "amount": 3
             },
-            "status": "accepted",
+            "status": "shiped",
             "date": {
                 "month": 1,
                 "day": 15
@@ -30,8 +30,7 @@ export class Order extends Component {
 
     onChangStatus = () => {
         var { order } = this.state
-        order.status = order.status === "accepted" ? "sent" : "arrive"
-        console.log('onChangStatus');
+        order.status = "shiped";
         this.setState({ order })
     }
 
@@ -40,13 +39,13 @@ export class Order extends Component {
         const { order } = this.state
         console.log('img', order.buyer.fullname);
         return <section className="order">
-            order
+
             {/* ********************** Buyer Info ******************* */}
             <div>{order.buyer.fullnames}</div>
-            <div className="item">{order.items.name}</div>
-            <div className="item">{order.items.amount}</div>
-    <div>{order.date.day}-{order.date.month}-{order.date.month == 1 ? 21 : 20}</div>
-            <div className="status" style={{ "background-color": order.status === "accepted" ? "red" : order.status === "sent" ? "yellow" : "rgb(166, 255, 0)" }} onClick={this.onChangStatus} >{order.status}</div>
+            <div className="item"> <span className="key">item: </span>{order.items.name}</div>
+            <div className="item"><span className="key">amount: </span>{order.items.amount}</div>
+            <div>{order.date.day}-{order.date.month}-{order.date.month == 1 ? 21 : 20}</div>
+            <div className="status" style={{ "background-color": order.status === "shiped" ? "#EE6055" : "#60D394" }} onClick={this.onChangStatus} >{order.status}</div>
         </section>
     }
 }

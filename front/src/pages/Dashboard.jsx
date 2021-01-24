@@ -27,6 +27,7 @@ export class _Dashboard extends Component {
         return (
           <div className="dashboard">
               dash board
+              orders:
               <Order/>
           </div>
         )

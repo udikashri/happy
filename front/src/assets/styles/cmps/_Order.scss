@@ -1,0 +1,20 @@
+.order{
+    color: black;
+   display: flex;
+//    background-color: lightcyan;
+   width: 45vw;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 20px;
+
+   .key{
+       font-weight: bold;
+       font-size: 1.25rem;
+   }
+   .status{
+       padding:5px 10px;
+       border-radius: 10px;
+       width: 100px;
+       text-align: center;
+   }
+}
