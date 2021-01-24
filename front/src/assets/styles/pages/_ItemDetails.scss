@@ -36,16 +36,15 @@
     color: rgb(17, 17, 17);
     .header {
         // align-self: start;
-        h1,
-        .price {
-            margin: 0;
-            font-weight: 800;
-            font-size: 28px;
-            // align-self: start;
-            // align-items: center;
-        }
+       
     }
-
+    .price {
+        margin: 0;
+        font-weight: 800;
+        font-size: 28px;
+        // align-self: start;
+        // align-items: center;
+    }
     .buy {
         background-color: $clr3;
         font-size: 2rem;
