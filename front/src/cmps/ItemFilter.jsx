@@ -12,10 +12,23 @@ export class ItemFilter extends Component {
             type: 'all',
             color: 'clear',
             tags: [],
-            userId: 'clear'
+            userId: 'clear',
+            tagId: 'clear'
             // lowPrice: 0,
             // highPrice: 1000
 
+        }
+    }
+
+    componentDidUpdate(prevState) {
+        if (prevState !== this.state) {
+            // const params = new URLSearchParams()
+            // if (this.state.) {
+            //     params.append("title", this.state.title)
+            // } else {
+            //     params.delete("tags")
+            // }
+            console.log(this.state.tagId);
         }
     }
 
@@ -23,16 +36,16 @@ export class ItemFilter extends Component {
     handleChange = ({ target }) => {
         const field = target.name
         const value = (target.type === 'number') ? +target.value : target.value
-        // console.log(target.value);
+        // console.log(event);
         this.setState(prevState => ({ filterBy: { ...prevState.filterBy, [field]: value } }), () => {
             this.props.onSetFilter(this.state.filterBy)
         })
-        // const params = new URLSearchParams()
-        // if (this.state.title) {
-        //   params.append("title", this.state.title)
-        //  else {
-        //   params.delete("tags")
-        // }
+    }
+
+    handleChangeTags = (tagId) => {
+        this.setState(prevState => ({ filterBy: { ...prevState.filterBy, tagId: tagId } }), () => {
+            this.props.onSetFilter(this.state.filterBy)
+        })
     }
 
     handleChangeColor = (color) => {
@@ -67,12 +80,12 @@ export class ItemFilter extends Component {
                     <input className="filter-price" type="number" name="highPrice" /*value={filterBy.highPrice}*/ onChange={this.handleChange} placeholder="Max price" />
                     <h6>Popolar tags:</h6>
                     <section className="filter-tags flex">
-                        <Link to="/shop?tag=featured">Featured</Link>
-                        <Link to="/shop?tag=developers">Developers</Link>
-                        <Link to="/shop?tag=art">Art</Link>
-                        <Link to="/shop?tag=trending">Trending</Link>
-                        <Link to="/shop?tag=onsale">OnSale</Link>
-                        <Link to="/shop?tag=display">Hot</Link>
+                        <Link onClick={this.handleChangeTags} id="featured" to="/shop?tag=featured">Featured</Link>
+                        <Link onClick={this.handleChangeTags} id="developers" to="/shop?tag=developers">Developers</Link>
+                        <Link onClick={this.handleChangeTags} id="art" to="/shop?tag=art">Art</Link>
+                        <Link onClick={this.handleChangeTags} id="trending" to="/shop?tag=trending">Trending</Link>
+                        <Link onClick={this.handleChangeTags} id="onsale" to="/shop?tag=onsale">OnSale</Link>
+                        <Link onClick={this.handleChangeTags} id="display" to="/shop?tag=display">Hot</Link>
                     </section>
                     <h6 className="h6-filter-seller">Filter by seller:</h6>
                     {sellers && <section>
