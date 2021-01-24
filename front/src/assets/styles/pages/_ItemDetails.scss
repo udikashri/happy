@@ -13,6 +13,10 @@
         width: 300px;
         margin: 0 auto;
         height: 350px;
+        &:hover {
+            transform: scale(1.2);
+            transition: 0.3s ease-in-out;
+        }
     }
     .border-seprator {
         margin: 10px 0;
@@ -105,7 +109,7 @@
         margin: 0 11px;
     }
 }
-.tag-title{
+.tag-title {
     margin-top: 10px;
     font-weight: bold;
     align-self: start;
@@ -120,15 +124,14 @@
         margin: 0 10px;
         border: 1px solid rgb(155, 155, 155);
         display: flex;
-align-items: start;
+        align-items: start;
         a {
             margin: 0;
             color: dimgray;
             text-transform: uppercase;
-            font-size: .8rem;
+            font-size: 0.8rem;
             &:hover {
                 text-decoration: none;
-                
             }
         }
     }
