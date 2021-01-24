@@ -20,7 +20,7 @@ export class Order extends Component {
                 "name": "Tacosaurus Socks",
                 "amount": 3
             },
-            "status": "shiped",
+            "status": "order",
             "date": {
                 "month": 1,
                 "day": 15
@@ -45,7 +45,7 @@ export class Order extends Component {
             <div className="item"> <span className="key">item: </span>{order.items.name}</div>
             <div className="item"><span className="key">amount: </span>{order.items.amount}</div>
             <div>{order.date.day}-{order.date.month}-{order.date.month == 1 ? 21 : 20}</div>
-            <div className="status" style={{ "background-color": order.status === "shiped" ? "#EE6055" : "#60D394" }} onClick={this.onChangStatus} >{order.status}</div>
+            <div className="status" style={{ "background-color": order.status === "order" ? "#EE6055" : "#60D394" }} onClick={this.onChangStatus} >{order.status}</div>
         </section>
     }
 }
