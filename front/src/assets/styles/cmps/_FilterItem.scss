@@ -60,13 +60,14 @@
 .filter-price{
     width: 80px;
 
-}
-@mixin circle {
+@mixin circle($color) {
     height: 25px;
     width: 25px;
     border-radius: 50%;
     margin: 3px;
     cursor: pointer;
+    background-color: $color;
+
 }
 
 .color-container {
@@ -79,54 +80,48 @@
     display: grid;
     grid-template-columns: repeat(4, 35px);
     grid-gap: 6px;
-    .red {
-        background-color: red;
-        @include circle();
+    .red-fill {
+        @include circle(red);
     }
-    .gray {
-        background-color: gray;
-        @include circle();
+    .gray-fill  {
+        @include circle(gray);
     }
-    .blue {
-        background-color: blue;
-        @include circle();
+    .blue-fill  {
+        @include circle(blue);
     }
-    .pink {
-        background-color: hotpink;
-        @include circle();
+    .pink-fill  {
+        @include circle(hotpink);
     }
-    .yellow {
-        background-color: yellow;
-        @include circle();
+    .yellow-fill  {
+        @include circle(yellow);
     }
-    .black {
-        background-color: black;
-        @include circle();
+    .black-fill  {
+        @include circle(black);
     }
-    .white {
-        background-color: white;
-        @include circle();
+    .white-fill  {
+        @include circle(white);
     }
-    .green {
-        background-color: greenyellow;
-        @include circle();
+    .green-fill  {
+        @include circle(greenyellow);
     }
-    .purple {
-        background-color: purple;
-        @include circle();
+    .purple-fill  {
+        @include circle(purple);
     }
-    .brown {
-        background-color: rgb(116, 76, 24);
-        @include circle();
+    .brown-fill  {
+        @include circle(rgb(116, 76, 24));
+
     }
     .colorful {
         background-color: red; /* For browsers that do not support gradients */
-        background-image: linear-gradient(to bottom right, yellow, green, blue, red, orange);
-        @include circle();
+        background-image: linear-gradient(to bottom left, yellow, rgb(8, 123, 255), red, orange, yellow);
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        margin: 3px;
+        cursor: pointer;
     }
     .all {
-        background-color: lightgray;
-        @include circle();
+        @include circle(lightgray);
         color: white;
     }
 }
