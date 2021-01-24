@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { PickColor } from './PickColor'
+import Avatar from '@material-ui/core/Avatar';
 
 export class ItemFilter extends Component {
 
@@ -8,7 +9,8 @@ export class ItemFilter extends Component {
             title: '',
             type: 'all',
             color: 'clear',
-            tags: []
+            tags: [],
+            userId: 'clear'
             // lowPrice: 0,
             // highPrice: 1000
 
@@ -36,9 +38,18 @@ export class ItemFilter extends Component {
             this.props.onSetFilter(this.state.filterBy)
         })
     }
+    handleChangeUser = ({target}) => {
+        console.log(target);
+        console.log(target.alt);
+        this.setState(prevState => ({ filterBy: { ...prevState.filterBy, userId: target.alt } }), () => {
+            this.props.onSetFilter(this.state.filterBy)
+        })
+    }
 
     render() {
         const { filterBy } = this.state
+        const { sellers } = this.props
+        console.log(sellers);
         return (
             <section className="item-filter" >
                 <h1>Find socks</h1>
@@ -52,7 +63,14 @@ export class ItemFilter extends Component {
                     <input type="number" name="highPrice" /*value={filterBy.highPrice}*/ onChange={this.handleChange} placeholder="Max price" />
                     <h6>Filter by color:</h6>
                     <PickColor handleChangeColor={this.handleChangeColor} />
+                    <h6>Filter by seller:</h6>
+                    {sellers && <section>
+                        {sellers.map(seller => {
+                            console.log(seller.name);
+                           return <img key={seller.user._id} value={seller.user.fullname} src={seller.user.imgUrl} alt={seller.user._id} className="img-user-filter" onClick={this.handleChangeUser} />
 
+                        })}
+                    </section>}
                 </div>
             </section>
         )

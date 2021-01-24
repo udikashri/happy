@@ -41,11 +41,11 @@ class _ItemDetails extends Component {
     const sellerId = this.state.currItem.seller._id
     // this.props.loadSellers()
     const sellers = await this.props.sellers;
-    const seller = sellers.filter(seller => {
+    const seller = sellers.find(seller => {
       return seller._id === sellerId
     })
-    this.setState({ seller: seller[0], sellers: sellers }, () => {
-      this.rateCalculator(seller[0].reviews)
+    this.setState({ seller: seller, sellers: sellers }, () => {
+      this.rateCalculator(seller.reviews)
     })
   }
 

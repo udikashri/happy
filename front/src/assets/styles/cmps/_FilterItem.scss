@@ -3,7 +3,7 @@
     padding: 20px;
     background-color: whitesmoke;
     width: 250px;
-    height: 500px;
+    height: 550px;
     position: sticky;
     left: 0;
     top: 86px;
@@ -90,4 +90,12 @@
         @include circle();
         color: white;
     }
+}
+
+.img-user-filter{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 3px;
+    cursor: pointer;
 }
