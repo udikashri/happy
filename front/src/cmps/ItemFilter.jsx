@@ -72,13 +72,13 @@ export class ItemFilter extends Component {
                 <div className="filter-input-container">
                     <input type="text" name="title" value={filterBy.title} onChange={this.handleChange} placeholder="Search e.g 'React socks'" autoComplete="off" />
                     {/* <input type="text" name="tags" value={filterBy.title} onChange={this.handleChange} placeholder="Search e.g 'React socks'" autoComplete="off" /> */}
-                    <h6>Filter by color:</h6>
+                    <h6>Color:</h6>
                     <PickColor handleChangeColor={this.handleChangeColor} />
-                    <h6>Filter by price:</h6>
+                    <h6>Price:</h6>
                     <input className="filter-price" type="number" name="lowPrice"  /*value={filterBy.lowPrice}*/ onChange={this.handleChange} placeholder="Min price" /*name="highPrice"*/ />
                     <span> - </span>
                     <input className="filter-price" type="number" name="highPrice" /*value={filterBy.highPrice}*/ onChange={this.handleChange} placeholder="Max price" />
-                    <h6>Popolar tags:</h6>
+                    <h6>Tags:</h6>
                     <section className="filter-tags flex">
                         <Link onClick={this.handleChangeTags} id="featured" to="/shop?tag=featured">Featured</Link>
                         <Link onClick={this.handleChangeTags} id="developers" to="/shop?tag=developers">Developers</Link>
@@ -87,7 +87,7 @@ export class ItemFilter extends Component {
                         <Link onClick={this.handleChangeTags} id="onsale" to="/shop?tag=onsale">OnSale</Link>
                         <Link onClick={this.handleChangeTags} id="display" to="/shop?tag=display">Hot</Link>
                     </section>
-                    <h6 className="h6-filter-seller">Filter by seller:</h6>
+                    <h6 className="h6-filter-seller">Top sellers</h6>
                     {sellers && <section>
                         {sellers.map(seller => {
                             console.log(seller.name);

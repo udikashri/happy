@@ -1,7 +1,7 @@
 .reviews {
     .review {
-        border-bottom: solid 2px black;
-        margin-bottom: 10px;
+        border-bottom: solid 0.7px lightgray;
+        margin-bottom: 15px;
         padding-bottom: 10px;
 
         .by-info {
@@ -9,14 +9,14 @@
             display: flex;
             align-items: center;
             h5 {
-                margin-bottom: 0px;
+                margin-bottom: 3px;
                 span {
                     color: rgb(223, 163, 34);
                 }
             }
         }
         img {
-            border: 1px solid black;
+            border: 0.7px solid lightgray;
             height: 35px;
             width: 35px;
             border-radius: 50px;
@@ -27,9 +27,11 @@
         }
 
         .review-text {
+            margin-top: 7px;
             margin-left: 10px;
             text-indent: 10px;
             color: rgb(53, 8, 8);
+            font-size: 0.9rem;
         }
     }
 }
