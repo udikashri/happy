@@ -184,8 +184,8 @@ class _Home extends Component {
 
 
             <section className="top-sellers">
-              <h2>Our Top Sellers </h2>
               <section className="sellers-list flex-column align-center justify-center" >
+              <h2>Our Top Sellers </h2>
                 <div className="sellers-row flex  space-between justify-center">
                   <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/10_vnikfz.jpg" className="small" />
                   <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/8_tzi2ty.jpg" className="small" />

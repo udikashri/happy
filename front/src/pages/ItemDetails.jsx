@@ -202,14 +202,14 @@ class _ItemDetails extends Component {
               <td>&nbsp;</td>
               <td>&nbsp;</td>
               <td>Shiping</td>
-              <td>$70</td>
+              <td>$56</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
-              <td className="final-price">${currItem.price * amount + 70}</td>
+              <td className="final-price">${currItem.price * amount + 56}</td>
             </tr>
           </table>
           <Link onClick={this.onOrder} to={"/thank"}>Order</Link>
