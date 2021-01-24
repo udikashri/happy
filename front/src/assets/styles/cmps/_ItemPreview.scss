@@ -12,12 +12,13 @@
     display: flex;
     align-items: stretch;
     position: relative;
-    // margin-bottom: 2vh;
+    background-color: #F8F8F8;
+    margin-bottom: 2vh;
     .seller-preview {
         border-top: 1.5px solid rgb(223, 223, 223);
         font-size: 0.8rem;
-        // display: flex;
-        // padding-top: 10px;
+        display: flex;
+        padding-top: 10px;
         justify-content: start;
         align-items: center;
         // img {
@@ -35,6 +36,8 @@
     // }
     .MuiCardHeader-root {
         padding-bottom: 0px;
+        background-color: #F8F8F8;
+
     }
     .MuiCardContent-root.card-text {
         // align-self: flex-end;

@@ -1,5 +1,6 @@
 .item-details {
     display: grid;
+    gap: 20px;
     grid-template-columns: 1fr 1fr;
 
     grid-template-rows: 450px 50px 1fr;
@@ -10,18 +11,17 @@
 
     img.item-image {
         grid-area: img;
-        width: 300px;
         margin: 0 auto;
-        height: 350px;
-        &:hover {
-            transform: scale(1.2);
-            transition: 0.3s ease-in-out;
-        }
+        width: 394px;
+        // &:hover {
+        //     transform: scale(1.2);
+        //     transition: 0.3s ease-in-out;
+        // }
     }
     .border-seprator {
-        margin: 20px 0;
+        // margin: 20px 0;
         grid-area: sep;
-        background-color: dimgray;
+        background-color: lightgray;
         left: 0;
         height: 1px;
     }
@@ -31,37 +31,39 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: space-between;
-    margin-top: 5px;
     color: rgb(17, 17, 17);
     .header {
-        align-self: start;
+        // align-self: start;
         h1,
         .price {
-            margin: 0 40px;
-            margin-top: 10px;
-            align-self: start;
+            margin: 0;
+            font-weight: 800;
+            font-size: 28px;
+            // align-self: start;
+            // align-items: center;
         }
     }
 
     .buy {
         background-color: $clr3;
         font-size: 2rem;
-        color: white;
+        color: ghostwhite;
         padding: 0 50px;
         margin: 20px 10px;
         cursor: pointer;
         transition: 0.5s;
+        border-radius: 3px;
 
         &:hover {
-            -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
-                5px 5px 28px 15px rgba(0, 0, 0, 0.11);
-            box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 28px 15px rgba(0, 0, 0, 0.11);
+            background-color: #8800ad;
         }
     }
 
     .description {
         font-size: 0.875rem;
+        text-align: left;
     }
 }
 
@@ -70,6 +72,7 @@
     width: 220px;
     height: 50px;
     border: 1px solid rgb(32, 32, 32);
+    border-radius: 3px;
 
     div {
         border-left: 1px solid rgb(32, 32, 32);
@@ -90,7 +93,7 @@
 
 .seller-preview {
     display: flex;
-    align-self: start;
+    // align-self: start;
     justify-content: space-between;
     span,
     img {
@@ -113,6 +116,7 @@
     margin-top: 10px;
     font-weight: bold;
     align-self: start;
+    font-size: small;
 }
 .tags-container {
     color: rgb(155, 155, 155);
@@ -125,6 +129,7 @@
         border: 1px solid rgb(155, 155, 155);
         display: flex;
         align-items: start;
+        border-radius: 3px;
         a {
             margin: 0;
             color: dimgray;
@@ -147,7 +152,7 @@
 }
 
 .order-info-modal {
-    background-color: rgb(206, 197, 214);
+    background-color: white;
     color: black;
     // border: 6px solid chartreuse;
     position: absolute;
@@ -181,6 +186,7 @@
         }
         .final-price {
             border-top: 1px solid black;
+            font-weight: bold;
         }
     }
 
@@ -203,11 +209,9 @@
 }
 .reviews {
     grid-area: reviews;
-    margin: 0 30px 0 220px;
 }
 .seller-details {
     grid-area: seller;
-    padding: 2% 5%;
     h3 {
         margin-bottom: 15px;
     }
@@ -230,6 +234,7 @@
         width: 140px;
         margin-left: 150px;
         transition: 0.5s;
+        border-radius: 3px;
 
         &:hover {
             background-color: #9d033f;

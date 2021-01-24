@@ -21,13 +21,13 @@ header {
     }   
 
     // .loggedin-user {
-    //     background-color: lightcyan;
+    //     background-color: white;
     //     padding: 2px 8px;
     //     border-radius: 1em;
     //     align-self: flex-end;
     //     color: whitesmoke;
     //     span {
-    //         background-color: lightcyan;
+    //         background-color: white;
     //         padding: 4px;
     //         margin: 10px;
     //         border-radius: 50%;
@@ -50,13 +50,13 @@ nav {
         width: 100px;
         // border-right: 1px solid black;
         text-decoration: none;
-        color:lightcyan;
+        color:white;
          &:first-child {
             // border-left: 1px solid black;
             // justify-content: flex-start;
         }
         &:active {
-            color: lightcyan;
+            color: white;
             text-decoration: none;
         }
         &:hover {
@@ -66,7 +66,7 @@ nav {
 }
 
 nav .active {
-    color: lightcyan;
+    color: white;
     text-decoration: none;
 }
 .logo{
@@ -77,7 +77,7 @@ margin-inline-start: 3px;
 .logo a {
     margin-left: 30px;
     font-size: 2rem;
-    color: lightcyan;
+    color: white;
 
     &:hover {
         text-decoration: none;

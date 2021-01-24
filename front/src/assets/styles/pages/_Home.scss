@@ -7,7 +7,7 @@
 }
 
 .home {
-    background-color: orange;
+    background-color: #e8973b;
     h2 {
         text-align: center;
         color: white;
@@ -55,7 +55,7 @@
         margin-bottom: 24px;
     }
     & .btn {
-        background-color: orange;
+        background-color: #e8973b;
         font-weight: 500;
         border: none;
         color: whitesmoke;
@@ -72,13 +72,13 @@
     }
 }
 
-.card-media {
-    &:hover {
-        transform: scale(1.2);
-        -webkit-transition: 0.3s ease-in-out;
-        transition: 0.3s ease-in-out;
-    }
-}
+// .card-media {
+//     &:hover {
+//         transform: scale(1.2);
+//         -webkit-transition: 0.3s ease-in-out;
+//         transition: 0.3s ease-in-out;
+//     }
+// }
 // .home-collection-list {
 //     margin-top: 25px;
 //     padding: 20px;
@@ -89,7 +89,7 @@
 //     width:93.1vw;
 //     grid-gap: 8px;
 //     gap: 8px;
-//     background-color: orangered;
+//     background-color: #e8973bred;
 // }
 
 .collection-card {
@@ -111,44 +111,44 @@
     }
 }
 
-// .img-1 {
-//     color: whitesmoke;
-//     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-//         // url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990427/atmosphere/crazy-socks_1024x1024_w9hsye.jpg);
-//         url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301258/atmosphere/ot_co9rh2.jpg);
-// }
-// .img-2 {
-//     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-//         // url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_happy_nhag3k.jpg);
-//         url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301259/atmosphere/80_vwru5z.png);
-//         color: whitesmoke;
-// }
-// .img-3 {
-//     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-//         // url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_pink_tklalh.jpg);
-//         url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301259/atmosphere/pp_zxik7v.jpg);
+.img-1 {
+    color: whitesmoke;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+        // url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990427/atmosphere/crazy-socks_1024x1024_w9hsye.jpg);
+        url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301258/atmosphere/ot_co9rh2.jpg);
+}
+.img-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+        // url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_happy_nhag3k.jpg);
+        url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301259/atmosphere/80_vwru5z.png);
+        color: whitesmoke;
+}
+.img-3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+        // url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990430/atmosphere/socks_pink_tklalh.jpg);
+        url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301259/atmosphere/pp_zxik7v.jpg);
 
-//         color: whitesmoke;
-// }
-// .img-4 {
-//     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-//         // url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990432/atmosphere/socks_face-removebg-preview_u5mgyo.png);
-//         url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301258/atmosphere/an_dsules.jpg);
-//         color: whitesmoke;
-// }
-// .img-5 {
-//     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-//         // url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990429/atmosphere/pexels-photo-1437149_rf8m7o.jpg);
-//         url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301257/atmosphere/spo_dfghzs.jpg);
-//     color: whitesmoke;
-// }
+        color: whitesmoke;
+}
+.img-4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+        // url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990432/atmosphere/socks_face-removebg-preview_u5mgyo.png);
+        url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301258/atmosphere/an_dsules.jpg);
+        color: whitesmoke;
+}
+.img-5 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+        // url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1610990429/atmosphere/pexels-photo-1437149_rf8m7o.jpg);
+        url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301257/atmosphere/spo_dfghzs.jpg);
+    color: whitesmoke;
+}
 
 .item-cards {
     width: 100%;
     gap: 40px;
     justify-content: center;
     padding: 16px;
-    background-color:orange;
+    background-color:#e8973b;
     margin-bottom: 5vh;
     & a:link {
         text-decoration: none;
@@ -164,6 +164,7 @@
     align-content: center;
     text-align: center;
     padding: 34px 181px;
+    cursor: pointer;
 
     & .sellers-row {
         margin-top: 20px;
@@ -212,10 +213,11 @@
 }
 
 .container {
-    background-color: #660082;
+      background-color: antiquewhite;
     padding: 8px;
     width: 60vw;
     margin: 0 auto;
+    border-radius: 9px;
 }
 
 .gallery {
