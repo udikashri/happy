@@ -78,8 +78,8 @@ export class _Dashboard extends Component {
                         <th>Item</th>
                         <th>Price</th>
                         <th>Amount</th>
-                        <th>Item</th>
-                        <th>Total Price</th>
+                        <th>Date</th>
+                        <th>Order Status</th>
                     </tr>
                 </table>
                 <Order />
