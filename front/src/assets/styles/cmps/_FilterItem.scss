@@ -7,7 +7,7 @@
     position: sticky;
     left: 0;
     top: 86px;
-    
+
     & h1,
     h2,
     h3,
@@ -29,7 +29,15 @@
     margin: 3px;
     cursor: pointer;
     background-color: $color;
+}
 
+@mixin circle-border($color) {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin: 3px;
+    cursor: pointer;
+    border: 2px solid $color;
 }
 
 .color-container {
@@ -45,35 +53,65 @@
     .red-fill {
         @include circle(red);
     }
-    .gray-fill  {
+    .red-border {
+        @include circle-border(red);
+    }
+    .gray-fill {
         @include circle(gray);
     }
-    .blue-fill  {
+    .gray-border {
+        @include circle-border(gray);
+    }
+
+    .blue-fill {
         @include circle(blue);
     }
-    .pink-fill  {
+    .blue-border {
+        @include circle-border(blue);
+    }
+    .pink-fill {
         @include circle(hotpink);
     }
-    .yellow-fill  {
+    .pink-border {
+        @include circle-border(hotpink);
+    }
+    .yellow-fill {
         @include circle(yellow);
     }
-    .black-fill  {
+    .yellow-border {
+        @include circle-border(yellow);
+    }
+    .black-fill {
         @include circle(black);
     }
-    .white-fill  {
+    .black-border {
+        @include circle-border(black);
+    }
+    .white-fill {
         @include circle(white);
     }
-    .green-fill  {
+    .white-border {
+        @include circle-border(white);
+    }
+    .green-fill {
         @include circle(greenyellow);
     }
-    .purple-fill  {
+    .green-border {
+        @include circle-border(greenyellow);
+    }
+    .purple-fill {
         @include circle(purple);
     }
-    .brown-fill  {
-        @include circle(rgb(116, 76, 24));
-
+    .purple-border {
+        @include circle-border(purple);
     }
-    .colorful {
+    .brown-fill {
+        @include circle(rgb(116, 76, 24));
+    }
+    .brown-border {
+        @include circle-border(rgb(116, 76, 24));
+    }
+    .colorful-fill {
         background-color: red; /* For browsers that do not support gradients */
         background-image: linear-gradient(to bottom left, yellow, rgb(8, 123, 255), red, orange, yellow);
         height: 25px;
@@ -82,13 +120,32 @@
         margin: 3px;
         cursor: pointer;
     }
+    .colorful-border {
+        height: 25px;
+        width: 25px;
+        margin: 3px;
+        background: conic-gradient(
+            lightgrey 0deg 30deg,
+            red 30deg 60deg,
+            lightgrey 60deg 120deg,
+            yellow 12deg 150deg,
+            lightgrey 150deg 210deg,
+            green 210deg 240deg,
+            lightgrey 240deg 300deg,
+            blue 300deg 330deg,
+            lightgrey 330deg 360deg
+        );
+        -webkit-mask-image: radial-gradient(transparent 65%, black 65%);
+        mask-image: radial-gradient(transparent 65%, black 65%);
+        border-radius: 50%;
+    }
     .all {
         @include circle(lightgray);
         color: white;
     }
 }
 
-.img-user-filter{
+.img-user-filter {
     height: 40px;
     width: 40px;
     border-radius: 50%;
