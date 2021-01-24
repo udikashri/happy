@@ -5,6 +5,7 @@ import { loadItems } from '../store/actions/itemActions'
 import { ItemPreview } from '../cmps/ItemPreview'
 // import { ItemAdd } from '../cmps/ItemAdd'
 import { ItemEdit } from '../cmps/ItemEdit'
+import { Order } from '../cmps/Order'
 
 // import { SellerDeatails } from '../cmps/SellerDeatails'
 
