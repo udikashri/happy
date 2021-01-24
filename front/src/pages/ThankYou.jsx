@@ -5,7 +5,7 @@ import { getOrder } from '../store/actions/orderActions'
 import { loadItems } from '../store/actions/itemActions'
 import { ItemPreview } from '../cmps/ItemPreview'
 import CircularProgress from '@material-ui/core/CircularProgress'
-
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 class _ThankYou extends Component {
     state = {
         items: [],
@@ -49,7 +49,7 @@ class _ThankYou extends Component {
             <section className="thank-you">
                 <div className="thank-msg">
                     <div>Your {order.amount !== 1 && order.amount} {order.amount === 1 ? "pair" : "pairs"} of "{order.title}" Socks Is On The Way</div>
-                    <Link to={'/shop'}>C<span>o</span>ntinue Sh<span>o</span>ping</Link>
+                    <Link to={'/shop'}>C<span>o</span>ntinue Sh<span>o</span>ping <ArrowForwardIcon /></Link>
                 </div>
 
                 <div className="speech half">thank you for you purchase</div>
@@ -58,11 +58,14 @@ class _ThankYou extends Component {
 
                 {/* ************* Item With Same Tag Preview  ********************* */}
 
-                <div className="item-thank-conainer">
+                <div className="item-thank">
+                    <h3 className="item-thank-header">Related socks:</h3>
+                    <div className="item-thank-conainer">
 
-                    {items.map(item => {
-                        return <ItemPreview key={item._id} item={item} /*removeable={false}*/ />
-                    })}
+                        {items.map(item => {
+                            return <ItemPreview key={item._id} item={item} /*removeable={false}*/ />
+                        })}
+                    </div>
                 </div>
             </section>)
 

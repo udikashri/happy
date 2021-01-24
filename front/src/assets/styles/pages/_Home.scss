@@ -241,12 +241,24 @@
     padding: 0;
 }
 
+// .gallery-tag-featured{
+//     background-color: black;
+//     background-size: initial;
+//     bottom: -63%;
+//     width: 14.42%;
+//     // width: 1fr;
+//     position: absolute;
+//     text-align: center;
+//     }
+
 .gallery__item--1 {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
 
+   
+    
     /** Alternative Syntax **/
     /* grid-column: 1 / span 2;  */
     /* grid-row: 1 / span 2; */

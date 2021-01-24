@@ -21,7 +21,8 @@ async function query(filterBy =null) {
             if(tags) cred.tags = {$in:[tags]}
             if(lowPrice) cred.price = {$gte:+lowPrice} 
             if(highPrice) cred.price = {$gte:+highPrice} 
-            if(userId) cred = {"seller._id":userId}
+            // if(userId) cred = {"seller._id":userId}
+            if(userId) cred.seller._id = userId
             // if (userId) cred.seller._Id = userId
 
             // if(userId && userId !== 'clear' && sellerCred) sellerCred =  {"seller._id":userId}

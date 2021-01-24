@@ -37,7 +37,7 @@ export class _App extends Component {
             <Switch>
               <Route path="/user/:id" component={UserDetails} />
               <Route path="/login" component={LoginSignup} />
-              <Route path="/login" component={LoginSignup} />
+              <Route path="/thank" component={ThankYou} />
               <Route path="/dashboard" component={Dashboard} />
               <Route path="/thank" component={ThankYou} />
               {/* <Route path="/chat" component={Chat} /> */}
