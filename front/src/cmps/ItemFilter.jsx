@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { PickColor } from './PickColor'
 import Avatar from '@material-ui/core/Avatar';
+import { Link } from 'react-router-dom'
+
 
 export class ItemFilter extends Component {
 
@@ -38,7 +40,7 @@ export class ItemFilter extends Component {
             this.props.onSetFilter(this.state.filterBy)
         })
     }
-    handleChangeUser = ({target}) => {
+    handleChangeUser = ({ target }) => {
         console.log(target);
         console.log(target.alt);
         this.setState(prevState => ({ filterBy: { ...prevState.filterBy, userId: target.alt } }), () => {
@@ -52,22 +54,31 @@ export class ItemFilter extends Component {
         console.log(sellers);
         return (
             <section className="item-filter" >
-                <h1>Find socks</h1>
-                <h6>Search</h6>
-
+                {/* <h1></h1> */}
+                <h6 className="h6-filter-title">Find socks</h6>
                 <div className="filter-input-container">
                     <input type="text" name="title" value={filterBy.title} onChange={this.handleChange} placeholder="Search e.g 'React socks'" autoComplete="off" />
                     {/* <input type="text" name="tags" value={filterBy.title} onChange={this.handleChange} placeholder="Search e.g 'React socks'" autoComplete="off" /> */}
-                    <h6>Up to price:</h6>
-                    <input type="number" name="lowPrice"  /*value={filterBy.lowPrice}*/ onChange={this.handleChange} placeholder="Min price" /*name="highPrice"*/ />
-                    <input type="number" name="highPrice" /*value={filterBy.highPrice}*/ onChange={this.handleChange} placeholder="Max price" />
                     <h6>Filter by color:</h6>
                     <PickColor handleChangeColor={this.handleChangeColor} />
-                    <h6>Filter by seller:</h6>
+                    <h6>Filter by price:</h6>
+                    <input className="filter-price" type="number" name="lowPrice"  /*value={filterBy.lowPrice}*/ onChange={this.handleChange} placeholder="Min price" /*name="highPrice"*/ />
+                    <span> - </span>
+                    <input className="filter-price" type="number" name="highPrice" /*value={filterBy.highPrice}*/ onChange={this.handleChange} placeholder="Max price" />
+                    <h6>Popolar tags:</h6>
+                    <section className="filter-tags flex">
+                        <Link to="/shop?tag=featured">Featured</Link>
+                        <Link to="/shop?tag=developers">Developers</Link>
+                        <Link to="/shop?tag=art">Art</Link>
+                        <Link to="/shop?tag=trending">Trending</Link>
+                        <Link to="/shop?tag=onsale">OnSale</Link>
+                        <Link to="/shop?tag=display">Hot</Link>
+                    </section>
+                    <h6 className="h6-filter-seller">Filter by seller:</h6>
                     {sellers && <section>
                         {sellers.map(seller => {
                             console.log(seller.name);
-                           return <img key={seller.user._id} value={seller.user.fullname} src={seller.user.imgUrl} alt={seller.user._id} className="img-user-filter" onClick={this.handleChangeUser} />
+                            return <img key={seller.user._id} value={seller.user.fullname} src={seller.user.imgUrl} alt={seller.user._id} className="img-user-filter" onClick={this.handleChangeUser} />
 
                         })}
                     </section>}

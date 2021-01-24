@@ -39,6 +39,7 @@ export class _App extends Component {
               <Route path="/login" component={LoginSignup} />
               <Route path="/thank" component={ThankYou} />
               <Route path="/dashboard" component={Dashboard} />
+              <Route path="/thank" component={ThankYou} />
               {/* <Route path="/chat" component={Chat} /> */}
               <Route path="/seller/:userId" component={BackOfficeSeller} />
               <Route path="/item/:itemId" component={ItemDetails} />
