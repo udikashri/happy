@@ -1,19 +1,27 @@
 .item-details {
-        display: grid;
-        /* grid-gap: 20px; */
-        gap: 24px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 451px 1px 1fr;
-        grid-template-areas:
-            "img item-info"
-            "sep sep"
-            "reviews seller";
-        margin: 99px 16vw 30px;
-    
+    display: grid;
+    /* grid-gap: 20px; */
+    gap: 24px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 451px 1px 1fr;
+    grid-template-areas:
+        "img item-info"
+        "sep sep"
+        "reviews seller";
+    margin: 99px 17vw 30px;
 
     img.item-image {
         grid-area: img;
-        width: 394px;
+        width: 400px;
+        /* padding-left: 106px; */
+        align-content: center;
+        justify-content: center;
+        margin-left: 53px;
+        margin-top: 14px;
+        // grid-area: img;
+        // // width: 100%;
+        // width: 400px;
+        // // padding-top: 43px;
         // &:hover {
         //     transform: scale(1.2);
         //     transition: 0.3s ease-in-out;
@@ -37,7 +45,6 @@
     color: rgb(17, 17, 17);
     .header {
         // align-self: start;
-       
     }
     .price {
         margin: 0;
@@ -64,6 +71,7 @@
     .description {
         font-size: 0.875rem;
         text-align: left;
+        padding-left: 15px;
     }
 }
 
@@ -117,6 +125,7 @@
     font-weight: bold;
     align-self: start;
     font-size: small;
+    padding-left: 65px;
 }
 .tags-container {
     color: rgb(155, 155, 155);
@@ -177,6 +186,7 @@
     }
 
     table {
+        margin-top: 37px;
         width: 10px;
         width: 99%;
         text-align: center;
@@ -195,7 +205,7 @@
         color: rgb(66, 20, 27);
         text-align: center;
         font-size: 1.5rem;
-        margin: 0 45% 10px;
+        margin: 0 41% 10px;
         border: 1px solid rgb(66, 20, 27);
         padding: 5px 15px;
         border-radius: 10px;
@@ -209,10 +219,11 @@
 }
 .reviews {
     grid-area: reviews;
-    width: 87%;
+    // width: 87%;
 }
 .seller-details {
     grid-area: seller;
+    padding-left: 63px;
     h3 {
         margin-bottom: 15px;
     }
@@ -233,7 +244,7 @@
         padding: 5px 15px;
         margin-top: 10px;
         width: 140px;
-        margin-left: 150px;
+        margin-left: 170px;
         transition: 0.5s;
         border-radius: 3px;
 

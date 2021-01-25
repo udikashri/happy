@@ -26,12 +26,12 @@ export class PickColor extends Component {
                 <section title="Gray" onClick={() => {
                     this.props.handleChangeColor('gray')
                     this.handlePickeColor('gray')
-                }} className={(pickeColor === "gray" || pickeColor === "all") ? "gray-fill" : "gray-border"} ></section>
+                }} className={(pickeColor === "gray" || pickeColor === "all") ? "gray-fill outline" : "gray-border"} ></section>
                 <section title="Blue" onClick={() => {
                     this.props.handleChangeColor('blue')
                     this.handlePickeColor('blue')
 
-                }} className={(pickeColor === "blue" || pickeColor === "all") ? "blue-fill" : "blue-border"} ></section>
+                }} className={(pickeColor === "blue" || pickeColor === "all") ? "blue-fill outline" : "blue-border"} ></section>
                 <section title="Pink" onClick={() => {
                     this.props.handleChangeColor('pink')
                     this.handlePickeColor('pink')

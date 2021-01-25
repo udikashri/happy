@@ -1,16 +1,19 @@
 .thank-you {
-  // margin-top: 100px;
-  height: 830px;
+  padding-top: 100px;
+  // height: 830px;
   margin: 50px 330px;
   margin-bottom: 0;
 
   .item-thank{
     // text-align: center;
-    // margin-top: 140px;
+    margin-top: 260px;
     h3{
+      // text-align: center;
+      margin-top: 35px;
       margin-bottom: 35px;
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: rgb(27, 27, 27);
+      font-weight: 400;
     }
 
   }
@@ -26,13 +29,13 @@
   }
   .thank-msg {
     // margin: 240px 300px 0px;
-    margin-top: 115px;
+    margin-top: 25px;
     margin-bottom: 30px;
     // top:500px;
     font-size: 30px;
     div.order-msg {
       // margin-top: 25px;
-      width: 400px;
+      width: 520px;
     }
     // .continue-shopping {
     // // margin-top: 30px;
@@ -41,12 +44,12 @@
     // background-color: rgb(166, 255, 0);
     a {
       font-family: Apple Chancery, cursive;
-      color: black;
+      color: #9d033f;
       font-size: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid black;
+      border: 1px solid #9d033f;
       width: 360px;
       padding: 6px 6px;
       margin-top: 30px;
@@ -59,6 +62,8 @@
       }
       &:hover {
         text-decoration: none;
+        color:white;
+        background-color: #9d033f;
 
         span,
         .MuiSvgIcon-root {
@@ -72,10 +77,10 @@
   & img {
     z-index: -1;
     position: absolute;
-    width: 1000px;
+    width: 400px;
     // height: 80%;
-    right: 0;
-    top: 120px;
+    right: 250px;
+    top: 100px;
   }
 
   & .speech {
