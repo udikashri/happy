@@ -1,12 +1,14 @@
 .item-filter {
     margin-left: 20px;
     padding: 20px;
+    padding-left: 55px;
     background-color: whitesmoke;
-    width: 250px;
+    width: 300px;
     height: 620px;
     position: sticky;
     left: 0;
     top: 86px;
+    border-radius: 3px;
     
     // & h1,
     // h2,
@@ -25,7 +27,8 @@
     // }
 
 & input {
-    border: 1px solid purple;
+    border: 1px solid lightgray;
+    // outline-style:solid;
     padding: 3px;
     border-radius: 0.2em ;
 }
@@ -182,6 +185,11 @@
         color: white;
     }
 }
+.outline{
+    outline: 1px solid black;
+    outline-offset: 5px;
+}
+
 
 .img-user-filter {
     height: 40px;

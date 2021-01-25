@@ -160,10 +160,10 @@
 }
 
 .sellers-list {
-    margin: 20px;
+    // margin: 20px;
     align-content: center;
     text-align: center;
-    padding: 34px 181px;
+    padding: 34px 0;
     cursor: pointer;
 
     & .sellers-row {
@@ -319,4 +319,10 @@
     /** Alternative Syntax **/
     /* grid-column: 5 / span 4; */
     /* grid-row: 6 / span 3; */
+}
+
+
+div.MuiAvatar-root.MuiAvatar-circle.medium{
+    width: 60px;
+    height: 60px;
 }

@@ -48,8 +48,8 @@ class _ThankYou extends Component {
         return (
             <section className="thank-you">
                 <div className="thank-msg">
-                    <div>Your {order.amount !== 1 && order.amount} {order.amount === 1 ? "pair" : "pairs"} of "{order.title}" Socks Is On The Way</div>
-                    <Link to={'/shop'}>C<span>o</span>ntinue Sh<span>o</span>ping <ArrowForwardIcon /></Link>
+                    <div className="order-msg">Your {order.amount !== 1 && order.amount} {order.amount === 1 ? "pair" : "pairs"} of "{order.title}" Socks Is On The Way</div>
+                    <Link className="continue-shopping" to={'/shop'}>C<span>o</span>ntinue Sh<span>o</span>ping {/*<ArrowForwardIcon />*/}</Link>
                 </div>
 
                 <div className="speech half">thank you for you purchase</div>

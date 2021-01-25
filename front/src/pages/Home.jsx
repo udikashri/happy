@@ -188,22 +188,22 @@ class _Home extends Component {
               <section className="sellers-list flex-column align-center justify-center" >
               <h2>Our Top Sellers </h2>
                 <div className="sellers-row flex  space-between justify-center">
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/10_vnikfz.jpg" className="small" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/8_tzi2ty.jpg" className="small" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/5_yvygo4.jpg" className="small" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/18_rwb9g1.jpg" className="small" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/16_trr5zq.jpg" className="small" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/9_gqkjqu.jpg" className="small" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/6_qr24nq.jpg" className="small" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/10_vnikfz.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/8_tzi2ty.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/5_yvygo4.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/18_rwb9g1.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/16_trr5zq.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/9_gqkjqu.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/6_qr24nq.jpg" className="medium" />
                 </div>
                 <div className="sellers-row flex space-between justify-center">
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg" className="small" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg" className="small" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/3_nz6vkf.jpg" className="small" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/4_o2r8cs.jpg" className="small" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/11_egixh0.jpg" className="small" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/30_nvklsm.jpg" className="small" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg" className="small" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/3_nz6vkf.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/4_o2r8cs.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/11_egixh0.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/30_nvklsm.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg" className="medium" />
 
                 </div>
                 <Link className="btn" to={`/sell`}>Join our Marketplace</Link>
