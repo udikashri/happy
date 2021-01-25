@@ -19,7 +19,7 @@
         }
     }
     .border-seprator {
-        margin: 20px 0;
+        margin: 20px 10px 20px 220px;
         grid-area: sep;
         background-color: dimgray;
         left: 0;
@@ -228,7 +228,7 @@
         padding: 5px 15px;
         margin-top: 10px;
         width: 140px;
-        margin-left: 150px;
+        margin-left: 170px;
         transition: 0.5s;
 
         &:hover {

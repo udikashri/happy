@@ -153,7 +153,7 @@ class _ItemDetails extends Component {
         {/* ************* Seller Reviews  ********************* */}
 
         <div className="reviews">
-          <h3>reviews:</h3>
+          <h3>Reviews:</h3>
           {seller && seller.reviews.map(review => {
             return <Review key={review.id} review={review} />
           })}
