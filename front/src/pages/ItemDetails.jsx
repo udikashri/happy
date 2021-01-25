@@ -104,7 +104,7 @@ class _ItemDetails extends Component {
 
     return (
 
-      <section className="item-details">
+      <section className="item-details main-container ">
 
         <img className="item-image" src={currItem.imgUrl} alt="img" />
 
@@ -114,7 +114,6 @@ class _ItemDetails extends Component {
         <div className="item-info">
           <div className="header">
             <h1>{currItem.title}</h1>
-            <div className="price">${currItem.price}.00</div>
           </div>
 
 
@@ -127,7 +126,9 @@ class _ItemDetails extends Component {
           </div>}
 
           {/* *************** Change Amount ****************    */}
-          <h3>How Many Pairs would You Like?</h3>
+          <div className="price">${currItem.price}.00</div>
+
+          <h6>How Many Pairs would You Like?</h6>
           <div className="amount">
             <div onClick={(ev) => this.onChangeAmount(ev, -1)} className="change-amount">-</div>
             <div>{amount}</div>
@@ -212,7 +213,7 @@ class _ItemDetails extends Component {
               <td className="final-price">${currItem.price * amount + 56}</td>
             </tr>
           </table>
-          <Link onClick={this.onOrder} to={"/thank"}>Order</Link>
+          <Link onClick={this.onOrder} to={"/thank"}>Pay</Link>
           {/* <Link onClick={this.onOrder}>Order</Link> */}
 
 

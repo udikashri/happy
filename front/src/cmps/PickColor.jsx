@@ -18,9 +18,10 @@ export class PickColor extends Component {
         return (
             <div className="color-container">
                 <section title="Red" onClick={() => {
+                    let toggleOutline = false
                     this.props.handleChangeColor('red')
                     this.handlePickeColor('red')
-                }} className={(pickeColor === "red" || pickeColor === "all") ? "red-fill" : "red-border"} >
+                }} className={(pickeColor === "red" || pickeColor === "all") ? "red-fill outline" : "red-border"} >
                 </section>
                 <section title="Gray" onClick={() => {
                     this.props.handleChangeColor('gray')

@@ -50,7 +50,7 @@ class _Home extends Component {
 
                   <CardHeader
                     avatar={
-                      <Avatar alt="Shira" src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-500w.jpeg" className="small" />
+                      <Avatar src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-500w.jpeg" className="small" />
 
                     }
                     title="Shira Socks"
@@ -68,7 +68,7 @@ class _Home extends Component {
 
                   <CardHeader
                     avatar={
-                      <Avatar alt="Shira" src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" className="small" />
+                      <Avatar src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" className="small" />
 
                     }
                     title="Joe stuff"
@@ -114,7 +114,7 @@ class _Home extends Component {
 
                   <CardHeader
                     avatar={
-                      <Avatar alt="Shira" src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" className="small" />
+                      <Avatar src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" className="small" />
 
                     }
                     title="Miryam lib"
@@ -124,8 +124,8 @@ class _Home extends Component {
 
               </Card>
             </section>
-            {/* 
-            <section className="home-collection-list ">
+            
+            {/* <section className="home-collection-list ">
               <div className="collection-card img-1">
                 <div className="preview-image ">
                   <h3>Fun</h3>
@@ -188,22 +188,22 @@ class _Home extends Component {
               <section className="sellers-list flex-column align-center justify-center" >
               <h2>Our Top Sellers </h2>
                 <div className="sellers-row flex  space-between justify-center">
-                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/10_vnikfz.jpg" className="small" />
-                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/8_tzi2ty.jpg" className="small" />
-                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/5_yvygo4.jpg" className="small" />
-                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/18_rwb9g1.jpg" className="small" />
-                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/16_trr5zq.jpg" className="small" />
-                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/9_gqkjqu.jpg" className="small" />
-                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/6_qr24nq.jpg" className="small" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/10_vnikfz.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/8_tzi2ty.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/5_yvygo4.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/18_rwb9g1.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/16_trr5zq.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/9_gqkjqu.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/6_qr24nq.jpg" className="medium" />
                 </div>
                 <div className="sellers-row flex space-between justify-center">
-                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg" className="small" />
-                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg" className="small" />
-                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/3_nz6vkf.jpg" className="small" />
-                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/4_o2r8cs.jpg" className="small" />
-                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/11_egixh0.jpg" className="small" />
-                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/30_nvklsm.jpg" className="small" />
-                  <Avatar alt="Shira" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg" className="small" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/3_nz6vkf.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/4_o2r8cs.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/11_egixh0.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/30_nvklsm.jpg" className="medium" />
+                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg" className="medium" />
 
                 </div>
                 <Link className="btn" to={`/sell`}>Join our Marketplace</Link>
@@ -228,7 +228,7 @@ class _Home extends Component {
 
                 <CardHeader
                   avatar={
-                    <Avatar alt="Shira" src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-500w.jpeg" className="small" />
+                    <Avatar src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-500w.jpeg" className="small" />
 
                   }
                   title="Shira Socks"
@@ -245,7 +245,7 @@ class _Home extends Component {
 
                 <CardHeader
                   avatar={
-                    <Avatar alt="Shira" src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" className="small" />
+                    <Avatar src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" className="small" />
 
                   }
                   title="Joe stuff"
@@ -284,7 +284,7 @@ class _Home extends Component {
 
                 <CardHeader
                   avatar={
-                    <Avatar alt="Shira" src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" className="small" />
+                    <Avatar src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" className="small" />
 
                   }
                   title="Miryam lib"

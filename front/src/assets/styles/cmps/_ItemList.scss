@@ -3,9 +3,9 @@
     grid-area: list;
     display: grid;
     // grid-template-columns: repeat(4,1fr);
-    padding-left: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 30px;
+    padding-left: 40px;
+    grid-template-columns: repeat(auto-fill, 230px );
+    grid-gap: 40px;
     width:100%;
 //   card-grid
 }

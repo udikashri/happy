@@ -7,7 +7,7 @@
 }
 
 .home {
-    background-color: orange;
+    background-color: #e8973b;
     h2 {
         text-align: center;
         color: white;
@@ -55,7 +55,7 @@
         margin-bottom: 24px;
     }
     & .btn {
-        background-color: orange;
+        background-color: #e8973b;
         font-weight: 500;
         border: none;
         color: whitesmoke;
@@ -72,13 +72,13 @@
     }
 }
 
-.card-media {
-    &:hover {
-        transform: scale(1.2);
-        -webkit-transition: 0.3s ease-in-out;
-        transition: 0.3s ease-in-out;
-    }
-}
+// .card-media {
+//     &:hover {
+//         transform: scale(1.2);
+//         -webkit-transition: 0.3s ease-in-out;
+//         transition: 0.3s ease-in-out;
+//     }
+// }
 // .home-collection-list {
 //     margin-top: 25px;
 //     padding: 20px;
@@ -89,7 +89,7 @@
 //     width:93.1vw;
 //     grid-gap: 8px;
 //     gap: 8px;
-//     background-color: orangered;
+//     background-color: #e8973bred;
 // }
 
 .collection-card {
@@ -148,7 +148,7 @@
     gap: 40px;
     justify-content: center;
     padding: 16px;
-    background-color:orange;
+    background-color:#e8973b;
     margin-bottom: 5vh;
     & a:link {
         text-decoration: none;
@@ -160,10 +160,11 @@
 }
 
 .sellers-list {
-    margin: 20px;
+    // margin: 20px;
     align-content: center;
     text-align: center;
-    padding: 34px 181px;
+    padding: 34px 0;
+    cursor: pointer;
 
     & .sellers-row {
         margin-top: 20px;
@@ -212,10 +213,11 @@
 }
 
 .container {
-    background-color: #660082;
+      background-color: antiquewhite;
     padding: 8px;
     width: 60vw;
     margin: 0 auto;
+    border-radius: 9px;
 }
 
 .gallery {
@@ -317,4 +319,10 @@
     /** Alternative Syntax **/
     /* grid-column: 5 / span 4; */
     /* grid-row: 6 / span 3; */
+}
+
+
+div.MuiAvatar-root.MuiAvatar-circle.medium{
+    width: 60px;
+    height: 60px;
 }

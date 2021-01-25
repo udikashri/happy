@@ -15,19 +15,19 @@ header {
     img {
         border-radius: 50%;
         margin: 5px;
-        margin-right: 5px;
+        // margin-right: 180px;
         height: 40px;
         width: 40px;
     }   
 
     // .loggedin-user {
-    //     background-color: lightcyan;
+    //     background-color: white;
     //     padding: 2px 8px;
     //     border-radius: 1em;
     //     align-self: flex-end;
     //     color: whitesmoke;
     //     span {
-    //         background-color: lightcyan;
+    //         background-color: white;
     //         padding: 4px;
     //         margin: 10px;
     //         border-radius: 50%;
@@ -47,16 +47,19 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100px;
+        margin-right: 98.7px;
+        font-size: 24px;
+        width: 85px;
         // border-right: 1px solid black;
         text-decoration: none;
-        color:lightcyan;
+        color:white;
          &:first-child {
             // border-left: 1px solid black;
             // justify-content: flex-start;
         }
         &:active {
-            color: lightcyan;
+            color: white;
+            // margin: 0;
             text-decoration: none;
         }
         &:hover {
@@ -65,19 +68,23 @@ nav {
     }
 }
 
+nav a.header-find{
+    margin: 0 40px;
+}
+
 nav .active {
-    color: lightcyan;
+    color: white;
     text-decoration: none;
 }
 .logo{
-margin-inline-start: 3px;
+margin-inline-start: 96px;
     justify-self: flex-start;
     display: flex;
 }
 .logo a {
-    margin-left: 30px;
+    // margin-left: 30px;
     font-size: 2rem;
-    color: lightcyan;
+    color: white;
 
     &:hover {
         text-decoration: none;
