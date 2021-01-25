@@ -24,7 +24,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     // background-attachment: fixed;
-    background-position: 10%;
+    background-position: 0px ​-400px;
     position: relative;
     z-index: 0;
     // background-image: rgba(0, 0, 0, 0.1);
@@ -154,7 +154,12 @@
         text-decoration: none;
     }
 }
-
+.hacker {
+    background-color: #cc0344;
+width:100%;
+height: 50px;
+padding-top: 20px;
+}
 .MuiCard-root {
     width: 216px;
 }

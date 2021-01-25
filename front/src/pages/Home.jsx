@@ -194,7 +194,7 @@ class _Home extends Component {
             </section>
 
 
-            <h2> 👩‍💻 Hacker Socks </h2>
+           <div className="hacker full"> <h2> 👩‍💻 Hacker's Socks </h2></div>
             <section className="item-cards full flex">
               <Card>
                 <CardMedia
