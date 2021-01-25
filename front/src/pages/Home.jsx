@@ -124,7 +124,7 @@ class _Home extends Component {
 
               </Card>
             </section>
-            
+
             {/* <section className="home-collection-list ">
               <div className="collection-card img-1">
                 <div className="preview-image ">
@@ -163,7 +163,7 @@ class _Home extends Component {
               <div className="gallery">
                 <figure className="gallery__item gallery__item--1">
                   <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301257/atmosphere/spo_dfghzs.jpg" alt="Gallery image 1" className="gallery__img" />
-                  <span className="gallery-tag-featured">Featured</span> 
+                  <span className="gallery-tag-featured">Featured</span>
                 </figure>
                 <figure className="gallery__item gallery__item--2">
                   <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301259/atmosphere/80_vwru5z.png" alt="Gallery image 2" className="gallery__img" />
@@ -183,31 +183,30 @@ class _Home extends Component {
               </div>
             </div>
 
-
+            {/* *************************** Top Seller ************************************* */}
             <section className="top-sellers">
               <section className="sellers-list flex-column align-center justify-center" >
-              <h2>Our Top Sellers </h2>
+                <h2>Our Top Sellers </h2>
                 <div className="sellers-row flex  space-between justify-center">
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/10_vnikfz.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/8_tzi2ty.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/5_yvygo4.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/18_rwb9g1.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/16_trr5zq.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/9_gqkjqu.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/6_qr24nq.jpg" className="medium" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/10_vnikfz.jpg" alt="" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/8_tzi2ty.jpg" alt="" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/5_yvygo4.jpg" alt="" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/18_rwb9g1.jpg" alt="" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/16_trr5zq.jpg" alt="" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/9_gqkjqu.jpg" alt="" />
                 </div>
                 <div className="sellers-row flex space-between justify-center">
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/3_nz6vkf.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/4_o2r8cs.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/11_egixh0.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/30_nvklsm.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg" className="medium" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg" alt="hadar" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg" alt="" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/3_nz6vkf.jpg" alt="" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/4_o2r8cs.jpg" alt="" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/30_nvklsm.jpg" alt="" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg" alt="" />
+
 
                 </div>
                 <Link className="btn" to={`/sell`}>Join our Marketplace</Link>
-                            </section>
+              </section>
               <section className="seller-banner">
                 <div className="banner-text">HappySocks changed my life!</div>
                 <div className="banner-text2">Bob Safam - Maatziv Garbaim</div>

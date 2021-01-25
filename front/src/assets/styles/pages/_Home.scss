@@ -188,6 +188,13 @@
 
 .top-sellers {
     margin: 20px;
+    img.top-seller{
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        border: 1px solid rgb(104, 104, 104);
+        margin-top: 35px;
+    }
 }
 
 .seller-banner {
