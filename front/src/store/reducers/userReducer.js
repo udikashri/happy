@@ -3,9 +3,21 @@ if (sessionStorage.loggedinUser) localLoggedinUser = JSON.parse(sessionStorage.l
 
 const initialState = {
   loggedInUser: {
-    fullname: 'Claudia Perez',
-    _id: 'bv6phbrTCmj',
-    imgUrl: 'https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg'
+    // fullname: 'Claudia Perez',
+    // _id: 'bv6phbrTCmj',
+    // imgUrl: 'https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg'
+    // _id: 'dhoSPowvM',
+    // fullname: 'Zack Jordan',
+    // imgUrl: 'https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/15_pj1iel.jpg'
+    // _id: 'E4G3Ck',
+    // fullname: 'Amelia Larson',
+    // imgUrl: 'https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/3_nz6vkf.jpg'
+    // _id: 'YjSm4WSQhwbp',
+    // fullname: 'Jasmine Aleksa',
+    // imgUrl: 'https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg'
+    _id: 'Xh9nMze',
+    fullname: 'Richard Horton',
+    imgUrl: 'https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg'
   },
   users: []
 }

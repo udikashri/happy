@@ -64,7 +64,9 @@ export class ItemFilter extends Component {
     render() {
         const { filterBy } = this.state
         const { sellers } = this.props
-        console.log(sellers);
+        // sellers = sellers.splice(4)
+        // const {user} = sellers
+        // console.log(sellers[0].user._id);
         return (
             <section className="item-filter" >
                 {/* <h1></h1> */}
@@ -89,6 +91,11 @@ export class ItemFilter extends Component {
                     </section>
                     <h6 className="h6-filter-seller">Top sellers</h6>
                     {sellers && <section>
+                        {/* <img key={sellers[0].user._id} src={sellers[0].user.imgUrl} alt={sellers[0].user._id} className="img-user-filter" onClick={this.handleChangeUser} />
+                        <img key={sellers[1].user._id} src={sellers[1].user.imgUrl} alt={sellers[1].user._id} className="img-user-filter" onClick={this.handleChangeUser} />
+                        <img key={sellers[2].user._id} src={sellers[2].user.imgUrl} alt={sellers[2].user._id} className="img-user-filter" onClick={this.handleChangeUser} />
+                        <img key={sellers[3].user._id} src={sellers[3].user.imgUrl} alt={sellers[3].user._id} className="img-user-filter" onClick={this.handleChangeUser} /> */}
+                        {console.log(sellers)}
                         {sellers.map(seller => {
                             console.log(seller.name);
                             return <img key={seller.user._id} value={seller.user.fullname} src={seller.user.imgUrl} alt={seller.user._id} className="img-user-filter" onClick={this.handleChangeUser} />

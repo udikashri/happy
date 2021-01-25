@@ -66,6 +66,8 @@
 @mixin circle($color) {
     height: 25px;
     width: 25px;
+    // border-color: black;
+    border: 1px solid darkgray;
     border-radius: 50%;
     margin: 3px;
     cursor: pointer;
@@ -78,7 +80,7 @@
     border-radius: 50%;
     margin: 3px;
     cursor: pointer;
-    border: 2px solid $color;
+    border: 2px solid black;
 }
 
 .color-container {
@@ -186,7 +188,7 @@
     }
 }
 .outline{
-    outline: 1px solid black;
+    outline: 1px solid darkgray;
     outline-offset: 5px;
 }
 

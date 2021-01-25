@@ -17,55 +17,56 @@ export class PickColor extends Component {
         const { pickeColor } = this.state
         return (
             <div className="color-container">
-                <section title="Red" onClick={() => {
+                <section title="Red" /*className="red-fill"*/ onClick={() => {
                     let toggleOutline = false
                     this.props.handleChangeColor('red')
+                   
                     this.handlePickeColor('red')
-                }} className={(pickeColor === "red" || pickeColor === "all") ? "red-fill outline" : "red-border"} >
+                }} className={(pickeColor === "red") ? "red-fill outline": "red-fill"} >
                 </section>
                 <section title="Gray" onClick={() => {
                     this.props.handleChangeColor('gray')
                     this.handlePickeColor('gray')
-                }} className={(pickeColor === "gray" || pickeColor === "all") ? "gray-fill" : "gray-border"} ></section>
+                }} className={(pickeColor === "gray") ? "gray-fill outline" : "gray-fill"} ></section>
                 <section title="Blue" onClick={() => {
                     this.props.handleChangeColor('blue')
                     this.handlePickeColor('blue')
 
-                }} className={(pickeColor === "blue" || pickeColor === "all") ? "blue-fill" : "blue-border"} ></section>
+                }} className={(pickeColor === "blue") ? "blue-fill outline" : "blue-fill"} ></section>
                 <section title="Pink" onClick={() => {
                     this.props.handleChangeColor('pink')
                     this.handlePickeColor('pink')
 
-                }} className={(pickeColor === "pink" || pickeColor === "all") ? "pink-fill" : "pink-border"} ></section>
+                }} className={(pickeColor === "pink") ? "pink-fill outline" : "pink-fill"} ></section>
                 <section title="Yellow" onClick={() => {
                     this.handlePickeColor('yellow')
                     this.props.handleChangeColor('yellow')
-                }} className={(pickeColor === "yellow" || pickeColor === "all") ? "yellow-fill" : "yellow-border"} ></section>
+                }} className={(pickeColor === "yellow") ? "yellow-fill outline" : "yellow-fill"} ></section>
                 <section title="White" onClick={() => {
                     this.props.handleChangeColor('white')
                     this.handlePickeColor('white')
 
-                }} className={(pickeColor === "white" || pickeColor === "all") ? "white-fill" : "white-border"} ></section>
+                }} className={(pickeColor === "white") ? "white-fill outline" : "white-fill"} ></section>
                 <section title="Black" onClick={() => {
                     this.handlePickeColor('black')
                     this.props.handleChangeColor('black')
-                }} className={(pickeColor === "black" || pickeColor === "all") ? "black-fill" : "black-border"} ></section>
+                }} className={(pickeColor === "black") ? "black-fill outline" : "black-fill"} ></section>
                 <section title="Green" onClick={() => {
                     this.handlePickeColor('green')
                     this.props.handleChangeColor('green')
-                }} className={(pickeColor === "green" || pickeColor === "all") ? "green-fill" : "green-border"} ></section>
+                }} className={(pickeColor === "green") ? "green-fill outline" : "green-fill"} ></section>
                 <section title="Purple" onClick={() => {
                     this.handlePickeColor('purple')
                     this.props.handleChangeColor('purple')
-                }} className={(pickeColor === "purple" || pickeColor === "all") ? "purple-fill" : "purple-border"} ></section>
+                }} className={(pickeColor === "purple") ? "purple-fill outline" : "purple-fill"} ></section>
                 <section title="Brown" onClick={() => {
                     this.handlePickeColor('brown')
                     this.props.handleChangeColor('brown')
-                }} className={(pickeColor === "brown" || pickeColor === "all") ? "brown-fill" : "brown-border"} ></section>
+                }} className={(pickeColor === "brown") ? "brown-fill outline" : "brown-fill"} ></section>
                 <section title="colorful" onClick={() => { 
                     this.handlePickeColor('colorful')
                     this.props.handleChangeColor('colorful') 
-                    }} className={(pickeColor === "colorful" || pickeColor === "all") ? "colorful-fill" : "colorful-border"}></section>
+                    }} className={(pickeColor === "colorful") ? "colorful-fill outline" : "colorful-fill"}></section>
                 <section title="Clear" onClick={() => {
                     this.handlePickeColor('all')
                     this.props.handleChangeColor('clear')
