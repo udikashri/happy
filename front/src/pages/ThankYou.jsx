@@ -49,17 +49,17 @@ class _ThankYou extends Component {
             <section className="thank-you">
                 <div className="thank-msg">
                     <div className="order-msg">Your {order.amount !== 1 && order.amount} {order.amount === 1 ? "pair" : "pairs"} of "{order.title}" Socks Is On The Way</div>
-                    <Link className="continue-shopping" to={'/shop'}>C<span>o</span>ntinue Sh<span>o</span>ping {/*<ArrowForwardIcon />*/}</Link>
+                    <Link className="continue-shopping" to={'/shop'}>Find another one...{/*<ArrowForwardIcon />*/}</Link>
                 </div>
 
-                <div className="speech half">thank you for you purchase</div>
-                <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611052878/atmosphere/3485-removebg-preview_1_gy43es.png" alt="img" />
+                {/* <div className="speech half">thank you for you purchase</div> */}
+                <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611587744/Funny-Royal-Socks-Gift-Collection-Kate_480x-removebg-preview_a2fseb.png" alt="img" />
 
 
                 {/* ************* Item With Same Tag Preview  ********************* */}
 
                 <div className="item-thank">
-                    <h3 className="item-thank-header">Related socks:</h3>
+                    <h3 className="item-thank-header">More socks for you</h3>
                     <div className="item-thank-conainer">
 
                         {items.map(item => {

@@ -30,13 +30,13 @@ class _Home extends Component {
     return (
       <>
         <section className="hero-image">
-          <h2>good things come in pairs...</h2>
+          <h2>Good things come in pairs...</h2>
           <div className="flex">
             <Link className="btn" to={`/shop`}>🧦 Find your match</Link>
-            <Link className="btn btn-2" to={`/item/600ab40822fe2c973b33a4cc`}>🎲 I feel lucky</Link>
+            <Link className="btn btn-2" to={`/item/600ab40822fe2c973b33a4cc`}>🎲 I'm feeling lucky</Link>
           </div>
         </section>
-        <section className="app">
+        <section>
           <div className="home main-container">
             {/* <h2>🧵 Our FullStack</h2> */}
             <section className="item-cards full flex">
@@ -44,7 +44,7 @@ class _Home extends Component {
                 <Link to={`/item/600ab40822fe2c973b33a4d7`}>
                   <CardMedia
                     className="card-media"
-                    image="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611427479/hf/items/Visual_Merch_village_Self-Portrait-V-Gogh_01_1600x_zmwq3j.png"
+                    image="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611584503/RsBR5qPA9m_ncoolg.png"
                     title="great stuff"
                   />
 
@@ -62,7 +62,7 @@ class _Home extends Component {
 
                   <CardMedia
                     className="card-media"
-                    image="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611427450/hf/items/1080x1080_Carrousel_Mondrian_1_1600x_ancbva.jpg"
+                    image="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611581605/tlc0k3deyfydeqddr5a0.jpg"
                     title="great stuff"
                   />
 
@@ -88,7 +88,7 @@ class _Home extends Component {
 
                   <CardMedia
                     className="card-media"
-                    image="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611427460/hf/items/Visual_Merch_Great_Wave_01_1600x_wo3zd8.jpg"
+                    image="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611582002/gptz9uhfz6fzun5e6tq4.jpg"
                     title="great stuff"
                   />
 
@@ -108,7 +108,7 @@ class _Home extends Component {
 
                   <CardMedia
                     className="card-media"
-                    image="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611427449/hf/items/1080x1080_Carrousel_Gauguin_1_1600x_dc0gwt.jpg"
+                    image="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611590031/df4236ca2499be75.jpg_xagd0d.jpg"
                     title="great stuff"
                   />
 
@@ -124,7 +124,7 @@ class _Home extends Component {
 
               </Card>
             </section>
-            
+
             {/* <section className="home-collection-list ">
               <div className="collection-card img-1">
                 <div className="preview-image ">
@@ -159,55 +159,32 @@ class _Home extends Component {
             </section> */}
 
 
-            <div className="container" >
-              <div className="gallery">
-                <figure className="gallery__item gallery__item--1">
-                  <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301257/atmosphere/spo_dfghzs.jpg" alt="Gallery image 1" className="gallery__img" />
-                  <span className="gallery-tag-featured">Featured</span> 
-                </figure>
-                <figure className="gallery__item gallery__item--2">
-                  <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301259/atmosphere/80_vwru5z.png" alt="Gallery image 2" className="gallery__img" />
-                </figure>
-                <figure className="gallery__item gallery__item--3">
-                  <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301259/atmosphere/pp_zxik7v.jpg" alt="Gallery image 3" className="gallery__img" />
-                </figure>
-                <figure className="gallery__item gallery__item--4">
-                  <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301259/atmosphere/food_h3x9ri.png" alt="Gallery image 4" className="gallery__img" />
-                </figure>
-                <figure className="gallery__item gallery__item--5">
-                  <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301258/atmosphere/sp_cxahqx.jpg" alt="Gallery image 5" className="gallery__img" />
-                </figure>
-                <figure className="gallery__item gallery__item--6">
-                  <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611301258/atmosphere/ot_co9rh2.jpg" alt="Gallery image 6" className="gallery__img" />
-                </figure>
-              </div>
-            </div>
+    
 
-
+            {/* *************************** Top Seller ************************************* */}
             <section className="top-sellers">
               <section className="sellers-list flex-column align-center justify-center" >
-              <h2>Our Top Sellers </h2>
+                <h2>Our Top Sellers </h2>
                 <div className="sellers-row flex  space-between justify-center">
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/10_vnikfz.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/8_tzi2ty.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/5_yvygo4.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/18_rwb9g1.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/16_trr5zq.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/9_gqkjqu.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/6_qr24nq.jpg" className="medium" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/10_vnikfz.jpg" alt="" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/8_tzi2ty.jpg" alt="" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/5_yvygo4.jpg" alt="" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/18_rwb9g1.jpg" alt="" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/16_trr5zq.jpg" alt="" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/9_gqkjqu.jpg" alt="" />
                 </div>
                 <div className="sellers-row flex space-between justify-center">
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/3_nz6vkf.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/4_o2r8cs.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/11_egixh0.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/30_nvklsm.jpg" className="medium" />
-                  <Avatar src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg" className="medium" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610534/hf/faces/19_ne4lby.jpg" alt="hadar" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610533/hf/faces/7_gdn9xw.jpg" alt="" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/3_nz6vkf.jpg" alt="" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/4_o2r8cs.jpg" alt="" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/30_nvklsm.jpg" alt="" />
+                  <img className="top-seller" src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1610610532/hf/faces/27_zdptgs.jpg" alt="" />
+
 
                 </div>
                 <Link className="btn" to={`/sell`}>Join our Marketplace</Link>
-                            </section>
+              </section>
               <section className="seller-banner">
                 <div className="banner-text">HappySocks changed my life!</div>
                 <div className="banner-text2">Bob Safam - Maatziv Garbaim</div>

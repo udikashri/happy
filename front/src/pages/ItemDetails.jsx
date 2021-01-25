@@ -105,9 +105,9 @@ class _ItemDetails extends Component {
     return (
 
       <section className="item-details main-container ">
-
-        <img className="item-image" src={currItem.imgUrl} alt="img" />
-
+        {/* <div > */}
+          <img className="item-image" src={currItem.imgUrl} alt="img" />
+        {/* </div> */}
 
 
         {/* ************* Item Info  ********************* */}
@@ -137,8 +137,10 @@ class _ItemDetails extends Component {
 
           <div onClick={this.openModal} className="buy">Buy Me </div>
 
-          <div className="description">{currItem.description}</div>
-          <div className="tag-title">Related Tags:</div>
+          {/* <div className="description">{currItem.description}</div> */}
+          <div className="description">
+            <p>Description: Being a synesthete, a condition in which the senses are directly linked, Kandinsky relied heavily on every inner perception to complete his paintings.</p>
+          </div>          <div className="tag-title">Related Tags:</div>
           <div className="tags-container">
             {currItem.tags.map(tag => {
               return <div className="tag">
@@ -202,18 +204,25 @@ class _ItemDetails extends Component {
               <td>&nbsp;</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
-              <td>Shiping</td>
-              <td>$56</td>
+              <td>Shipping</td>
+              <td>$12</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>VAT</td>
+              <td>$0</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
-              <td className="final-price">${currItem.price * amount + 56}</td>
+              <td className="final-price">${currItem.price * amount + 12}</td>
             </tr>
           </table>
-          <Link onClick={this.onOrder} to={"/thank"}>Pay</Link>
+          <Link onClick={this.onOrder} to={"/thank"}>Pay Now</Link>
           {/* <Link onClick={this.onOrder}>Order</Link> */}
 
 

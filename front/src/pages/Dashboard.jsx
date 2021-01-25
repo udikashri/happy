@@ -1,17 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-// import { _ItemEdit } from '../cmps/ItemEdit'
 import { loadItems } from '../store/actions/itemActions'
-import { ItemPreview } from '../cmps/ItemPreview'
-// import { ItemAdd } from '../cmps/ItemAdd'
-import { ItemEdit } from '../cmps/ItemEdit'
 import { Order } from '../cmps/Order'
 
 // import { SellerDeatails } from '../cmps/SellerDeatails'
 
 export class _Dashboard extends Component {
     state = {
-        order: [{
+        orders: [{
             buyer: {
                 "_id": "0DKUfiuZaj7F",
                 "fullname": "Deeann Stirling",
@@ -67,7 +63,7 @@ export class _Dashboard extends Component {
 
 
     render() {
-
+        const { orders } = this.state
         return (
             <div className="dashboard">
                 dash board
@@ -75,14 +71,25 @@ export class _Dashboard extends Component {
 
                 <table>
                     <tr>
-                        <th>Item</th>
-                        <th>Price</th>
-                        <th>Amount</th>
+                        <th className='item'>Buyer</th>
+                        <th className='item'>Item</th>
+                        <th className='number'>Price</th>
+                        <th className='number'>Amount</th>
                         <th>Date</th>
                         <th>Order Status</th>
                     </tr>
-                </table>
-                <Order />
+                
+                {orders.map(order => {
+                    return <tr>
+                    <td className='item'>{ order.buyer.fullname}</td>
+                    <td className='item'>{order.items.name}</td>
+            <td>{order.items.amount}</td>
+                    <td>{order.totalPrice}</td>
+                    <td>{order.date.day}-{order.date.month}-{order.date.month == 1 ? 21 : 20}</td>
+                    <td>{order.status }</td>
+                </tr>
+                })}
+               </table>
             </div>
         )
     }

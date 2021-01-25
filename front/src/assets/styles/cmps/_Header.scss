@@ -3,7 +3,6 @@ header {
     // padding: 10px;
     width: 100vw;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     // justify-content:flex-end;
     // background-position: ;
@@ -18,7 +17,7 @@ header {
         // margin-right: 180px;
         height: 40px;
         width: 40px;
-    }   
+    }
 
     // .loggedin-user {
     //     background-color: white;
@@ -37,23 +36,35 @@ header {
         color: grayscale($color: gray);
     }
 }
+.header-container {
+    // display: flex;
+}
+.leftnav {
+    display: flex;
+}
+.rightnav {
+    display: flex;
+}
 nav {
-    // margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
     padding: 0;
     height: inherit;
-    display: flex;
     align-items: center;
+    width: 90vw;
+    margin: 0 auto;
     a {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-right: 98.7px;
+        // margin-right: 98.7px;
+
         font-size: 24px;
-        width: 85px;
+        // width: 85px;
         // border-right: 1px solid black;
         text-decoration: none;
-        color:white;
-         &:first-child {
+        color: white;
+        &:first-child {
             // border-left: 1px solid black;
             // justify-content: flex-start;
         }
@@ -68,7 +79,7 @@ nav {
     }
 }
 
-nav a.header-find{
+nav a.header-find {
     margin: 0 40px;
 }
 
@@ -76,8 +87,7 @@ nav .active {
     color: white;
     text-decoration: none;
 }
-.logo{
-margin-inline-start: 96px;
+.logo {
     justify-self: flex-start;
     display: flex;
 }
