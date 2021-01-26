@@ -157,25 +157,25 @@
         margin: 3px;
         cursor: pointer;
     }
-    .colorful-border {
-        height: 25px;
-        width: 25px;
-        margin: 3px;
-        background: conic-gradient(
-            lightgrey 0deg 30deg,
-            red 30deg 60deg,
-            lightgrey 60deg 120deg,
-            yellow 12deg 150deg,
-            lightgrey 150deg 210deg,
-            green 210deg 240deg,
-            lightgrey 240deg 300deg,
-            blue 300deg 330deg,
-            lightgrey 330deg 360deg
-        );
-        -webkit-mask-image: radial-gradient(transparent 65%, black 65%);
-        mask-image: radial-gradient(transparent 65%, black 65%);
-        border-radius: 50%;
-    }
+    // .colorful-border {
+    //     height: 25px;
+    //     width: 25px;
+    //     margin: 3px;
+    //     background: conic-gradient(
+    //         lightgrey 0deg 30deg,
+    //         red 30deg 60deg,
+    //         lightgrey 60deg 120deg,
+    //         yellow 12deg 150deg,
+    //         lightgrey 150deg 210deg,
+    //         green 210deg 240deg,
+    //         lightgrey 240deg 300deg,
+    //         blue 300deg 330deg,
+    //         lightgrey 330deg 360deg
+    //     );
+    //     -webkit-mask-image: radial-gradient(transparent 65%, black 65%);
+    //     mask-image: radial-gradient(transparent 65%, black 65%);
+    //     border-radius: 50%;
+    // }
     .all {
         @include circle(lightgray);
         color: white;
