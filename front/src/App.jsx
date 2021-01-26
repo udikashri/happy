@@ -8,7 +8,6 @@ import { Home } from './pages/Home'
 import { BackOfficeSeller} from './pages/BackOfficeSeller'
 import { ShopApp } from './pages/ShopApp'
 import { ItemDetails } from './pages/ItemDetails'
-import '../src/assets/styles/main.scss'
 import {loadItems} from './store/actions/itemActions'
 import {loadSellers} from './store/actions/sellerActions'
 
