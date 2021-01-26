@@ -18,7 +18,6 @@ import { LoginSignup } from './pages/LoginSignup'
 import { UserDetails } from './pages/UserDetails'
 import { connect } from 'react-redux'
 import {ThankYou} from './pages/ThankYou'
-import {Dashboard} from './pages/Dashboard'
 
 export class _App extends Component {
 
@@ -37,8 +36,6 @@ export class _App extends Component {
             <Switch>
               <Route path="/user/:id" component={UserDetails} />
               <Route path="/login" component={LoginSignup} />
-              <Route path="/thank" component={ThankYou} />
-              <Route path="/dashboard" component={Dashboard} />
               <Route path="/thank" component={ThankYou} />
               {/* <Route path="/chat" component={Chat} /> */}
               <Route path="/seller/:userId" component={BackOfficeSeller} />

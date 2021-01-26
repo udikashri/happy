@@ -13,6 +13,7 @@ const session = expressSession({
     cookie: { secure: false }
 })
 // Express App Config
+app.use(express.static('public'));
 app.use(cookieParser())
 app.use(bodyParser.json())
 app.use(session)
@@ -30,7 +31,7 @@ if (process.env.NODE_ENV === 'production') {
 const itemRoutes = require('./api/item/item.routes')
 // const authRoutes = require('./api/auth/auth.routes')
 // const reviewRoutes = require('./api/review/review.routes')
-const {connectSockets} = require('./services/socket.service')
+const { connectSockets } = require('./services/socket.service')
 // const orderRoutes = require('./api/order/order.routes')
 // const userRoutes = require('./api/user/user.routes')
 const sellerRoutes = require('./api/seller/seller.routes')
@@ -56,13 +57,10 @@ app.get('/**', (req, res) => {
 })
 
 const logger = require('./services/logger.service')
-const port = process.env.PORT || 3030
-http.listen(port, () => {
-    logger.info('Server is running on port: ' + port)
+const port = process.env.PORT || 3030;
+app.get('/**', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 })
-
-logger.debug([6, 8], 'Papa!')
-
-console.log('I am Here!, am I?')
-
-
+app.listen(port, () => {
+    console.log(`App listening on port ${port}!`)
+});
