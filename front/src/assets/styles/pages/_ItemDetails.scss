@@ -17,12 +17,13 @@
         justify-content: center;
         margin-left: 53px;
         margin-top: 14px;
-       & img {
-        width: 100%;
-        height: 100%;
-        background-size: contain;
+        & img {
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            object-fit: contain;
             /* padding-left: 106px; */
-        
+
             // grid-area: img;
             // width: 400px;
             // // padding-top: 43px;
@@ -31,9 +32,8 @@
             //     transition: 0.3s ease-in-out;
             // }
         }
-
     }
-    
+
     .border-seprator {
         // margin: 20px 0;
         grid-area: sep;
@@ -178,6 +178,9 @@
     width: 52vw;
     padding: 11px;
     padding-bottom: 23px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     .close {
         cursor: pointer;
         position: absolute;
@@ -191,13 +194,13 @@
     h3 {
         color: rgb(83, 47, 47);
         margin: 10px;
+        align-self: baseline;
     }
 
     table {
         margin-top: 37px;
-        width: 10px;
         width: 99%;
-        text-align: center;
+        text-align: left;
 
         td {
             height: 65px;
@@ -207,25 +210,36 @@
             border-top: 1px solid black;
             font-weight: bold;
         }
-        & .table-bold {
-            font-weight: bold;
-        }
+        // & .table-bold {
+        //     font-weight: bold;
+        // }
     }
 
-    a {
-        text-decoration: none;
+    .checkout {
+        display: flex;
+        flex-direction: column;
         color: rgb(66, 20, 27);
-        text-align: center;
+        // text-align: center;
         font-size: 1.5rem;
-        margin: 0 41% 10px;
-        border: 1px solid rgb(66, 20, 27);
-        padding: 5px 15px;
-        border-radius: 10px;
-        // transition: 0.5s;
+        // margin: 0 41% 10px;
 
-        &:hover {
-            background-color: rgb(98, 36, 45);
-            color: rgb(206, 197, 214);
+        // transition: 0.5s;
+        > * {
+            margin-bottom: 5px;
+        }
+        span {
+            font-size: 0.8rem;
+        }
+        img {
+            width: 150px;
+            object-fit: cover;
+        }
+        a {
+            background-color: purple;
+            color: white;
+            padding: 5px 35px;
+            border-radius: 3px;
+            text-decoration: none;
         }
     }
 }

@@ -226,9 +226,11 @@ class _ItemDetails extends Component {
               <td className="final-price">${currItem.price * amount + 12}</td>
             </tr>
           </table>
-          <Link onClick={this.onOrder} to={"/thanks"}>Pay Now</Link>
-          {/* <Link onClick={this.onOrder}>Order</Link> */}
-
+          <div className="checkout">
+          <Link onClick={this.onOrder} to={"/thank"}>CHECKOUT</Link>
+        <span>WE ACCEPT:</span>
+        <img src="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611652063/hf/items/checkout_lt7hx6.jpg" alt=""/>
+          </div>
 
         </div>
 
