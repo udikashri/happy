@@ -208,7 +208,7 @@ class _Home extends Component {
                     <Avatar src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-500w.jpeg" className="small" />
 
                   }
-                  title="Shira Socks"
+                  title="Shira Sacks"
                   subheader="Best Seller ⭐ 4.2" />
 
 
@@ -216,7 +216,7 @@ class _Home extends Component {
               <Card>
                 <CardMedia
                   className="card-media"
-                  image="https://res.cloudinary.com/dt1zahrqy/image/upload/v1611428206/hf/items/ur_socks_flatlay_medium_square_1000x1000-bg_f8f8f8.1_1_pltfyu.jpg"
+                  image="https://ih1.redbubble.net/image.984109788.7935/ur,socks_flatlay_medium,square,600x600-bg,f8f8f8.1.jpg"
                   title="great stuff"
                 />
 
@@ -225,7 +225,7 @@ class _Home extends Component {
                     <Avatar src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" className="small" />
 
                   }
-                  title="Joe stuff"
+                  title="Joe Trump"
                   subheader="Top Seller ⭐⭐⭐" />
 
 
@@ -247,7 +247,7 @@ class _Home extends Component {
                     <Avatar alt="bob" src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-500w.jpeg" className="small" />
 
                   }
-                  title="Bob Masks"
+                  title="Bob Habanai"
                   subheader="Funny Seller ⭐ 4.2" />
 
 
@@ -264,7 +264,7 @@ class _Home extends Component {
                     <Avatar src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" className="small" />
 
                   }
-                  title="Miryam lib"
+                  title="Miryam Libovitch"
                   subheader="Featurd Seller 🧵" />
 
 

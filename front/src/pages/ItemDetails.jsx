@@ -105,10 +105,9 @@ class _ItemDetails extends Component {
     return (
 
       <section className="item-details main-container ">
-        {/* <div > */}
+        <section className="image-container">
           <img className="item-image" src={currItem.imgUrl} alt="img" />
-        {/* </div> */}
-
+        </section>
 
         {/* ************* Item Info  ********************* */}
         <div className="item-info">
@@ -191,6 +190,7 @@ class _ItemDetails extends Component {
               <th>Price</th>
               <th>Amount</th>
               <th>Item</th>
+              <th></th>
               <th>Total Price</th>
             </tr>
             <tr>
@@ -198,20 +198,23 @@ class _ItemDetails extends Component {
               <td>${currItem.price}</td>
               <td>{amount}</td>
               <td>{currItem.title}</td>
+              <td>&nbsp;</td>
               <td>${currItem.price * amount}</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
-              <td>Shipping</td>
+              <td></td>
+              <td><span className="table-bold">Shipping</span></td>
               <td>$12</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
-              <td>VAT</td>
+              <td></td>
+              <td><span className="table-bold">VAT</span></td>
               <td>$0</td>
             </tr>
             <tr>
@@ -219,10 +222,11 @@ class _ItemDetails extends Component {
               <td>&nbsp;</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
+              <td>&nbsp;</td>
               <td className="final-price">${currItem.price * amount + 12}</td>
             </tr>
           </table>
-          <Link onClick={this.onOrder} to={"/thank"}>Pay Now</Link>
+          <Link onClick={this.onOrder} to={"/thanks"}>Pay Now</Link>
           {/* <Link onClick={this.onOrder}>Order</Link> */}
 
 
