@@ -15,8 +15,9 @@
 }
 
 .hero-image {
-    background-image: url('https://res.cloudinary.com/dt1zahrqy/image/upload/v1611590779/photo-1561886316-0c6da0625c12_akiz6z.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
         //     // url(../../../assets/img/Home/heppy-home.jpeg);
+        url(https://res.cloudinary.com/dt1zahrqy/image/upload/v1611590779/photo-1561886316-0c6da0625c12_akiz6z.jpg);
     // height: 90vh;
     // margin-bottom: 8px;
     // background-position: 70%;
